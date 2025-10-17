@@ -1,0 +1,45 @@
+# Environment files
+.env
+.env.*      # z.B. .env.local, .env.production
+
+# Docker / database data
+/data/
+**/data/
+data/
+data/mysql/
+*.sql
+*.sqlite
+*.sqlite3
+
+# Composer, npm, IDEs, OS
+/vendor/
+node_modules/
+.DS_Store
+Thumbs.db
+
+# IDEs / editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs, cache, temp
+*.log
+cache/
+tmp/
+*.cache
+
+# SSH / keys / certs
+*.pem
+*.key
+*.p12
+*.crt
+
+# Secrets / local files
+*.secret
+.htpasswd
+
+# Build artifacts
+dist/
+build/
+*.exe
