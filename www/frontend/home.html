@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,10 +9,13 @@
     <title>Portfolio</title>
   </head>
 
-  <body class="flex flex-col bg-gray-100 m-0 p-0 min-h-screen">
+  <body
+    class="flex md:flex-row flex-col justify-between bg-gray-100 m-0 p-0 w-full"
+  >
+    <!--Navigation-->
     <section
       id="navBar"
-      class="z-100 fixed bg-gray-50 border-2 border-gray-100 w-[200px] min-h-screen"
+      class="z-100 fixed flex-none bg-gray-50 m-0 border-2 border-gray-100 w-[200px] min-h-screen"
     >
       <!--Navigation -->
       <nav id="nav">
@@ -26,28 +29,30 @@
             class="flex flex-row justify-center gap-2 mt-5 text-gray-900 scale-100 hover:scale-105 duration-300 ease-in-out"
           >
             <img
-              src="./src/images/Nav/Icon_home.png"
+              src="./src/images/nav/Icon_home.png"
               alt="Icon Home"
               class="w-[20px] h-[20px]"
             />
             <a href="home.html" class="relative focus:outline-none">Home</a>
-            <span class="-bottom-1 left-0 absolute bg-violet-500 w-0 focus:w-full h-0.5 transition-all duration-300"></span>
+            <span
+              class="-bottom-1 left-0 absolute bg-violet-500 w-0 focus:w-full h-0.5 transition-all duration-300"
+            ></span>
           </li>
           <li
             class="flex flex-row justify-center gap-2 mt-5 text-gray-900 scale-100 hover:scale-105 duration-300 ease-in-out"
           >
             <img
-              src="./src/images/Nav/Icon_skills.png"
+              src="./src/images/nav/Icon_skills.png"
               alt="Icon Home"
               class="w-[20px] h-[20px]"
             />
-            <a href="#">Skills</a>
+            <a href="#skillsBoxes">Skills</a>
           </li>
           <li
             class="flex flex-row justify-center gap-2 mt-5 text-gray-900 scale-100 hover:scale-105 duration-300 ease-in-out"
           >
             <img
-              src="./src/images/Nav/Icon_projects.png"
+              src="./src/images/nav/Icon_projects.png"
               alt="Icon Home"
               class="w-[20px] h-[20px]"
             />
@@ -57,7 +62,7 @@
             class="flex flex-row justify-center gap-2 mt-5 text-gray-900 scale-100 hover:scale-105 duration-300 ease-in-out"
           >
             <img
-              src="./src/images/Nav/Icon_about.png"
+              src="./src/images/nav/Icon_about.png"
               alt="Icon Home"
               class="w-[20px] h-[20px]"
             />
@@ -67,7 +72,7 @@
             class="flex flex-row justify-center gap-2 mt-5 text-gray-900 scale-100 hover:scale-105 duration-300 ease-in-out"
           >
             <img
-              src="./src/images/Nav/Icon_contact.png"
+              src="./src/images/nav/Icon_contact.png"
               alt="Icon Home"
               class="w-[20px] h-[20px]"
             />
@@ -75,9 +80,7 @@
           </li>
         </ul>
       </nav>
-
       <!--Theme Toggle -->
-
       <section id="themeToggle" class="flex content-start">
         <button id="themeToggleBtn">
           <img
@@ -97,44 +100,407 @@
         </button>
       </section>
     </section>
-    <!--Header-->
-    <header id="portHeader" class="flex">
-      <img
-        src="./src/images/header.png"
-        alt="Animation einer Frau, Stärken ploppen auf"
-        class="absolute"
-      />
 
-      <!-- Text Container-->
-      <section
-        id="headerTextBox"
-        class="flex flex-col justify-center items-center bg-white/30 shadow-lg backdrop-blur-md m-4 mt-40 ml-80 p-10 rounded-2xl w-full max-w-xl"
-      >
-        <div id="headerBtn" class="flex flex-col justify-center gap-5 w-full">
-          <h1 class="text-violet-500 text-3xl">
-            Hallo und Willkommen <br />
-            bei Port Pauli!
-          </h1>
-          <p>
-            Mein Name ist Paulina – kreativ im Herzen, Webentwicklung als
-            Sprache.
-          </p>
-          <a
-            href="#"
-            class="flex justify-center items-center p-2 border-3 border-violet-500 rounded-2xl w-32 h-10 text-violet-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
+    <section
+      id="portContent"
+      class="flex flex-col flex-1 justify-between ml-[200px] w-full"
+    >
+      <!--Header-->
+      <header id="portHeader" class="flex m-0">
+        <img
+          src="./src/images/home/header.png"
+          alt="Bild von Paulina"
+          class=""
+        />
+
+        <!-- Text Container-->
+        <section
+          id="headerTextBox"
+          class="absolute flex flex-col justify-center items-center bg-white/30 shadow-lg backdrop-blur-md m-4 mt-40 ml-20 p-10 rounded-2xl w-full max-w-xl"
+        >
+          <div
+            id="headerText"
+            class="flex flex-col justify-center gap-5 w-full"
           >
-            Skills
-          </a>
-        </div>
-      </section>
-    </header>
+            <p>PAULINA ANNA MISA</p>
+            <h1 class="text-violet-500 text-3xl">
+              Hallo und Willkommen <br />
+              bei Port Pauli!
+            </h1>
+            <p>Kreativität im Herzen - Webentwicklung als Sprache.</p>
+            <a
+              href="#skillsBoxes"
+              class="flex justify-center items-center p-2 border-2 border-orange-500 rounded-2xl w-32 h-10 text-orange-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            >
+              Skills
+            </a>
+          </div>
+        </section>
+      </header>
 
-    <main class="flex justify-center items-center m-0 p-0 min-h-screen">
-      <!-- Container for orbs (behind the content) -->
-      <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">
-        <div id="circle-3d"></div>
-      </div>
-    </main>
+      <!--Main content-->
+      <main class="flex flex-col m-0 p-0 min-h-screen">
+        <div id="portAnimationArrow" class="flex justify-start ml-85">
+          <img
+            src="./src/images/home/gif_arrow_violet.gif"
+            alt="Animation von Pfeilen nach unten"
+            class="max-h-10"
+          />
+        </div>
+        <!--Short about me-->
+        <section
+          id="headerAboutBox"
+          class="flex flex-col justify-center items-center bg-white/30 shadow-lg backdrop-blur-md mx-20 mt-20 p-20 rounded-2xl"
+        >
+          <div id="portAbout" class="flex flex-row gap-40">
+            <div id="portAboutAnimation">
+              <img
+                src="./src/images/home/GIF-orange-coden.gif"
+                alt="Animation von Codes auf dem PC-Bildschirm."
+                class="w-[300px] h-[300px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+              />
+            </div>
+
+            <div id="portAboutText" class="flex flex-col">
+              <h1 class="text-violet-500 text-3xl">Wer bin ich?</h1>
+              <p class="mt-10 max-w-2xl">
+                Hi, ich bin Paulina – alias Pauli. <br />
+                27 Jahre alt, mit einem Herzen voller Kreativität und einem
+                Kopf, der gerne Pixel jongliert. Ich bin eine kreative Seele
+                denn ich designe, code, fotografiere und UI/UX ist mir ebenfalls
+                vertraut.
+                <br />
+                Am liebsten kombiniere ich all diese Fähigkeiten gleichzeitig,
+                um digitale Erlebnisse zu erschaffen, die sowohl ästhetisch
+                aussehen als auch funktionieren – meistens begleitet von einer
+                großen Tasse Kaffee, die meine Ideen noch ein kleines bisschen
+                schneller in Gang bringt.
+              </p>
+              <a
+                href="about.html"
+                class="flex justify-center items-center mt-5 p-2 border-2 border-orange-500 rounded-2xl w-42 h-10 text-orange-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
+              >
+                Mehr über mich
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!--Skills-->
+        <section id="portSkills" class="flex flex-col w-full">
+          <h1 class="mx-40 mt-20 mb-10 text-violet-500 text-3xl text-start">
+            Skills
+          </h1>
+
+          <div
+            id="skillsBoxes"
+            class="flex md:flex-row flex-col justify-start items-center items-stretch gap-20 mx-40"
+          >
+            <!--Skills Web-->
+            <a
+              href="#"
+              class="flex flex-col flex-1 justify-center items-center bg-white/30 shadow-lg hover:shadow-sky-200 backdrop-blur-md px-20 py-10 rounded-2xl scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            >
+              <div id="skillsBoxDev">
+                <h2 class="font-bold text-sky-500">WEB DEVELOPMENT</h2>
+
+                <div
+                  id="skillsDev"
+                  class="flex flex-row flex-wrap justify-between items-center gap-5 my-10 text-center"
+                >
+                  <div
+                    id="skillHtml"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_html.jpg"
+                      alt="HTML Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">HTML</p>
+                  </div>
+                  <div
+                    id="skillCss"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_css.jpg"
+                      alt="CSS Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">CSS</p>
+                  </div>
+                  <div
+                    id="skillJs"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_js.jpg"
+                      alt="JavaScript Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">JS</p>
+                  </div>
+                  <div
+                    id="skillPhp"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_php.jpg"
+                      alt="PHP Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">PHP</p>
+                  </div>
+                  <div
+                    id="skillMysql"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_mysql.jpg"
+                      alt="MySQL Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">MySQL</p>
+                  </div>
+                  <div
+                    id="skillTailwind"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_tailwind.jpg"
+                      alt="Tailwind Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">Tailwind</p>
+                  </div>
+                  <div
+                    id="skillDocker"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_docker.jpg"
+                      alt="Docker Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">Docker</p>
+                  </div>
+                  <div
+                    id="skillGithub"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_github.jpg"
+                      alt="Github Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">Github</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!--Skills Design-->
+            <a
+              href="#"
+              class="flex flex-col flex-1 justify-center items-center bg-white/30 shadow-lg hover:shadow-orange-200 backdrop-blur-md px-20 py-10 rounded-2xl scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            >
+              <div id="skillsBoxDesign">
+                <h2 class="font-bold text-orange-500">DESIGN</h2>
+
+                <div
+                  id="skillsDesign"
+                  class="flex flex-row flex-wrap justify-start items-center gap-5 my-10 text-center"
+                >
+                  <div
+                    id="skillPs"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_ps.jpg"
+                      alt="Photoshop Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">PS</p>
+                  </div>
+                  <div
+                    id="skillAi"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_ai.jpg"
+                      alt="Illustrator Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">Ai</p>
+                  </div>
+                  <div
+                    id="skillId"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_id.jpg"
+                      alt="Indesign Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">Id</p>
+                  </div>
+                  <div
+                    id="skillXd"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_xd.jpg"
+                      alt="Adoobe XD Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">Xd</p>
+                  </div>
+                  <div
+                    id="skillPr"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_pr.jpg"
+                      alt="Premiere Pro Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">Pr</p>
+                  </div>
+                  <div
+                    id="skillFigma"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_figma.jpg"
+                      alt="Figma Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">Figma</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!--Skills Photography-->
+            <a
+              href="#"
+              class="flex flex-col flex-1 justify-center items-center bg-white/30 shadow-lg hover:shadow-emerald-200 backdrop-blur-md px-20 py-10 rounded-2xl scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            >
+              <div id="skillsBoxPhoto">
+                <h2 class="font-bold text-emerald-500">FOTOGRAFIE</h2>
+
+                <div
+                  id="skillsPhoto"
+                  class="flex flex-row flex-wrap justify-start items-start gap-5 my-10"
+                >
+                  <div
+                    id="skillLrc"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_lrc.jpg"
+                      alt="Lightroom Classic Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">LrC</p>
+                  </div>
+                  <div
+                    id="skillLr"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_lr.jpg"
+                      alt="Lightroom Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">Lr</p>
+                  </div>
+                  <div
+                    id="skillPs"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_ps.jpg"
+                      alt="Photoshop Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">PS</p>
+                  </div>
+                  <div
+                    id="skillCanon"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_canon.jpg"
+                      alt="Canon Kamera Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">Canon</p>
+                  </div>
+                  <div
+                    id="skillNikon"
+                    class="flex flex-col justify-center items-center text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  >
+                    <img
+                      src="./src/images/skills/icon_nikon.jpg"
+                      alt="Nikon Kamera Icon"
+                      class="border-1 border-gray-200 rounded-4xl w-[50px] h-[50px] object-cover"
+                    />
+                    <p class="mt-2 text-gray-900">Nikon</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!--Projects-->
+        <section
+          id="portProjectsBox"
+          class="flex flex-col bg-white/30 shadow-lg backdrop-blur-md mt-20 p-20"
+        >
+          <h1 class="justify-center mb-10 ml-20 text-violet-500 text-3xl text-center">
+            Meine Projekte
+          </h1>
+          <h1 class="justify-start ml-20 text-sky-500 text-xl">Web Development</h1>
+          <p class="mt-5 ml-20 text-start">
+            „Für mich bedeutet Webentwicklung, Kreativität und Technik zu
+            verbinden. <br> Jedes Projekt ist eine neue Gelegenheit, Design in
+            funktionierende Lösungen zu verwandeln.“
+          </p>
+          <div id="portProjects" class="flex flex-col"></div>
+        </section>
+
+        <!-- Container for orbs (behind the content) -->
+        <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">
+          <div id="circle-3d"></div>
+        </div>
+      </main>
+
+      <!--Footer-->
+      <footer id="portFooter" class="bg-white m-h-[1500px] mt-40 w-full">
+        <div
+          id="footerLinks"
+          class="flex flex-row justify-center gap-20 mx-20 py-10"
+        >
+          <a
+            href="contact.html"
+            class="scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            >Kontakt</a
+          >
+          <a
+            href="impressum.html"
+            class="scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            >Impressum</a
+          >
+          <a
+            href="impressum.html"
+            class="scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            >Datenschutzerklärung</a
+          >
+        </div>
+        <p class="mb-10 text-center">© 2025 Paulina Anna Misa</p>
+      </footer>
+    </section>
 
     <script src="./src/js/animation.js"></script>
     <script src="./src/js/darkmode.js"></script>
