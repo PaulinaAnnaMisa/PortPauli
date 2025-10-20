@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="welcome" content="Portfolio Willkommensseite" />
+    <link href="./src/css/output.css" rel="stylesheet" />
+
+    <title>Portfolio</title>
+  </head>
+
+  <body class="flex flex-col bg-gray-100 m-0 p-0 min-h-screen">
+    <section
+      id="navBar"
+      class="z-100 fixed bg-gray-50 border-2 border-gray-100 w-[200px] min-h-screen"
+    >
+      <!--Navigation -->
+      <nav id="nav">
+        <h1 class="mt-5 text-violet-500 text-xl text-center">Port Pauli</h1>
+
+        <ul
+          id="navLinks"
+          class="flex flex-col justify-center items-start gap-5 mt-10 ml-8"
+        >
+          <li
+            class="flex flex-row justify-center gap-2 mt-5 text-gray-900 scale-100 hover:scale-105 duration-300 ease-in-out"
+          >
+            <img
+              src="./src/images/Nav/Icon_home.png"
+              alt="Icon Home"
+              class="w-[20px] h-[20px]"
+            />
+            <a href="home.html" class="relative focus:outline-none">Home</a>
+            <span class="-bottom-1 left-0 absolute bg-violet-500 w-0 focus:w-full h-0.5 transition-all duration-300"></span>
+          </li>
+          <li
+            class="flex flex-row justify-center gap-2 mt-5 text-gray-900 scale-100 hover:scale-105 duration-300 ease-in-out"
+          >
+            <img
+              src="./src/images/Nav/Icon_skills.png"
+              alt="Icon Home"
+              class="w-[20px] h-[20px]"
+            />
+            <a href="#">Skills</a>
+          </li>
+          <li
+            class="flex flex-row justify-center gap-2 mt-5 text-gray-900 scale-100 hover:scale-105 duration-300 ease-in-out"
+          >
+            <img
+              src="./src/images/Nav/Icon_projects.png"
+              alt="Icon Home"
+              class="w-[20px] h-[20px]"
+            />
+            <a href="#">Projekte</a>
+          </li>
+          <li
+            class="flex flex-row justify-center gap-2 mt-5 text-gray-900 scale-100 hover:scale-105 duration-300 ease-in-out"
+          >
+            <img
+              src="./src/images/Nav/Icon_about.png"
+              alt="Icon Home"
+              class="w-[20px] h-[20px]"
+            />
+            <a href="about.html">Über mich</a>
+          </li>
+          <li
+            class="flex flex-row justify-center gap-2 mt-5 text-gray-900 scale-100 hover:scale-105 duration-300 ease-in-out"
+          >
+            <img
+              src="./src/images/Nav/Icon_contact.png"
+              alt="Icon Home"
+              class="w-[20px] h-[20px]"
+            />
+            <a href="contact.html">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!--Theme Toggle -->
+
+      <section id="themeToggle" class="flex content-start">
+        <button id="themeToggleBtn">
+          <img
+            src="./src/images/bright-moon.svg"
+            alt="Dark Mode"
+            id="darkIcon"
+            style="display: none"
+            class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+          />
+          <img
+            src="./src/images/dark-sun.svg"
+            alt=""
+            id="Light Mode"
+            style="display: none"
+            class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+          />
+        </button>
+      </section>
+    </section>
+    <!--Header-->
+    <header id="portHeader" class="flex">
+      <img
+        src="./src/images/GIF-header.png"
+        alt="Animation einer Frau, Stärken ploppen auf"
+        class="absolute"
+      />
+
+      <!-- Text Container-->
+      <section
+        id="headerTextBox"
+        class="flex flex-col justify-center items-center bg-white/30 shadow-lg backdrop-blur-md m-4 mt-40 ml-80 p-10 rounded-2xl w-full max-w-xl"
+      >
+        <div id="headerBtn" class="flex flex-col justify-center gap-5 w-full">
+          <h1 class="text-violet-500 text-3xl">
+            Hallo und Willkommen <br />
+            bei Port Pauli!
+          </h1>
+          <p>
+            Mein Name ist Paulina – kreativ im Herzen, Webentwicklung als
+            Sprache.
+          </p>
+          <a
+            href="#"
+            class="flex justify-center items-center p-2 border-3 border-violet-500 rounded-2xl w-32 h-10 text-violet-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
+          >
+            Skills
+          </a>
+        </div>
+      </section>
+    </header>
+
+    <main class="flex justify-center items-center m-0 p-0 min-h-screen">
+      <!-- Container for orbs (behind the content) -->
+      <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">
+        <div id="circle-3d"></div>
+      </div>
+    </main>
+
+    <script src="./src/js/animation.js"></script>
+    <script src="./src/js/darkmode.js"></script>
+  </body>
+</html>
