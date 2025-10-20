@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 NotFound</title>
-    <link href="./src/output.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body>
-    <section id="404" class="flex-row justify-center items-center bg-gray-200 min-h-screen">
-        <h1 class="mb-2 font-bold text-2xl text-center">404 Not Found</h1>
-        <p class="mb-6 text-center"> Du hast dich hier verirrt. Hier gibt es keine Kokurrenz. </p>
-        <h2 class="mb-6 text-center">Wir sind alle ein Team!</h2>
-    </section>
-</body>
-</html>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="welcome" content="Portfolio Willkommensseite" />
+    <link href="./src/css/output.css" rel="stylesheet" />
+    <title>LogIn</title>
+  </head>
+
+  <body
+    class="relative flex justify-center items-center bg-gray-200 m-0 p-0 min-h-screen"
+  >
+    <nav>
+      <!--Theme Toggle -->
+      <section id="themeToggle">
+        <button id="themeToggleBtn">
+          <svg id="lightIcon" style="display: none"></svg>
+        </button>
+      </section>
+    </nav>
+    <main>
+      <!-- Container with blur effectt -->
+      <section
+        id="welcomeBox"
+        class="z-10 relative flex flex-col items-center bg-white/30 shadow-lg backdrop-blur-md m-20 p-10 rounded-2xl w-[800px] max-w-2xl"
+      >
+        <a
+          href="index.html"
+          class="top-4 left-4 absolute hover:scale-110 transition duration-200 ease-in-out"
+        >
+          <button id="back">
+            <img
+              src="./src/images/icon_arrow_back_violett.svg"
+              alt="icon back"
+              class="flex content-start m-2 w-[50px] h-[50px] object-cover cursor-pointer"
+            />
+          </button>
+        </a>
+        <div id="404Text" class="w-full">
+          <h1 class="mt-15 mb-2 font-bold text-2xl text-center">
+            404 Not Found
+          </h1>
+          <h2 class="mb-6 text-center">
+            Schön, dass du hierhergefunden hast – willkommen auf meinem Weg!
+          </h2>
+          <p class="mb-6 text-center">
+            Konkurrenz?. Gibt’s bei mir nicht. Ich glaube an Zusammenarbeit,
+            Inspiration und gemeinsames Wachsen. Wir sind ein Team!
+          </p>
+        </div>
+        <div id="404Gif">
+          <img
+            src="./src/images/dance-22003_256.gif"
+            alt="Ein Männchen tanzt"
+            class="m-5 w-[150px] h-[150px] object-cover"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- Container for orbs (behind the content) -->
+    <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">
+      <div id="circle-3d"></div>
+    </div>
+    <script src="./src/js/animation.js"></script>
+  </body>
 </html>
