@@ -11,14 +11,25 @@
   <body
     class="relative flex justify-center items-center bg-gray-100 m-0 p-0 min-h-screen"
   >
-    <nav>
-      <!--Theme Toggle -->
-      <section id="themeToggle">
-        <button id="themeToggleBtn">
-          <svg id="lightIcon" style="display: none"></svg>
-        </button>
-      </section>
-    </nav>
+    <!--Theme Toggle -->
+    <div id="themeToggle" class="top-8 right-8 z-50 fixed">
+      <button id="themeToggleBtn">
+        <img
+          src="./src/images/darkmode/bright-sun.svg"
+          alt="Dark Mode"
+          id="darkIcon"
+          class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out cursor-pointer"
+        />
+        <img
+          src="./src/images/darkmode/dark-sun.svg"
+          alt=""
+          id="Light Mode"
+          style="display: none"
+          class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+        />
+      </button>
+    </div>
+
     <main>
       <!-- Container with blur effectt -->
       <section

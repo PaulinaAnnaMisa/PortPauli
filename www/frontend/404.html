@@ -9,21 +9,32 @@
   </head>
 
   <body
-    class="relative flex justify-center items-center bg-gray-200 m-0 p-0 min-h-screen"
+    class="relative flex justify-center items-center bg-gray-100 m-0 p-0 min-h-screen"
   >
-    <nav>
-      <!--Theme Toggle -->
-      <section id="themeToggle">
-        <button id="themeToggleBtn">
-          <svg id="lightIcon" style="display: none"></svg>
-        </button>
-      </section>
-    </nav>
+    <!--Theme Toggle -->
+    <div id="themeToggle" class="top-8 right-8 z-50 fixed">
+      <button id="themeToggleBtn">
+        <img
+          src="./src/images/darkmode/bright-sun.svg"
+          alt="Dark Mode"
+          id="darkIcon"
+          class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out cursor-pointer"
+        />
+        <img
+          src="./src/images/darkmode/dark-sun.svg"
+          alt=""
+          id="Light Mode"
+          style="display: none"
+          class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+        />
+      </button>
+    </div>
+
     <main>
       <!-- Container with blur effectt -->
       <section
         id="welcomeBox"
-        class="z-10 relative flex flex-col items-center bg-white/30 shadow-lg backdrop-blur-md m-20 p-10 rounded-2xl w-[800px] max-w-2xl"
+        class="z-10 relative flex flex-col items-center bg-white/30 shadow-lg backdrop-blur-md p-10 rounded-2xl w-[800px] max-w-2xl"
       >
         <a
           href="index.html"
@@ -38,22 +49,22 @@
           </button>
         </a>
         <div id="404Text" class="w-full">
-          <h1 class="mt-15 mb-2 font-bold text-2xl text-center">
+          <h1 class="mb-10 font-bold text-violet-500 text-3xl text-center">
             404 Not Found
           </h1>
-          <h2 class="mb-6 text-center">
+          <p class="mb-2 text-center">
             Schön, dass du hierhergefunden hast – willkommen auf meinem Weg!
-          </h2>
-          <p class="mb-6 text-center">
-            Konkurrenz? Gibt’s bei mir nicht. Ich glaube an Zusammenarbeit,
+          </p>
+          <p class="text-center">
+            Konkurrenz? Gibt’s bei mir nicht. Ich glaube an Zusammenarbeit,<br />
             Inspiration und gemeinsames Wachsen. Wir sind ein Team!
           </p>
         </div>
         <div id="404Gif">
           <img
-            src="./src/images/dance-22003_256.gif"
+            src="./src/images/404/dance-22003_256.gif"
             alt="Ein Männchen tanzt"
-            class="m-5 w-[150px] h-[150px] object-cover"
+            class="pt-5 w-[150px] h-[150px] object-cover"
           />
         </div>
       </section>
