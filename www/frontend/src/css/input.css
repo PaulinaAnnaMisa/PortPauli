@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
 
 /* lato-300 - latin */
 @font-face {
@@ -85,18 +88,33 @@
 /* paytone-one-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Paytone One';
+  font-family: "Paytone One";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/paytone/paytone-one-v25-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-       url('../fonts/paytone/paytone-one-v25-latin-regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  src: url("../fonts/paytone/paytone-one-v25-latin-regular.woff2")
+      format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/paytone/paytone-one-v25-latin-regular.ttf")
+      format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 h1 {
   font-family: "Paytone One", Arial, sans-serif;
+    font-size: 32px;
 }
 h2 {
   font-family: "Paytone One", Arial, sans-serif;
+  font-size: 28px;
+}
+h3 {
+  font-family: "Paytone One", Arial, sans-serif;
+  font-size: 24px;
+}
+h4 {
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: rgb(29, 29, 29);
 }
 
 * {
@@ -105,6 +123,10 @@ h2 {
 }
 p {
   color: rgb(29, 29, 29);
+}
+strong,
+b {
+  font-weight: 600;
 }
 
 #orbs {

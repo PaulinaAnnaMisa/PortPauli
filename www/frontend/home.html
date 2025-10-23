@@ -12,13 +12,15 @@
   <body
     class="flex md:flex-row flex-col justify-between bg-gray-100 m-0 p-0 w-full"
   >
-  
     <!--Navigation-->
     <aside
       id="navBar"
       class="z-100 fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen min-h-screen"
     >
-    <h1 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h1>
+      <a href="home.html" class="">
+        <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
+      </a>
+
       <!--Navigation -->
       <nav id="nav" class="flex flex-col items-start">
         <ul
@@ -99,13 +101,17 @@
         </button>
       </div>
     </aside>
+    
     <!--Content-->
     <section
       id="portContent"
       class="flex flex-col flex-1 justify-between ml-[200px] w-full"
     >
       <!--Header-->
-      <header id="portHeader" class="flex m-0">
+      <header
+        id="portHeader"
+        class="flex opacity-0 m-0 transition-all translate-y-10 duration-700 ease-out"
+      >
         <img
           src="./src/images/home/header.png"
           alt="Bild von Paulina"
@@ -122,7 +128,7 @@
             class="flex flex-col justify-center gap-5 w-full"
           >
             <p>PAULINA ANNA MISA</p>
-            <h1 class="text-violet-500 text-3xl">
+            <h1 class="text-violet-500">
               Hallo und Willkommen <br />
               bei Port Pauli!
             </h1>
@@ -139,7 +145,7 @@
 
       <!--Main content-->
       <main class="flex flex-col m-0 p-0 min-h-screen">
-        <div id="portAnimationArrow" class="flex justify-start ml-85">
+        <div id="portAnimationArrow" class="flex justify-center mt-10">
           <img
             src="./src/images/home/gif_arrow_violet.gif"
             alt="Animation von Pfeilen nach unten"
@@ -148,36 +154,36 @@
         </div>
         <!--Short about me-->
         <section
-          id="headerAboutBox"
-          class="flex flex-col justify-center items-center bg-white/30 shadow-lg backdrop-blur-md mx-20 mt-20 p-20 rounded-2xl"
+          id="portAboutBox"
+          class="flex flex-col justify-center items-center bg-white/30 opacity-0 shadow-lg backdrop-blur-md m-0 mx-20 mt-20 p-20 rounded-2xl transition-all translate-y-10 duration-700 ease-out"
         >
           <div id="portAbout" class="flex flex-row gap-40">
             <div id="portAboutAnimation">
               <img
-                src="./src/images/home/GIF-orange-coden.gif"
+                src="./src/images/home/GIF-sky-coden.gif"
                 alt="Animation von Codes auf dem PC-Bildschirm."
                 class="w-[300px] h-[300px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
               />
             </div>
 
             <div id="portAboutText" class="flex flex-col">
-              <h1 class="text-violet-500 text-3xl">Wer bin ich?</h1>
+              <h2 class="text-violet-500 text-3xl">Wer bin ich?</h2>
               <p class="mt-5 max-w-2xl">
                 Hi, ich bin Paulina – alias Pauli. <br />
-                27 Jahre alt, mit einem Herzen voller Kreativität und einem
-                Kopf, der gerne Pixel jongliert. Ich bin eine kreative Seele
-                denn ich designe, code, fotografiere und UI/UX ist mir ebenfalls
-                vertraut.
+                27 Jahre alt, mit einem Herzen <b>voller Kreativität</b> und
+                einem Kopf, der gerne Pixel jongliert. Ich bin eine kreative
+                Seele denn ich <b>designe, code, fotografiere und UI/UX</b> ist
+                mir ebenfalls vertraut.
                 <br />
                 Am liebsten kombiniere ich all diese Fähigkeiten gleichzeitig,
-                um digitale Erlebnisse zu erschaffen, die sowohl ästhetisch
-                aussehen als auch funktionieren – meistens begleitet von einer
-                großen Tasse Kaffee, die meine Ideen noch ein kleines bisschen
-                schneller in Gang bringt.
+                um <b>digitale Erlebnisse</b> zu erschaffen, die sowohl
+                ästhetisch aussehen als auch funktionieren – meistens begleitet
+                von einer großen Tasse Kaffee, die meine <b>Ideen</b> noch ein
+                kleines bisschen schneller in Gang bringt.
               </p>
               <a
                 href="about.html"
-                class="flex justify-center items-center mt-5 p-2 border-2 border-orange-500 rounded-2xl w-42 h-10 text-orange-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
+                class="flex justify-center items-center bg-orange-500 mt-5 p-2 rounded-2xl w-42 h-10 text-white scale-100 hover:scale-105 transition duration-200 ease-in-out"
               >
                 Mehr über mich
               </a>
@@ -186,14 +192,17 @@
         </section>
 
         <!--Skills-->
-        <section id="portSkills" class="flex flex-col w-full">
-          <h1 class="mx-40 mt-20 mb-10 text-violet-500 text-3xl text-start">
+        <section
+          id="portSkills"
+          class="flex flex-col justify-center items-center w-full"
+        >
+          <h2 class="mx-40 mt-20 mb-10 text-violet-500 text-3xl text-center">
             Skills
-          </h1>
+          </h2>
 
           <div
             id="skillsBoxes"
-            class="flex md:flex-row flex-col justify-start items-center items-stretch gap-20 mx-40"
+            class="flex md:flex-row flex-col justify-start items-center items-stretch gap-10 mx-40"
           >
             <!--Skills Web-->
             <a
@@ -201,7 +210,7 @@
               class="flex flex-col flex-1 justify-center items-center bg-white/30 shadow-lg hover:shadow-sky-200 backdrop-blur-md px-20 py-10 rounded-2xl scale-100 hover:scale-105 transition duration-200 ease-in-out"
             >
               <div id="skillsBoxDev">
-                <h2 class="font-bold text-sky-500">WEB DEVELOPMENT</h2>
+                <h4 class="font-bold !text-sky-500">Web Development</h4>
 
                 <div
                   id="skillsDev"
@@ -304,7 +313,7 @@
               class="flex flex-col flex-1 justify-center items-center bg-white/30 shadow-lg hover:shadow-orange-200 backdrop-blur-md px-20 py-10 rounded-2xl scale-100 hover:scale-105 transition duration-200 ease-in-out"
             >
               <div id="skillsBoxDesign">
-                <h2 class="font-bold text-orange-500">DESIGN</h2>
+                <h4 class="font-bold !text-orange-500">Design</h4>
 
                 <div
                   id="skillsDesign"
@@ -385,7 +394,7 @@
               class="flex flex-col flex-1 justify-center items-center bg-white/30 shadow-lg hover:shadow-emerald-200 backdrop-blur-md px-20 py-10 rounded-2xl scale-100 hover:scale-105 transition duration-200 ease-in-out"
             >
               <div id="skillsBoxPhoto">
-                <h2 class="font-bold text-emerald-500">FOTOGRAFIE</h2>
+                <h4 class="font-bold !text-emerald-500">Fotografie</h4>
 
                 <div
                   id="skillsPhoto"
@@ -450,23 +459,49 @@
               </div>
             </a>
           </div>
+          <a
+            href="about.html#cv"
+            class="flex justify-center bg-orange-500 mt-10 p-2 rounded-2xl w-48 h-10 text-white text-center scale-100 hover:scale-105 transition duration-200 ease-in-out"
+          >
+            Zu meinem Lebenslauf
+          </a>
         </section>
+        <!--Logo Banner-->
+        <div id="banner" class="mt-10 p-10 overflow-hidden">
+          <div
+            id="bannerLogos"
+            class="flex items-center gap-10 overflow-hidden"
+          >
+            <p class="text-gray-100 text-xl">Nurofen</p>
+            <p class="text-gray-100 text-xl">Dobendan</p>
+            <p class="text-gray-100 text-xl">Gaviscon</p>
+            <p class="text-gray-100 text-xl">Ipsen</p>
+            <p class="text-gray-100 text-xl">Indivior</p>
+            <p class="text-gray-100 text-xl">Pur:dental</p>
+            <p class="text-gray-100 text-xl">Homedent</p>
+            <p class="text-gray-100 text-xl">Celltrion</p>
+            <p class="text-gray-100 text-xl">FromToLogistic</p>
+            <p class="text-gray-100 text-xl">Real</p>
+            <p class="text-gray-100 text-xl">Lidl</p>
+            <p class="text-gray-100 text-xl">Rewe</p>
+          </div>
+        </div>
 
         <!--Projects-->
         <section
           id="portProjectsBox"
-          class="flex flex-col bg-white/30 shadow-lg backdrop-blur-md mt-20 p-20"
+          class="flex flex-col bg-white/30 shadow-lg backdrop-blur-md mt-10 p-20"
         >
           <!--Web Development-->
-          <h1
+          <h2
             id="projectsWebHeadline"
             class="justify-center mb-10 ml-20 text-violet-500 text-3xl text-center"
           >
             Meine Projekte
-          </h1>
-          <h1 class="justify-center ml-20 text-sky-500 text-xl text-center">
+          </h2>
+          <h2 class="justify-center ml-20 text-sky-500 text-xl text-center">
             Fullstack Web Development
-          </h1>
+          </h2>
           <p class="mt-5 ml-20 text-center">
             „Für mich bedeutet Webentwicklung, Kreativität und Technik zu
             verbinden. <br />
@@ -476,7 +511,7 @@
 
           <div
             id="portProjectsWeb"
-            class="flex flex-row justify-center items-center gap-20 my-10 ml-20"
+            class="flex flex-row justify-center items-center gap-20 opacity-0 my-10 ml-20 transition-all translate-y-10 duration-700 ease-out"
           >
             <div id="prNetf" class="flex flex-col">
               <img
@@ -579,12 +614,12 @@
           </div>
 
           <!--Design-->
-          <h1
+          <h2
             id="projectsDesignHeadline"
-            class="justify-center mt-20 ml-20 text-orange-500 text-xl text-center"
+            class="justify-center mt-10 ml-20 text-orange-500 text-xl text-center"
           >
             Design
-          </h1>
+          </h2>
           <p class="mt-5 ml-20 text-center">
             „Für mich bedeutet Design, Leidenschaft und Kreativität zu vereinen.
             Jedes Projekt ist eine neue Möglichkeit,
@@ -593,7 +628,7 @@
           </p>
           <div
             id="portProjectsDesign"
-            class="flex flex-row justify-center items-center gap-20 my-10 ml-20"
+            class="flex flex-row justify-center items-center gap-20 opacity-0 my-10 ml-20 transition-all translate-y-10 duration-700 ease-out"
           >
             <div
               id="prLogo"
@@ -666,12 +701,12 @@
             </div>
           </div>
           <!--Photography-->
-          <h1
+          <h2
             id="projectsPhotographyHeadline"
-            class="justify-center mt-20 ml-20 text-emerald-500 text-xl text-center"
+            class="justify-center mt-10 ml-20 text-emerald-500 text-xl text-center"
           >
             Fotografie
-          </h1>
+          </h2>
           <p class="mt-5 ml-20 text-center">
             „Für mich bedeutet Design, Leidenschaft und Kreativität zu vereinen.
             Jedes Projekt ist eine neue Möglichkeit,
@@ -679,8 +714,8 @@
             Strukturen zu übersetzen, die wirken und bleiben.“
           </p>
           <div
-            id="portProjectsPhotography"
-            class="flex flex-row justify-center items-center gap-20 my-10 ml-20"
+            id="portProjectsPhoto"
+            class="flex flex-row justify-center items-center gap-20 opacity-0 my-10 ml-20 transition-all translate-y-10 duration-700 ease-out"
           >
             <div
               id="prPhoto2"
@@ -766,36 +801,29 @@
                 </li>
               </ul>
             </div>
-
-
           </div>
         </section>
-
-        <!-- Container for orbs (behind the content) -->
-        <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">
-          <div id="circle-3d"></div>
-        </div>
       </main>
 
       <!--Footer-->
-      <footer id="portFooter" class="bg-gray-50 m-h-[1500px] mt-40 w-full">
+      <footer id="portFooter" class="bg-gray-50 m-h-[1500px] w-full">
         <div
           id="footerLinks"
           class="flex flex-row justify-center gap-20 mx-20 py-10"
         >
           <a
             href="contact.html"
-            class="scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            class="hover:text-violet-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
             >Kontakt</a
           >
           <a
             href="impressum.html"
-            class="scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            class="hover:text-violet-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
             >Impressum</a
           >
           <a
             href="impressum.html"
-            class="scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            class="hover:text-violet-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
             >Datenschutzerklärung</a
           >
         </div>
@@ -803,7 +831,15 @@
       </footer>
     </section>
 
+    <!-- Container for orbs (behind the content) -->
+    <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">
+      <div id="circle-3d"></div>
+    </div>
+
+    <!--JavaScripts-->
     <script src="./src/js/animation.js"></script>
+    <script src="./src/js/logos.js"></script>
     <script src="./src/js/darkmode.js"></script>
+    <script src="./src/js/scrollanimation.js"></script>
   </body>
 </html>

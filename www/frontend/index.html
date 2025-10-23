@@ -12,24 +12,24 @@
   <body
     class="relative flex justify-center items-center bg-gray-100 m-0 p-0 min-h-screen"
   >
-      <!--Theme Toggle -->
-      <div id="themeToggle" class="top-8 right-8 z-50 fixed">
-        <button id="themeToggleBtn">
-          <img
-            src="./src/images/darkmode/bright-sun.svg"
-            alt="Dark Mode"
-            id="darkIcon"
-            class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out cursor-pointer"
-          />
-          <img
-            src="./src/images/darkmode/dark-sun.svg"
-            alt=""
-            id="Light Mode"
-            style="display: none"
-            class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
-          />
-        </button>
-      </div>
+    <!--Theme Toggle -->
+    <div id="themeToggle" class="top-8 right-8 z-50 fixed">
+      <button id="themeToggleBtn">
+        <img
+          src="./src/images/darkmode/bright-sun.svg"
+          alt="Dark Mode"
+          id="darkIcon"
+          class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out cursor-pointer"
+        />
+        <img
+          src="./src/images/darkmode/dark-sun.svg"
+          alt=""
+          id="Light Mode"
+          style="display: none"
+          class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+        />
+      </button>
+    </div>
 
     <main>
       <!-- Container with blur effectt -->
@@ -37,20 +37,20 @@
         id="welcomeBox"
         class="z-10 relative flex flex-col justify-center items-center bg-white/30 shadow-lg backdrop-blur-md m-4 p-10 rounded-2xl w-full max-w-2xl"
       >
-        <h1 class="pb-5 text-orange-500">Design x Development</h1>
+        <h4 class="pb-5 !text-orange-500">Design x Development</h4>
         <img
           src="./src/images/start/Paulina_Anna_Misa_840x840px.png"
           alt="Bild von Pauli"
           class="mb-4 w-[150px] h-[150px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
         />
-        <hr class="border-gray-400 border-t-4" />
 
-        <h1 class="mb-2 font-bold text-violet-500 text-2xl">
+        <h3 class="mb-2 font-bold text-violet-500 text-2xl">
           Willkommen bei Port Pauli!
-        </h1>
-        <h3 class="mb-6 text-center">
-          Schön, dass Sie da sind! Bitte wählen Sie vor dem Fortfahren aus, <br>in welcher Rolle Sie  meine Seite besuchen:
         </h3>
+        <p class="mb-6 text-center">
+          Schön, dass Sie da sind! Bitte wählen Sie vor dem Fortfahren aus,
+          <br />in welcher Rolle Sie meine Seite besuchen:
+        </p>
 
         <div id="welcomeBtn" class="flex flex-row justify-center gap-5 w-full">
           <a
@@ -73,14 +73,16 @@
           </a>
         </div>
       </section>
-
-      <!-- Container for orbs (behind the content) -->
-      <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">
-        <div id="circle-3d"></div>
-      </div>
     </main>
 
+    <!-- Container for orbs (behind the content) -->
+    <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">
+      <div id="circle-3d"></div>
+    </div>
+
+    <!--JavaScripts-->
     <script src="./src/js/animation.js"></script>
     <script src="./src/js/darkmode.js"></script>
+    <script src="./src/js/scrollanimation.js"></script>
   </body>
 </html>

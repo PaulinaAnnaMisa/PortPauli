@@ -49,11 +49,20 @@
           </button>
         </a>
 
-        <img
-          src="./src/images/login.svg"
-          alt="Icon Woman with Laptop"
-          class="mb-10 w-[150px] h-[150px] object-cover"
-        />
+        <div id="loginVideo" class="mb-10">
+          <video
+            width="150"
+            height="150"
+            autoplay
+            loop
+            muted
+            playsinline
+            class="shadow-lg rounded-full"
+          >
+            <source src="./src/videos/bubbles3.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
         <!-- LogIn Form -->
         <form
@@ -67,19 +76,19 @@
             id="username"
             name="username"
             placeholder="Benutzername"
-            class="bg-white px-4 py-2 border-2 border-violet-600 rounded-full focus:outline-none focus:ring-2 focus:ring-violet-500 text-gray-900 placeholder-gray-500"
+            class="bg-white p-5 px-4 py-2 border-0.75 border-gray-300 rounded-md focus:outline-none focus:ring-0.75 focus:ring-violet-500 text-gray-900 placeholder-gray-500"
           />
           <input
             type="password"
             id="loginPwd"
             name="password"
             placeholder="Passwort"
-            class="bg-white px-4 py-2 border-2 border-violet-600 rounded-full focus:outline-none focus:ring-2 focus:ring-violet-500 text-gray-900 placeholder-gray-500"
+            class="bg-white p-5 px-4 py-2 border-0.75 border-gray-300 rounded-md focus:outline-none focus:ring-0.75 focus:ring-violet-500 text-gray-900 placeholder-gray-500"
           />
           <input
             type="submit"
             value="Anmelden"
-            class="mx-auto p-2 border-2 border-orange-500 rounded-2xl w-32 text-orange-500 scale-100 hover:scale-105 transition duration-200 ease-in-out cursor-pointer"
+            class="bg-orange-500 mx-auto p-2 rounded-2xl w-32 text-white scale-100 hover:scale-105 transition duration-200 ease-in-out cursor-pointer"
           />
         </form>
       </section>
@@ -89,6 +98,10 @@
     <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">
       <div id="circle-3d"></div>
     </div>
+
+    <!--JavaScripts-->
     <script src="./src/js/animation.js"></script>
+    <script src="./src/js/darkmode.js"></script>
+    <script src="./src/js/scrollanimation.js"></script>
   </body>
 </html>
