@@ -41,8 +41,10 @@
     --color-gray-900: #111827;
     --color-white: #ffffff;
     --spacing: 0.25rem;
+    --container-lg: 32rem;
     --container-xl: 36rem;
     --container-2xl: 42rem;
+    --container-3xl: 48rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
@@ -378,6 +380,9 @@
   .ml-20 {
     margin-left: calc(var(--spacing) * 20);
   }
+  .ml-200 {
+    margin-left: calc(var(--spacing) * 200);
+  }
   .ml-\[200px\] {
     margin-left: 200px;
   }
@@ -438,11 +443,23 @@
   .max-h-10 {
     max-height: calc(var(--spacing) * 10);
   }
+  .max-h-screen {
+    max-height: 100vh;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
   .w-0 {
     width: calc(var(--spacing) * 0);
+  }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
+  }
+  .w-2\/2 {
+    width: calc(2/2 * 100%);
+  }
+  .w-2\/3 {
+    width: calc(2/3 * 100%);
   }
   .w-3 {
     width: calc(var(--spacing) * 3);
@@ -516,14 +533,47 @@
   .max-w-2xl {
     max-width: var(--container-2xl);
   }
+  .max-w-3xl {
+    max-width: var(--container-3xl);
+  }
+  .max-w-12 {
+    max-width: calc(var(--spacing) * 12);
+  }
+  .max-w-24 {
+    max-width: calc(var(--spacing) * 24);
+  }
+  .max-w-28 {
+    max-width: calc(var(--spacing) * 28);
+  }
+  .max-w-30 {
+    max-width: calc(var(--spacing) * 30);
+  }
+  .max-w-32 {
+    max-width: calc(var(--spacing) * 32);
+  }
+  .max-w-48 {
+    max-width: calc(var(--spacing) * 48);
+  }
+  .max-w-50 {
+    max-width: calc(var(--spacing) * 50);
+  }
   .max-w-60 {
     max-width: calc(var(--spacing) * 60);
   }
   .max-w-80 {
     max-width: calc(var(--spacing) * 80);
   }
+  .max-w-500 {
+    max-width: calc(var(--spacing) * 500);
+  }
   .max-w-full {
     max-width: 100%;
+  }
+  .max-w-lg {
+    max-width: var(--container-lg);
+  }
+  .max-w-prose {
+    max-width: 65ch;
   }
   .max-w-xl {
     max-width: var(--container-xl);
@@ -1016,6 +1066,9 @@
   }
   .text-sky-500 {
     color: var(--color-sky-500);
+  }
+  .text-violet-50 {
+    color: var(--color-violet-50);
   }
   .text-violet-400 {
     color: var(--color-violet-400);

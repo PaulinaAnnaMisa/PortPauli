@@ -1,24 +1,20 @@
-
-   <!DOCTYPE html>
-<html lang="de" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="welcome" content="Portfolio Willkommensseite" />
+    <meta name="contact" content="contact" />
     <link href="./src/css/output.css" rel="stylesheet" />
-
-    <title>Portfolio</title>
+    <title>Kontakt</title>
   </head>
 
-  <body
-    class="flex flex-row md:flex-col justify-between bg-gray-100 m-0 p-0 w-full"
-  >
+  <body class="flex flex-col bg-gray-100">
     <!--Navigation-->
     <aside
       id="navBar"
-      class="z-100 fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen min-h-screen"
+      class="z-50 fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen"
     >
-      <a href="home.html" class="">
+      <a href="home.html">
         <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
       </a>
 
@@ -48,7 +44,7 @@
               alt="Icon Home"
               class="justify-center w-[20px] h-[20px]"
             />
-            <a href="#skillsBoxes">Skills</a>
+            <a href="home.html#skillsBoxes">Skills</a>
           </li>
           <li
             class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out"
@@ -58,7 +54,7 @@
               alt="Icon Home"
               class="w-[20px] h-[20px]"
             />
-            <a href="#projectsWebHeadline">Projekte</a>
+            <a href="home.html#projectsWebHeadline">Projekte</a>
           </li>
           <li
             class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out"
@@ -101,111 +97,71 @@
           />
         </button>
       </div>
-      
     </aside>
 
     <!--Content-->
-    <main class="justify-center">
-      <!-- Container with blur effectt -->
+
+    <main class="flex justify-center items-center ml-[200px] min-h-screen">
+
+      <!--Privacy Policy-->
       <section
-        id="welcomeBox"
-        class="z-10 relative flex flex-col items-center bg-white/30 shadow-lg backdrop-blur-md m-20 p-10 rounded-2xl w-[500px] max-w-2xl"
+        id="pp"
+        class="flex flex-col justify-center gap-5 bg-white/30 shadow-lg backdrop-blur-md mx-auto my-20 p-10 rounded-2xl"
+      >
+
+        <h1 class="text-violet-500">Impressum</h1>
+
+        <p>
+          Paulina Anna Misa<br />
+          Richthofenplatz, 3<br />
+          64560 Riedstadt
+        </p>
+
+        <h2 class="text-violet-500">Kontakt</h2>
+        <p>
+          Telefon: +49 (0) 1796119138<br />
+          E-Mail: paulinaanna.misa.dev@gmail.com
+        </p>
+        <hr class="border-0.75 border-solid">
+
+        <p>
+          Quelle:
+          <a href="https://www.e-recht24.de/impressum-generator.html"
+            >https://www.e-recht24.de/impressum-generator.html</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <!--Footer-->
+    <footer id="portFooter" class="bg-gray-50 m-h-[150px] ml-[200px]">
+      <div
+        id="footerLinks"
+        class="flex flex-row justify-center gap-20 py-10"
       >
         <a
-          href="index.html"
-          class="top-4 left-4 absolute hover:scale-110 transition duration-200 ease-in-out"
+          href="contact.html"
+          class="hover:text-violet-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
+          >Kontakt</a
         >
-          <button id="back">
-            <img
-              src="./src/images/icon_arrow_back_violett.svg"
-              alt="icon back"
-              class="flex content-start m-2 w-[50px] h-[50px] object-cover cursor-pointer"
-            />
-          </button>
-        </a>
-
-        <div id="loginVideo" class="mb-10">
-          <video
-            width="150"
-            height="150"
-            autoplay
-            loop
-            muted
-            playsinline
-            class="shadow-lg rounded-full"
-          >
-            <source src="./src/videos/bubbles3.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <!-- LogIn Form -->
-        <form
-          action="./login.php"
-          method="POST"
-          id="formLogin"
-          class="flex flex-col justify-center gap-5 w-full"
+        <a
+          href="impressum.html"
+          class="hover:text-violet-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
+          >Impressum</a
         >
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Benutzername"
-            class="bg-white px-4 py-2 border-2 border-violet-600 rounded-full focus:outline-none focus:ring-2 focus:ring-violet-500 text-gray-900 placeholder-gray-500"
-          />
-          <input
-            type="password"
-            id="loginPwd"
-            name="password"
-            placeholder="Passwort"
-            class="bg-white px-4 py-2 border-2 border-violet-600 rounded-full focus:outline-none focus:ring-2 focus:ring-violet-500 text-gray-900 placeholder-gray-500"
-          />
-          <input
-            type="submit"
-            value="Anmelden"
-            class="mx-auto p-2 border-2 border-orange-500 rounded-2xl w-32 text-orange-500 scale-100 hover:scale-105 transition duration-200 ease-in-out cursor-pointer"
-          />
-        </form>
-      </section>
+      </div>
+      <p class="mb-10 text-center">© 2025 Paulina Anna Misa</p>
+    </footer>
 
-
-
-      <!--Footer-->
-      <footer id="portFooter" class="bg-gray-50 m-h-[1500px] mt-40 w-full">
-        <div
-          id="footerLinks"
-          class="flex flex-row justify-center gap-20 mx-20 py-10"
-        >
-          <a
-            href="contact.html"
-            class="scale-100 hover:scale-105 transition duration-200 ease-in-out"
-            >Kontakt</a
-          >
-          <a
-            href="impressum.html"
-            class="scale-100 hover:scale-105 transition duration-200 ease-in-out"
-            >Impressum</a
-          >
-          <a
-            href="impressum.html"
-            class="scale-100 hover:scale-105 transition duration-200 ease-in-out"
-            >Datenschutzerklärung</a
-          >
-        </div>
-        <p class="mb-10 text-center">© 2025 Paulina Anna Misa</p>
-      </footer>
-    </section>
-     </main>
-     <!-- Container for orbs (behind the content) -->
-   <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">
-    <div id="circle-3d"></div>
-     </div>
+    <!-- Container for orbs (behind the content) -->
+    <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">
+      <div id="circle-3d"></div>
+    </div>
 
     <!--JavaScripts-->
     <script src="./src/js/animation.js"></script>
-    <script src="./src/js/darkmode.js"></script>
+    <!--<script src="./src/js/darkmode.js"></script>-->
     <script src="./src/js/scrollanimation.js"></script>
+    <script src="./src/js/contact.js"></script>
   </body>
 </html>
-
-
