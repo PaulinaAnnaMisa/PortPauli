@@ -8,15 +8,13 @@
     <title>Kontakt</title>
   </head>
 
-  <body
-    class="flex flex-col bg-gray-100"
-  >
+  <body class="flex flex-col bg-gray-100">
     <!--Navigation-->
     <aside
       id="navBar"
       class="fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen"
     >
-      <a href="home.html" >
+      <a href="home.html">
         <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
       </a>
 
@@ -101,21 +99,24 @@
       </div>
     </aside>
     <!--Content-->
-    <section id="contactContent"
-      class="flex flex-col flex-1 justify-between ml-[200px]">
-
+    <section
+      id="contactContent"
+      class="flex flex-col flex-1 justify-between ml-[200px]"
+    >
       <!-- Main contant -->
-      <main class="flex flex-row justify-center items-center gap-50 min-h-screen">
-
+      <main
+        class="flex flex-row justify-center items-center gap-50 min-h-screen"
+      >
         <!-- Content left -->
         <section
           id="contactLeft"
-          class="relative flex flex-col justify-start items-start">
+          class="relative flex flex-col justify-start items-start"
+        >
           <h1 class="text-violet-500">
             Alles beginnt mit <br />einem Gespräch.
           </h1>
           <p class="mt-5 max-w-xl">
-            Du hast ein Projekt, eine Idee oder willst einfach Hallo sagen?<br>
+            Du hast ein Projekt, eine Idee oder willst einfach Hallo sagen?<br />
             Schreib mir – ich freue mich, von dir zu hören!
           </p>
           <hr class="mt-5 border-0.75 border-solid xl:w-75" />
@@ -179,7 +180,7 @@
 
           <!-- LogIn Form -->
           <form
-            action="/contact.php"
+            action="contact.php"
             method="POST"
             id="formContact"
             class="flex flex-col justify-start gap-5 mt-10"
@@ -199,109 +200,120 @@
                     </p>
                   </div>
                   <div class="m-7">
-                    <form
-                      action=" "
-                      method="POST"
-                      id="form"
-                    >
-                      <div class="flex space-x-4 mb-6">
-                        <div class="w-full md:w-1/2">
-                          <label
-                            for="fname"
-                            class="block mb-2 text-gray-600 dark:text-gray-400 text-sm"
-                            >Vorname*</label
-                          >
-                          <input
-                            type="text"
-                            name="name"
-                            id="first_name"
-                            placeholder="John"
-                            required
-                            class="dark:bg-gray-700 px-3 py-2 border border-gray-300 focus:border-violet-500 dark:border-gray-600 dark:focus:border-gray-500 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 dark:focus:ring-gray-900 w-full dark:text-white placeholder-gray-300 dark:placeholder-gray-500"
-                          />
-                        </div>
-                        <div class="w-full md:w-1/2">
-                          <label
-                            for="lname"
-                            class="block mb-2 text-gray-600 dark:text-gray-400 text-sm"
-                            >Nachname*</label
-                          >
-                          <input
-                            type="text"
-                            name="last_name"
-                            id="lname"
-                            placeholder="Doe"
-                            required
-                            class="dark:bg-gray-700 px-3 py-2 border border-gray-300 focus:border-violet-500 dark:border-gray-600 dark:focus:border-gray-500 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 dark:focus:ring-gray-900 w-full dark:text-white placeholder-gray-300 dark:placeholder-gray-500"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="flex space-x-4 mb-6">
-                        <div class="w-full md:w-1/2">
-                          <label
-                            for="email"
-                            class="block mb-2 text-gray-600 dark:text-gray-400 text-sm"
-                            >E-Mail*</label
-                          >
-                          <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="name@company.com"
-                            required
-                            class="dark:bg-gray-700 px-3 py-2 border border-gray-300 focus:border-violet-500 dark:border-gray-600 dark:focus:border-gray-500 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 dark:focus:ring-gray-900 w-full dark:text-white placeholder-gray-300 dark:placeholder-gray-500"
-                          />
-                        </div>
-
-                        <div class="w-full md:w-1/2">
-                          <label
-                            for="tel"
-                            class="block mb-2 text-gray-600 dark:text-gray-400 text-sm"
-                            >Telefonnummer</label
-                          >
-                          <input
-                            type="text"
-                            name="tel"
-                            id="tel"
-                            placeholder="+49 123 456789"
-                            class="dark:bg-gray-700 px-3 py-2 border border-gray-300 focus:border-violet-500 dark:border-gray-600 dark:focus:border-gray-500 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 dark:focus:ring-gray-900 w-full dark:text-white placeholder-gray-300 dark:placeholder-gray-500"
-                          />
-                        </div>
-                      </div>
-                      <div class="mb-6">
+                    <div class="flex space-x-4 mb-6">
+                      <div class="w-full md:w-1/2">
                         <label
-                          for="message"
+                          for="fname"
                           class="block mb-2 text-gray-600 dark:text-gray-400 text-sm"
-                          >Ihre Nachricht:*</label
+                          >Vorname*</label
                         >
-
-                        <textarea
-                          rows="5"
-                          name="message"
-                          id="message"
-                          placeholder="Ihre Nachricht"
-                          class="dark:bg-gray-700 px-3 py-2 border border-gray-300 focus:border-violet-500 dark:border-gray-600 dark:focus:border-gray-500 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 dark:focus:ring-gray-900 w-full dark:text-white placeholder-gray-300 dark:placeholder-gray-500"
+                        <input
+                          type="text"
+                          name="name"
+                          id="first_name"
+                          placeholder="John"
                           required
-                        ></textarea>
+                          class="dark:bg-gray-700 px-3 py-2 border border-gray-300 focus:border-violet-500 dark:border-gray-600 dark:focus:border-gray-500 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 dark:focus:ring-gray-900 w-full dark:text-white placeholder-gray-300 dark:placeholder-gray-500"
+                        />
                       </div>
-                      <div id="privacyPolicy" class="gap-2 mb-5">
-                        <input id="checkbox" required="" type="checkbox" class="max-w-3xl">Ich habe die <a href="privacypolicy.html" class="text-violet-500">Datenschutzerklärung</a> gelesen und <br> stimme der Verarbeitung meiner Daten wie dort beschrieben zu.
+                      <div class="w-full md:w-1/2">
+                        <label
+                          for="lname"
+                          class="block mb-2 text-gray-600 dark:text-gray-400 text-sm"
+                          >Nachname*</label
+                        >
+                        <input
+                          type="text"
+                          name="last_name"
+                          id="lname"
+                          placeholder="Doe"
+                          required
+                          class="dark:bg-gray-700 px-3 py-2 border border-gray-300 focus:border-violet-500 dark:border-gray-600 dark:focus:border-gray-500 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 dark:focus:ring-gray-900 w-full dark:text-white placeholder-gray-300 dark:placeholder-gray-500"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex space-x-4 mb-6">
+                      <div class="w-full md:w-1/2">
+                        <label
+                          for="email"
+                          class="block mb-2 text-gray-600 dark:text-gray-400 text-sm"
+                          >E-Mail*</label
+                        >
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          placeholder="name@company.com"
+                          required
+                          class="dark:bg-gray-700 px-3 py-2 border border-gray-300 focus:border-violet-500 dark:border-gray-600 dark:focus:border-gray-500 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 dark:focus:ring-gray-900 w-full dark:text-white placeholder-gray-300 dark:placeholder-gray-500"
+                        />
                       </div>
 
-                      <div class="mb-6">
-                        <button
-                          type="submit"
-                          class="bg-orange-500 focus:bg-orange-600 px-3 py-4 rounded-2xl focus:outline-none w-full text-orange-500 text-white scale-100 hover:scale-105 transition duration-200 ease-in-out cursor-pointer"
+                      <div class="w-full md:w-1/2">
+                        <label
+                          for="tel"
+                          class="block mb-2 text-gray-600 dark:text-gray-400 text-sm"
+                          >Telefonnummer</label
                         >
-                          Senden
-                        </button>
+                        <input
+                          type="text"
+                          name="tel"
+                          id="tel"
+                          placeholder="+49 123 456789"
+                          class="dark:bg-gray-700 px-3 py-2 border border-gray-300 focus:border-violet-500 dark:border-gray-600 dark:focus:border-gray-500 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 dark:focus:ring-gray-900 w-full dark:text-white placeholder-gray-300 dark:placeholder-gray-500"
+                        />
                       </div>
-                      <p
-                        class="text-orange-500 text-base text-center"
-                        id="result"
-                      ></p>
-                    </form>
+                    </div>
+                    <div class="mb-6">
+                      <label
+                        for="message"
+                        class="block mb-2 text-gray-600 dark:text-gray-400 text-sm"
+                        >Ihre Nachricht:*</label
+                      >
+
+                      <textarea
+                        rows="5"
+                        name="message"
+                        id="message"
+                        placeholder="Ihre Nachricht"
+                        class="dark:bg-gray-700 px-3 py-2 border border-gray-300 focus:border-violet-500 dark:border-gray-600 dark:focus:border-gray-500 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 dark:focus:ring-gray-900 w-full dark:text-white placeholder-gray-300 dark:placeholder-gray-500"
+                        required
+                      ></textarea>
+                    </div>
+                    <div
+                      id="privacyPolicy"
+                      class="flex justify-start items-start gap-5 mb-5"
+                    >
+                      <input
+                        id="checkbox"
+                        required
+                        type="checkbox"
+                        class="mt-1"
+                      />
+                      <span>
+                        Ich habe die
+                        <a href="privacypolicy.html" class="text-violet-500">
+                          Datenschutzerklärung</a
+                        >
+                        gelesen und <br />
+                        stimme der Verarbeitung meiner Daten wie dort
+                        beschrieben zu.
+                      </span>
+                    </div>
+
+                    <div class="mb-6">
+                      <button
+                        type="submit"
+                        class="bg-orange-500 focus:bg-orange-600 px-3 py-4 rounded-2xl focus:outline-none w-full text-orange-500 text-white scale-100 hover:scale-105 transition duration-200 ease-in-out cursor-pointer"
+                      >
+                        Senden
+                      </button>
+                    </div>
+                    <p
+                      class="text-orange-500 text-base text-center"
+                      id="result"
+                    ></p>
                   </div>
                 </div>
               </div>
@@ -313,10 +325,7 @@
 
     <!--Footer-->
     <footer id="portFooter" class="bg-gray-50 m-h-[150px] ml-[200px]">
-      <div
-        id="footerLinks"
-        class="flex flex-row justify-center gap-20 py-10"
-      >
+      <div id="footerLinks" class="flex flex-row justify-center gap-20 py-10">
         <a
           href="contact.html"
           class="hover:text-violet-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
@@ -330,7 +339,6 @@
       </div>
       <p class="mb-10 text-center">© 2025 Paulina Anna Misa</p>
     </footer>
-    </section>
 
     <!-- Container for orbs (behind the content) -->
     <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">

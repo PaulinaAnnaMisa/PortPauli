@@ -10,29 +10,18 @@ form.addEventListener("submit", function (e) {
     object[key] = value;
   });
 
-  var json = JSON.stringify(object);
-  result.innerHTML = "Please wait...";
+  result.style.display = "block";
+  result.innerHTML = "Bitte warten...";
 
-  fetch("https://api.web3forms.com/submit", {
+  fetch("contact.php", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: json,
+    body: new FormData(form),
   })
     .then(async (response) => {
-      let json = await response.json();
-      if (response.status == 200) {
-        result.innerHTML = json.message;
-        result.classList.remove("text-gray-500");
-        result.classList.add("text-green-500");
-      } else {
-        console.log(response);
-        result.innerHTML = json.message;
-        result.classList.remove("text-gray-500");
-        result.classList.add("text-red-500");
-      }
+      let text = await response.text();
+      result.innerHTML = text;
+      result.classList.remove("text-gray-500");
+      result.classList.add("text-green-500");
     })
     .catch((error) => {
       console.log(error);

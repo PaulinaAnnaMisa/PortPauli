@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = "Neue Nachricht von deiner Portfolio-Seite";
 
     // Message
-    $body = "Name: $name $last_name\n";
+    $body = "Name: $vorname $nachname\n";
     $body .= "E-Mail: $email\n\n";
     $body .= "Tel.: $tel\n\n";
     $body .= "Nachricht:\n$message\n";
