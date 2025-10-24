@@ -1,36 +1,39 @@
+// Variablen
 let form = document.querySelector("#formContact");
 let result = document.querySelector("#result");
 
-form.addEventListener("submit", function (e) {
-  let formData = new FormData(form);
-
-  e.preventDefault();
-  let object = {};
-  formData.forEach((value, key) => {
-    object[key] = value;
-  });
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // Standardverhalten stoppen
 
   result.style.display = "block";
   result.innerHTML = "Bitte warten...";
 
-  fetch("contact.php", {
+  console.log("Formular wird gesendet...");
+
+  //fetch
+  fetch("../backend/contact.php", {
     method: "POST",
     body: new FormData(form),
   })
-    .then(async (response) => {
-      let text = await response.text();
+    .then((response) => {
+      if (response.ok) {
+      return response.text(); }
+    })
+    .then((text) => {
+      console.log("Antwort von API:", text);
       result.innerHTML = text;
-      result.classList.remove("text-gray-500");
-      result.classList.add("text-green-500");
+      result.classList.add("!text-emerald-500");
     })
     .catch((error) => {
-      console.log(error);
-      result.innerHTML = "Something went wrong!";
+      console.error("Fehler:", error);
+      result.innerHTML = "Etwas ist schiefgelaufen!";
+      result.classList.add("!text-red-500");
     })
-    .then(function () {
+    .then(() => { // 
       form.reset();
       setTimeout(() => {
-        result.style.display = "none";
+        result.style.display = "";
       }, 5000);
     });
 });
+

@@ -165,25 +165,14 @@
           id="contactRight"
           class="flex flex-col justify-center gap-5 bg-white/30 shadow-lg backdrop-blur-md rounded-2xl"
         >
-          <a
-            href="index.html"
-            class="top-4 left-4 absolute hover:scale-110 transition duration-200 ease-in-out"
-          >
-            <button id="back">
-              <img
-                src="./src/images/icon_arrow_back_violett.svg"
-                alt="icon back"
-                class="flex content-start w-[50px] h-[50px] object-cover cursor-pointer"
-              />
-            </button>
-          </a>
+
 
           <!-- LogIn Form -->
           <form
-            action="contact.php"
+            action="./src/js/contact.js"
             method="POST"
             id="formContact"
-            class="flex flex-col justify-start gap-5 mt-10"
+            class="flex flex-col justify-start gap-5"
           >
             <div class="flex items-center">
               <div class="container">
@@ -296,8 +285,7 @@
                         <a href="privacypolicy.html" class="text-violet-500">
                           Datenschutzerklärung</a
                         >
-                        gelesen und <br />
-                        stimme der Verarbeitung meiner Daten wie dort
+                        gelesen und stimme <br />der Verarbeitung meiner Daten wie dort
                         beschrieben zu.
                       </span>
                     </div>
@@ -311,7 +299,7 @@
                       </button>
                     </div>
                     <p
-                      class="text-orange-500 text-base text-center"
+                      class="text-base text-center"
                       id="result"
                     ></p>
                   </div>

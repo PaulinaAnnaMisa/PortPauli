@@ -1,6 +1,7 @@
 # Environment files
 .env
 .env.*      # z.B. .env.local, .env.production
+vendor/
 
 # Docker / database data
 /data/
