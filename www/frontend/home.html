@@ -162,7 +162,7 @@
               <img
                 src="./src/images/home/GIF-sky-coden.gif"
                 alt="Animation von Codes auf dem PC-Bildschirm."
-                class="w-[300px] h-[300px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+                class="w-[400px] h-[400px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
               />
             </div>
 
@@ -466,364 +466,205 @@
             Zu meinem Lebenslauf
           </a>
         </section>
-        <!--Logo Banner-->
-        <div id="banner" class="mt-10 p-10 overflow-hidden">
-          <div
-            id="bannerLogos"
-            class="flex items-center gap-10 overflow-hidden"
-          >
-            <p class="text-gray-100 text-xl">Nurofen</p>
-            <p class="text-gray-100 text-xl">Dobendan</p>
-            <p class="text-gray-100 text-xl">Gaviscon</p>
-            <p class="text-gray-100 text-xl">Ipsen</p>
-            <p class="text-gray-100 text-xl">Indivior</p>
-            <p class="text-gray-100 text-xl">Pur:dental</p>
-            <p class="text-gray-100 text-xl">Homedent</p>
-            <p class="text-gray-100 text-xl">Celltrion</p>
-            <p class="text-gray-100 text-xl">FromToLogistic</p>
-            <p class="text-gray-100 text-xl">Real</p>
-            <p class="text-gray-100 text-xl">Lidl</p>
-            <p class="text-gray-100 text-xl">Rewe</p>
-          </div>
-        </div>
 
         <!--Projects-->
         <section
           id="portProjectsBox"
-          class="flex flex-col bg-white/30 shadow-lg backdrop-blur-md mt-10 p-20"
+          class="flex flex-col justify-center items-center bg-white/30 shadow-lg backdrop-blur-md mt-10 p-20"
         >
-          <!--Web Development-->
-          <h2
-            id="projectsWebHeadline"
-            class="justify-center mb-10 ml-20 text-violet-500 text-3xl text-center"
-          >
+          <h2 class="mb-10 text-violet-500 text-3xl text-center">
             Meine Projekte
           </h2>
-          <h2 class="justify-center ml-20 text-sky-500 text-xl text-center">
-            Fullstack Web Development
-          </h2>
-          <p class="mt-5 ml-20 text-center">
-            „Für mich bedeutet Webentwicklung, Kreativität und Technik zu
-            verbinden. <br />
-            Jedes Projekt ist eine neue Gelegenheit, Design in funktionierende
-            Lösungen zu verwandeln.“
-          </p>
+
+          <!-- Category/Tabs-->
+          <div id="categoryProjects" class="flex justify-center mb-10">
+            <ul class="flex gap-10 font-medium text-gray-800">
+              <li>
+                <button
+                  class="px-4 py-2 border border-gray-300 rounded-full text-gray-900 hover:scale-105 transition-all duration-300 ease-in-out tab-btn"
+                  data-category="all"
+                  data-color="violet-500"
+                >
+                  Alle Kategorien
+                </button>
+              </li>
+              <li>
+                <button
+                  class="px-4 py-2 border border-gray-300 rounded-full text-gray-900 hover:scale-105 transition-all duration-300 ease-in-out tab-btn"
+                  data-category="web"
+                  data-color="sky-500"
+                >
+                  Web Development
+                </button>
+              </li>
+              <li>
+                <button
+                  class="px-4 py-2 border border-gray-300 rounded-full text-gray-900 hover:scale-105 transition-all duration-300 ease-in-out tab-btn"
+                  data-category="design"
+                  data-color="orange-500"
+                >
+                  Design
+                </button>
+              </li>
+              <li>
+                <button
+                  class="px-4 py-2 border border-gray-300 rounded-full text-gray-900 hover:scale-105 transition-all duration-300 ease-in-out tab-btn"
+                  data-category="photo"
+                  data-color="emerald-500"
+                >
+                  Fotografie
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Gallery -->
 
           <div
             id="portProjectsWeb"
-            class="flex flex-row justify-center items-center gap-20 opacity-0 my-10 ml-20 transition-all translate-y-10 duration-700 ease-out"
+            class="flex flex-row justify-center gap-20 opacity-0 mx-20 mt-10 transition-all translate-y-10 duration-700 ease-out"
+            data-category="web"
           >
-            <div id="prNetf" class="flex flex-col">
+            <div
+              id="prNetf"
+              class="flex flex-col gallery-item"
+              data-category="web"
+            >
               <img
                 src="./src/images/projects/netflix-idee.png"
                 alt="Projekt Freitagsidee - Suche nach einer Filmidee"
                 class="border rounded-2xl w-[300px] h-[300px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
               />
-              <p class="mt-5 text-center">
-                Freitagsidee - ein fiktives Projekt
-              </p>
-              <ul class="flex flex-row justify-center gap-5 mt-5">
-                <li
-                  class="px-2 border-2 border-sky-500 rounded-2xl min-w-12 text-sky-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  HTML
-                </li>
-                <li
-                  class="px-2 border-2 border-sky-500 rounded-2xl min-w-12 text-sky-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  CSS
-                </li>
-                <li
-                  class="px-2 border-2 border-sky-500 rounded-2xl min-w-12 text-sky-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  PHP
-                </li>
-                <li
-                  class="px-2 border-2 border-sky-500 rounded-2xl min-w-12 text-sky-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  API
-                </li>
-              </ul>
             </div>
 
-            <div id="prNetf2" class="flex flex-col">
+            <div
+              id="prNetf2"
+              class="flex flex-col gallery-item"
+              data-category="web"
+            >
               <img
                 src="./src/images/projects/netflix-idee.png"
                 alt="Projekt Freitagsidee - Suche nach einer Filmidee"
                 class="border rounded-2xl w-[300px] h-[300px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
               />
-              <p class="mt-5 text-center">
-                Freitagsidee - ein fiktives Projekt
-              </p>
-              <ul class="flex flex-row justify-center gap-5 mt-5">
-                <li
-                  class="px-2 border-2 border-sky-500 rounded-2xl min-w-12 text-sky-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  HTML
-                </li>
-                <li
-                  class="px-2 border-2 border-sky-500 rounded-2xl min-w-12 text-sky-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  CSS
-                </li>
-                <li
-                  class="px-2 border-2 border-sky-500 rounded-2xl min-w-12 text-sky-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  PHP
-                </li>
-                <li
-                  class="px-2 border-2 border-sky-500 rounded-2xl min-w-12 text-sky-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  API
-                </li>
-              </ul>
             </div>
 
-            <div id="prNetf3" class="flex flex-col">
+            <div
+              id="prNetf3"
+              class="flex flex-col gallery-item"
+              data-category="web"
+            >
               <img
                 src="./src/images/projects/netflix-idee.png"
                 alt="Projekt Freitagsidee - Suche nach einer Filmidee"
                 class="border rounded-2xl w-[300px] h-[300px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
               />
-              <p class="mt-5 text-center">
-                Freitagsidee - ein fiktives Projekt
-              </p>
-              <ul class="flex flex-row justify-center gap-5 mt-5">
-                <li
-                  class="px-2 border-2 border-sky-500 rounded-2xl min-w-12 text-sky-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  HTML
-                </li>
-                <li
-                  class="px-2 border-2 border-sky-500 rounded-2xl min-w-12 text-sky-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  CSS
-                </li>
-                <li
-                  class="px-2 border-2 border-sky-500 rounded-2xl min-w-12 text-sky-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  PHP
-                </li>
-                <li
-                  class="px-2 border-2 border-sky-500 rounded-2xl min-w-12 text-sky-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  API
-                </li>
-              </ul>
             </div>
           </div>
 
           <!--Design-->
-          <h2
-            id="projectsDesignHeadline"
-            class="justify-center mt-10 ml-20 text-orange-500 text-xl text-center"
-          >
-            Design
-          </h2>
-          <p class="mt-5 ml-20 text-center">
-            „Für mich bedeutet Design, Leidenschaft und Kreativität zu vereinen.
-            Jedes Projekt ist eine neue Möglichkeit,
-            <br />Emotionen, Geschichten und Ideen in Formen, Farben und
-            Strukturen zu übersetzen, die wirken und bleiben.“
-          </p>
           <div
             id="portProjectsDesign"
-            class="flex flex-row justify-center items-center gap-20 opacity-0 my-10 ml-20 transition-all translate-y-10 duration-700 ease-out"
+            class="flex flex-row justify-center gap-20 opacity-0 mx-20 mt-10 transition-all translate-y-10 duration-700 ease-out"
+            data-category="design"
           >
             <div
               id="prLogo"
-              class="flex flex-col justify-center items-center mt-10"
+              class="flex flex-col justify-center items-center gallery-item"
+              data-category="design"
             >
               <img
                 src="./src/images/projects/Logo-B.png"
                 alt="Projekt Freitagsidee - Suche nach einer Filmidee"
                 class="border rounded-2xl w-[300px] h-[300px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
               />
-              <p class="mt-5 text-center">Logogestaltung für ein Autoservice</p>
-              <ul class="flex flex-row justify-center gap-5 mt-5">
-                <li
-                  class="px-2 border-2 border-orange-500 rounded-2xl min-w-12 text-orange-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  Ai
-                </li>
-                <li
-                  class="px-2 border-2 border-orange-500 rounded-2xl min-w-12 text-orange-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  Id
-                </li>
-              </ul>
             </div>
+
             <div
               id="prLogo2"
-              class="flex flex-col justify-center items-center mt-10"
+              class="flex flex-col justify-center items-center gallery-item"
+              data-category="design"
             >
               <img
                 src="./src/images/projects/Logo-B.png"
                 alt="Projekt Freitagsidee - Suche nach einer Filmidee"
                 class="border rounded-2xl w-[300px] h-[300px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
               />
-              <p class="mt-5 text-center">Logogestaltung für ein Autoservice</p>
-              <ul class="flex flex-row justify-center gap-5 mt-5">
-                <li
-                  class="px-2 border-2 border-orange-500 rounded-2xl min-w-12 text-orange-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  Ai
-                </li>
-                <li
-                  class="px-2 border-2 border-orange-500 rounded-2xl min-w-12 text-orange-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  Id
-                </li>
-              </ul>
             </div>
+
             <div
               id="prLogo3"
-              class="flex flex-col justify-center items-center mt-10"
+              class="flex flex-col justify-center items-center gallery-item"
+              data-category="design"
             >
               <img
                 src="./src/images/projects/Logo-B.png"
                 alt="Projekt Freitagsidee - Suche nach einer Filmidee"
                 class="border rounded-2xl w-[300px] h-[300px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
               />
-              <p class="mt-5 text-center">Logogestaltung für ein Autoservice</p>
-              <ul class="flex flex-row justify-center gap-5 mt-5">
-                <li
-                  class="px-2 border-2 border-orange-500 rounded-2xl min-w-12 text-orange-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  Ai
-                </li>
-                <li
-                  class="px-2 border-2 border-orange-500 rounded-2xl min-w-12 text-orange-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  Id
-                </li>
-              </ul>
             </div>
           </div>
+
           <!--Photography-->
-          <h2
-            id="projectsPhotographyHeadline"
-            class="justify-center mt-10 ml-20 text-emerald-500 text-xl text-center"
-          >
-            Fotografie
-          </h2>
-          <p class="mt-5 ml-20 text-center">
-            „Für mich bedeutet Design, Leidenschaft und Kreativität zu vereinen.
-            Jedes Projekt ist eine neue Möglichkeit,
-            <br />Emotionen, Geschichten und Ideen in Formen, Farben und
-            Strukturen zu übersetzen, die wirken und bleiben.“
-          </p>
+
           <div
             id="portProjectsPhoto"
-            class="flex flex-row justify-center items-center gap-20 opacity-0 my-10 ml-20 transition-all translate-y-10 duration-700 ease-out"
+            class="flex flex-row justify-center gap-20 opacity-0 mx-20 mt-10 transition-all translate-y-10 duration-700 ease-out"
+            data-category="photo"
           >
             <div
               id="prPhoto2"
-              class="flex flex-col justify-center items-center mt-10"
+              class="flex flex-col justify-center items-center gallery-item"
+            data-category="photo"
             >
               <img
                 src="./src/images/projects/photo.jpg"
                 alt="Projekt Freitagsidee - Suche nach einer Filmidee"
                 class="rounded-2xl w-[300px] h-[300px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
               />
-              <p class="mt-5 text-center">Fotoshooting im Freien</p>
-              <ul class="flex flex-row justify-center gap-5 mt-5">
-                <li
-                  class="px-2 border-2 border-emerald-500 rounded-2xl min-w-12 text-emerald-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  PS
-                </li>
-                <li
-                  class="px-2 border-2 border-emerald-500 rounded-2xl min-w-12 text-emerald-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  LrC
-                </li>
-                <li
-                  class="px-2 border-2 border-emerald-500 rounded-2xl min-w-12 text-emerald-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  Nikon
-                </li>
-              </ul>
             </div>
             <div
               id="prPhoto3"
-              class="flex flex-col justify-center items-center mt-10"
+              class="flex flex-col justify-center items-center gallery-item"
+            data-category="photo"
             >
               <img
                 src="./src/images/projects/photo.jpg"
                 alt="Projekt Freitagsidee - Suche nach einer Filmidee"
                 class="rounded-2xl w-[300px] h-[300px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
               />
-              <p class="mt-5 text-center">Fotoshooting im Freien</p>
-              <ul class="flex flex-row justify-center gap-5 mt-5">
-                <li
-                  class="px-2 border-2 border-emerald-500 rounded-2xl min-w-12 text-emerald-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  PS
-                </li>
-                <li
-                  class="px-2 border-2 border-emerald-500 rounded-2xl min-w-12 text-emerald-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  LrC
-                </li>
-                <li
-                  class="px-2 border-2 border-emerald-500 rounded-2xl min-w-12 text-emerald-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  Nikon
-                </li>
-              </ul>
             </div>
             <div
               id="prPhoto"
-              class="flex flex-col justify-center items-center mt-10"
+              class="flex flex-col justify-center items-center gallery-item"
+            data-category="photo"
             >
               <img
                 src="./src/images/projects/photo.jpg"
                 alt="Projekt Freitagsidee - Suche nach einer Filmidee"
                 class="rounded-2xl w-[300px] h-[300px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
               />
-              <p class="mt-5 text-center">Fotoshooting im Freien</p>
-              <ul class="flex flex-row justify-center gap-5 mt-5">
-                <li
-                  class="px-2 border-2 border-emerald-500 rounded-2xl min-w-12 text-emerald-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  PS
-                </li>
-                <li
-                  class="px-2 border-2 border-emerald-500 rounded-2xl min-w-12 text-emerald-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  LrC
-                </li>
-                <li
-                  class="px-2 border-2 border-emerald-500 rounded-2xl min-w-12 text-emerald-500 text-center scale-100 hover:scale-105 duration-300 ease-in-out"
-                >
-                  Nikon
-                </li>
-              </ul>
             </div>
           </div>
         </section>
       </main>
 
-    <!--Footer-->
-    <footer id="portFooter" class="bg-gray-50">
-      <div
-        id="footerLinks"
-        class="flex flex-row justify-center gap-20 py-10"
-      >
-        <a
-          href="contact.html"
-          class="hover:text-violet-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
-          >Kontakt</a
-        >
-        <a
-          href="impressum.html"
-          class="hover:text-violet-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
-          >Impressum</a
-        >
-      </div>
-      <p class="mb-10 text-center">© 2025 Paulina Anna Misa</p>
-    </footer>
+      <!--Footer-->
+      <footer id="portFooter" class="bg-gray-50">
+        <div id="footerLinks" class="flex flex-row justify-center gap-20 py-10">
+          <a
+            href="contact.html"
+            class="hover:text-violet-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            >Kontakt</a
+          >
+          <a
+            href="impressum.html"
+            class="hover:text-violet-500 scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            >Impressum</a
+          >
+        </div>
+        <p class="mb-10 text-center">© 2025 Paulina Anna Misa</p>
+      </footer>
     </section>
 
     <!-- Container for orbs (behind the content) -->
@@ -836,5 +677,6 @@
     <script src="./src/js/logos.js"></script>
     <script src="./src/js/darkmode.js"></script>
     <script src="./src/js/scrollanimation.js"></script>
+    <script src="./src/js/btnactive.js"></script>
   </body>
 </html>
