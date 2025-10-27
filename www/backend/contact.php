@@ -4,11 +4,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use Dotenv\Dotenv;
 
-require __DIR__ . '/vendor/autoload.php';
+require './vendor/autoload.php';
 
-// Dotenv laden (.env liegt im Root, zwei Ebenen hoch)
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
-$dotenv->safeLoad();
+// Dotenv load 
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 // Formulareingaben sauber holen
 $vorname   = htmlspecialchars($_POST['name'] ?? '');
