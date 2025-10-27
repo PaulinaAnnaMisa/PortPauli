@@ -8,8 +8,6 @@ require './vendor/autoload.php';
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
  
-
-
 // Form check
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -40,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Password check
         if ($password === $row["password"]) {
             $_SESSION["login_id"] = $row["id"];
-            header("Location: ../frontend/admindashboard.html");
+            header("Location: dashboard.php");
             exit();
         } else {
             echo "Falsches Passwort!";
@@ -51,6 +49,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
     $conn->close();
 }
-
-
-
