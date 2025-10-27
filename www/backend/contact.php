@@ -10,6 +10,8 @@ require './vendor/autoload.php';
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
+var_dump($_ENV);
+
 // Formulareingaben sauber holen
 $vorname   = htmlspecialchars($_POST['name'] ?? '');
 $nachname  = htmlspecialchars($_POST['last_name'] ?? '');
@@ -29,19 +31,19 @@ $mail = new PHPMailer(true);
 try {
     // SMTP konfigurieren
     $mail->isSMTP();
-    $mail->Host       = getenv('EMAIL_HOST');
+    $mail->Host       = $_ENV['EMAIL_HOST'];
     $mail->SMTPAuth   = true;
-    $mail->Username   = getenv('EMAIL_ADDR');
-    $mail->Password   = getenv('EMAIL_PASS');
+    $mail->Username   = $_ENV['EMAIL_NAME'];
+    $mail->Password   = $_ENV['EMAIL_PASS'];
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = getenv('EMAIL_PORT');
+    $mail->Port       = $_ENV['EMAIL_PORT'];
 
     // Absender und Empfänger
-    $mail->setFrom(getenv('EMAIL_ADDR'), 'Portfolio Website'); // eigener SMTP-Account
+    $mail->setFrom($_ENV['EMAIL_ADDR'], 'Portfolio Website'); // eigener SMTP-Account
     $mail->addReplyTo($email, "$vorname $nachname");           // Nutzerantwort
-    $mail->addAddress(getenv('EMAIL_ADDR'));                  // deine Zieladresse
+    $mail->addAddress($_ENV['EMAIL_ADDR']);            // deine Zieladresse
 
-    // E-Mail Inhalt
+    // E-Mail content
     $mail->isHTML(true);
     $mail->Subject = "Neue Nachricht von deiner Portfolio-Seite";
     $mail->Body  = "
@@ -53,10 +55,14 @@ try {
     ";
     $mail->AltBody = "Name: $vorname $nachname\nE-Mail: $email\nTel: $tel\n\nNachricht:\n$message";
 
-    // E-Mail senden
+    // E-Mail send
+    $mail->SMTPDebug = 2;
+    $mail->Debugoutput = 'html';
+
     $mail->send();
+
     echo "Vielen Dank! Deine Nachricht wurde gesendet.";
 } catch (Exception $e) {
-    // Fehlermeldung inkl. PHPMailer-Fehler (nur für Debug)
-    echo "Fehler: Nachricht konnte nicht gesendet werden. Mailer Error: {$mail->ErrorInfo}";
+    // DEbugging
+    echo "Leider ist ein Fehler aufgetreten. Bitte versuche es später erneut.";
 }

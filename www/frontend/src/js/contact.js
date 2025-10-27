@@ -1,9 +1,8 @@
-// Variablen
 let form = document.querySelector("#formContact");
 let result = document.querySelector("#result");
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault(); // Standardverhalten stoppen
+  event.preventDefault(); 
 
   result.style.display = "block";
   result.innerHTML = "Bitte warten...";
@@ -18,6 +17,7 @@ form.addEventListener("submit", (event) => {
     .then((response) => {
       if (response.ok) {
       return response.text(); }
+      console.log(response);
     })
     .then((text) => {
       console.log("Antwort von API:", text);
@@ -29,7 +29,7 @@ form.addEventListener("submit", (event) => {
       result.innerHTML = "Etwas ist schiefgelaufen!";
       result.classList.add("!text-red-500");
     })
-    .then(() => { // 
+    .then(() => { // delay
       form.reset();
       setTimeout(() => {
         result.style.display = "";
