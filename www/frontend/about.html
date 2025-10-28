@@ -580,93 +580,66 @@
         <!--Interests-->
         <section
           id="aboutInterests"
-          class="flex flex-col md:flex-col justify-center items-center opacity-0 mx-20 rounded-2xl"
+          class="flex flex-col opacity-0 mx-20 my-10"
         >
-          <h2 class="mb-5 text-violet-500">Über mich</h2>
-          <p class="mb-10 max-w-2xl text-center">
-            Ich habe schon immer Dinge erschaffen wollen – ob Zeichnungen, Fotos
-            oder <b>Webseiten.</b> Mit der Zeit habe ich gemerkt, dass
-            <b>Kreativität</b> für mich nicht nur ein Hobby ist, sondern eine
-            Sprache. Heute nutze ich diese <b>Sprache,</b> um Ideen sichtbar zu
-            machen, Emotionen zu wecken und Gedanken Form zu geben. Ich glaube
-            daran, dass gute Gestaltung ehrlich, mutig und persönlich sein darf.
-            Was mich antreibt, ist die <b>Neugier.</b> Jedes Projekt ist für
-            mich eine neue Möglichkeit, etwas zu lernen – über Design, Technik
-            und mich selbst.
-          </p>
           <div
-            id="aboutBoxWDP"
-            class="flex lg:flex-row flex-col justify-center items-center gap-10 bg-white/30 opacity-0 shadow-lg backdrop-blur-md p-20 rounded-2xl transition-all translate-y-10 duration-700 ease-out"
+            id="interestsLeft"
+            class="z-index-100 flex flex-row justify-start items-center gap-15 mr-10"
           >
-            <div
-              id="aboutWeb"
-              class="flex flex-col justify-center items-center"
-            >
-              <img
-                src="./src/images/about/web-ki.jpg"
-                alt="Abbildung von einem Laptop mit Codes"
-                class="shadow-lg hover:shadow-sky-200 mt-0 rounded-full w-24 h-24 object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
-              />
-              <h4 class="mt-5 !text-sky-500">Full-Stack-Web Developerin</h4>
-              <p class="mt-5 max-w-2xl text-center">
-                Als <b>Web Developerin</b> gestalte und entwickle ich moderne,
-                benutzerfreundliche Webseiten mit Fokus auf Design, Performance
-                und Funktionalität. Sauberer Code, responsive Layouts und ein
-                ästhetisches Gesamterlebnis stehen bei mir an erster Stelle. Ich
-                arbeite gerne lösungsorientiert – von der Konzeptphase bis zum
-                fertigen Produkt.
+            <div id="interestsText">
+              <h2 class="mb-5 text-violet-500">Meine Interessen</h2>
+              <p class="w-1/3 max-w-xl text-start">
+                Meine Interessen drehen sich um das Gestalten, Entdecken und
+                Erleben. <br />
+                Die Fotografie erlaubt es mir, besondere Momente einzufangen und
+                die Welt aus einzigartigen Blickwinkeln zu betrachten. <br />
+                Bücher öffnen mir Türen zu neuen Welten, inspirieren meine
+                Gedanken und regen meine Fantasie an. <br />
+                Auf Leinwänden kann ich meine Ideen, Gefühle und Eindrücke frei
+                ausdrücken und ihnen eine sichtbare Form geben. Alle drei
+                Leidenschaften ergänzen sich und formen meine persönliche
+                kreative Handschrift.
               </p>
             </div>
-            <div
-              id="aboutDesgn"
-              class="flex flex-col justify-center items-center"
-            >
-              <img
-                src="./src/images/about/design-ki.jpg"
-                alt="Abbildung von einem Laptop mit Codes"
-                class="shadow-lg hover:shadow-orange-200 mt-0 rounded-full w-24 h-24 object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
-              />
-              <h4 class="mt-5 !text-orange-500 text-xl">Designerin</h4>
-              <p class="mt-5 max-w-2xl text-center">
-                Als <b>Designerin</b> lege ich Wert auf klares, funktionales und
-                ästhetisches <b>Design.</b> Ich kombiniere kreative Konzepte mit
-                einem strukturierten Prozess, um <b>visuelle Lösungen</b> zu
-                schaffen, die wirken. Mein Ziel ist es, Designs zu entwickeln,
-                die nicht nur ästhetisch aussehen, sondern auch verständlich
-                sind und einen bleibenden <b>Eindruck</b> hinterlassen.
-              </p>
-            </div>
-            <div
-              id="aboutPhoto"
-              class="flex flex-col justify-center items-center"
-            >
-              <img
-                src="./src/images/about/photo-ki.jpg"
-                alt="Abbildung von einem Laptop mit Codes"
-                class="shadow-lg hover:shadow-emerald-200 mt-0 rounded-full w-24 h-24 object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
-              />
-              <h4 class="mt-5 !text-emerald-500 text-xl">Fotografin</h4>
-              <p class="mt-5 max-w-2xl text-center">
-                Als <b>Fotografin</b> halte ich Momente fest, die echt,
-                ungestellt und <b>voller Gefühl</b> sind. Licht, Farben und
-                Perspektiven fangen Stimmungen ein, die Worte oft nicht
-                beschreiben. Meine <b>Kamera</b> ist mehr als ein Werkzeug – sie
-                ist eine Brücke zwischen Beobachtung und Emotion. Jedes Bild
-                erzählt eine kleine, einzigartige <b>Geschichte</b>.
-              </p>
+
+            <!-- Gallery: Viewport + Track -->
+            <div id="paintingsGallery" class="relative">
+              <!-- viewport: begrenzt die sichtbare Fläche -->
+              <div id="paintingsViewport" class="w-[660px] overflow-hidden">
+                <!-- track: flex container, den wir per transform verschieben -->
+                <div
+                  id="paintingsTrack"
+                  class="flex gap-4 will-change-transform"
+                >
+                  <img
+                    src="./src/images/about/painting-3.png"
+                    class="flex-shrink-0 w-[200px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+                    alt="Painting 3"
+                  />
+                  <img
+                    src="./src/images/about/painting-4.png"
+                    class="flex-shrink-0 w-[200px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+                    alt="Painting 4"
+                  />
+                  <img
+                    src="./src/images/about/painting-2.png"
+                    class="flex-shrink-0 w-[200px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+                    alt="Painting 2"
+                  />
+                  <img
+                    src="./src/images/about/painting-1.png"
+                    class="flex-shrink-0 w-[200px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+                    alt="Painting 1"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          <a
-            href="home.html#skillsBoxes"
-            class="flex justify-center items-center bg-orange-500 my-10 p-2 rounded-2xl w-48 h-10 text-white scale-100 hover:scale-105 transition duration-200 ease-in-out"
-          >
-            Zu meinen Skills
-          </a>
         </section>
       </main>
 
       <!--Footer-->
-      <footer id="portFooter" class="bg-gray-50 m-h-[150px]">
+      <footer id="portFooter" class="bg-gray-50 m-h-[150px] mt-10">
         <div id="footerLinks" class="flex flex-row justify-center gap-20 py-10">
           <a
             href="contact.html"
