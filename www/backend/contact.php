@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -9,8 +12,6 @@ require './vendor/autoload.php';
 // Dotenv load 
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
-
-var_dump($_ENV);
 
 // Formulareingaben sauber holen
 $vorname   = htmlspecialchars($_POST['name'] ?? '');
@@ -56,13 +57,10 @@ try {
     $mail->AltBody = "Name: $vorname $nachname\nE-Mail: $email\nTel: $tel\n\nNachricht:\n$message";
 
     // E-Mail send
-    $mail->SMTPDebug = 2;
-    $mail->Debugoutput = 'html';
-
     $mail->send();
 
     echo "Vielen Dank! Deine Nachricht wurde gesendet.";
 } catch (Exception $e) {
-    // DEbugging
-    echo "Leider ist ein Fehler aufgetreten. Bitte versuche es später erneut.";
+    // Debugging
+    echo "Leider ist ein Fehler aufgetreten. Bitte versuche es später erneut. Fehler: {$mail->ErrorInfo}";
 }

@@ -2,12 +2,12 @@ let form = document.querySelector("#formContact");
 let result = document.querySelector("#result");
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault(); 
+  event.preventDefault();
 
   result.style.display = "block";
-  result.innerHTML = "Bitte warten...";
+  result.innerHTML = "Bitte warten ...";
 
-  console.log("Formular wird gesendet...");
+  console.log("Formular wird gesendet ...");
 
   //fetch
   fetch("../backend/contact.php", {
@@ -16,8 +16,12 @@ form.addEventListener("submit", (event) => {
   })
     .then((response) => {
       if (response.ok) {
-      return response.text(); }
-      console.log(response);
+        return response.text();
+      } else {
+        return response.text().then((text) => {
+          throw new Error(text);
+        });
+      }
     })
     .then((text) => {
       console.log("Antwort von API:", text);
@@ -29,11 +33,11 @@ form.addEventListener("submit", (event) => {
       result.innerHTML = "Etwas ist schiefgelaufen!";
       result.classList.add("!text-red-500");
     })
-    .then(() => { // delay
+    .then(() => {
+      // delay
       form.reset();
       setTimeout(() => {
         result.style.display = "";
       }, 5000);
     });
 });
-
