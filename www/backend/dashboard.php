@@ -2,9 +2,9 @@
 session_start();
 
 // Überprüfe, ob der Benutzer bereits angemeldet ist
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-  header("location: dashboard.php");
-  exit;
+if (!isset($_SESSION["login_id"])) {
+  header("Location: ../frontend/login.html");
+  exit();
 }
 ?>
 
