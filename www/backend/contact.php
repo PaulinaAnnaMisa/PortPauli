@@ -13,7 +13,7 @@ require './vendor/autoload.php';
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-// Formulareingaben sauber holen
+// Formulareingaben  holen
 $vorname   = htmlspecialchars($_POST['name'] ?? '');
 $nachname  = htmlspecialchars($_POST['last_name'] ?? '');
 $email     = htmlspecialchars($_POST['email'] ?? '');

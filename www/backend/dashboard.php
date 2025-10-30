@@ -18,11 +18,11 @@ if (!isset($_SESSION["login_id"])) {
 </head>
 
 <body
-  class="flex md:flex-row flex-col justify-between bg-gray-100 m-0 p-0 w-full">
+  class="bg-gray-100 m-0 p-0 w-full">
   <!--Navigation-->
   <aside
     id="navBar"
-    class="z-100 fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen min-h-screen">
+    class="top-0 left-0 z-50 fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen">
     <a href="home.html" class="">
       <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
     </a>
@@ -103,8 +103,7 @@ if (!isset($_SESSION["login_id"])) {
 
 
   <!--Content-->
-  <section id="adminContent" class="flex flex-col flex-1 mr-[200px] ml-[200px]">
-
+  <section id="adminContent" class="z-0 relative flex flex-col flex-1 ml-[200px]">
 
     <!-- Header-->
     <header
@@ -122,8 +121,6 @@ if (!isset($_SESSION["login_id"])) {
     <!-- Main-->
     <main class="flex flex-col m-0 p-0 min-h-screen">
 
-
-
       <!-- Project Menagement-->
       <section id="projectManagement" class="flex flex-col justify-start bg-white shadow-lg backdrop-blur-md ml-10 p-20">
         <div class="flex justify-between items-center">
@@ -132,39 +129,6 @@ if (!isset($_SESSION["login_id"])) {
             <img src="/../frontend/src/images/admin/Icons-add-emerald.png" alt="" class="w-[20px] object-cover">Neues Projekt
           </button>
         </div>
-        <!-- Modal-Hintergrund -->
-        <div id="popupNewProject" class="z-50 fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 w-1/2">
-          <!-- Modal-Inhalt -->
-          <div class="relative bg-white shadow-lg p-6 rounded-2xl max-w-md">
-            <h2 class="mb-4 font-semibold text-xl">Projekt erstellen</h2>
-            <p class="mb-4 text-gray-600">Gib den Namen deines neuen Projekts ein:</p>
-
-            <input
-              type="text"
-              class="mb-4 p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-500 w-full"
-              placeholder="Projektname" />
-
-            <div class="flex justify-end gap-3">
-              <button
-                onclick="toggleModal(false)"
-                class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">
-                Abbrechen
-              </button>
-              <button
-                onclick="alert('Projekt gespeichert!'); toggleModal(false)"
-                class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-white">
-                Speichern
-              </button>
-            </div>
-
-            <!-- Schließen-Button (oben rechts) -->
-            <button
-              onclick="toggleModal(false)"
-              class="top-3 right-3 absolute text-gray-400 hover:text-gray-600">
-              ✕
-            </button>
-          </div>
-        </div>
 
         <div id="projectsM" class="mt-10">
           <div class="w-[50vw] h-[50vh] overflow-x-auto">
@@ -172,17 +136,25 @@ if (!isset($_SESSION["login_id"])) {
               <!-- Header -->
               <thead class="bg-gray-100 py-5 pl-5 text-start">
                 <tr class="">
-                  <th class="px-2 py-2 font-medium text-gray-500 text-start">Projektname</th>
-                  <th class="font-medium text-gray-500 text-start">Kategorie</th>
+                  <th class="px-2 py-2 font-medium text-gray-500 text-start">ID</th>
+                  <th class="px-2 py-2 font-medium text-gray-500 text-start">Titel</th>
+                  <th class="px-2 py-2 font-medium text-gray-500 text-start">Beschreibung</th>
+                  <th class="px-2 py-2 font-medium text-gray-500 text-start">Bild-URL</th>
+                  <th class="px-2 py-2 font-medium text-gray-500 text-start">Kategorie</th>
+                  <th class="px-2 py-2 font-medium text-gray-500 text-start">Bereiche</th>
                   <th class="font-medium text-gray-500 text-start">Bearbeiten</th>
                   <th class="font-medium text-gray-500 text-start">Löschen</th>
                 </tr>
               </thead>
               <!-- Body -->
-              <tbody class="pl-5">
-                <tr class="hover:bg-gray-50 shadow-sm">
+              <tbody id="tbody" class="pl-5">
+                <tr class="shadow-sm">
+                  <td class="px-2 py-2 whitespace-nowrap">1</td>
                   <td class="px-2 py-2 whitespace-nowrap">Freitagsidee</td>
-                  <td class="py-2 whitespace-nowrap">Webentwicklung</td>
+                  <td class="px-2 py-2 whitespace-nowrap">Ein fiktives Projekt, während der Weiterbildung</td>
+                  <td class="px-2 py-2 whitespace-nowrap">./src/images/projects/netflix-idee.png</td>
+                  <td class="px-2 py-2 whitespace-nowrap">Web Developer</td>
+                  <td class="px-2 py-2 whitespace-nowrap">Frontend, Backend</td>
                   <td class="py-2 whitespace-nowrap">
                     <!-- Bearbeiten Button -->
                     <button class="flex items-center gap-2 py-1 text-gray-900 cursor-pointer">
@@ -199,70 +171,91 @@ if (!isset($_SESSION["login_id"])) {
                   </td>
                 </tr>
                 <!-- Weitere Projekte -->
-                <tr class="hover:bg-gray-50 shadow-sm rounded-lg">
-                  <td class="px-2 py-2 text-start whitespace-nowrap">Logo</td>
-                  <td class="py-2 text-start whitespace-nowrap">Design</td>
-                  <td class="py-2 py-6 text-start whitespace-nowrap">
-                    <!-- Bearbeiten Button -->
-                    <button class="flex items-center gap-2 hover:bg-blue-600 py-1 text-gray-900 cursor-pointer">
-                      <img src="../frontend/src/images/admin/Icons-edit-orange.png" alt="" class="w-[20px]">
-                      Bearbeiten
-                    </button>
-                  </td>
-                  <td class="py-2 text-start whitespace-nowrap">
-                    <!-- Löschen Button -->
-                    <button class="flex items-start gap-2 ml-2 py-1 text-gray-900 cursor-pointer">
-                      <img src="../frontend/src/images/admin/Icons-delete-red.png" alt="" class="w-[20px]">
-                      Löschen
-                    </button>
-                  </td>
-                </tr>
+                <tr id="newProject" class="hidden shadow-sm"></tr>
               </tbody>
             </table>
           </div>
         </div>
         </div>
-        <!--
-<hr>
-<section id="projectM1" class="flex pt-5 pb-5">
-<div id="projectTitle">
-<p class=""><strong> ${name}</strong></p>
-</div>
-<div id="projectCategory">
-<p class=""><strong> ${Kategorie}</strong></p>
-</div>
-<div id="projectEdit">
-<button id="btnEdit">
-<img src="../frontend/src/images/admin/Icons-edit-orange.png" alt="" class="w-[10px] h-[10px]">
-</button>
-</div>
-<div id="projectDelete">
-<button id="btnDelete">
-<img src="../frontend/src/images/admin/Icons-delete-red.png" alt="" class="w-[10px] h-[10px]">
-</button>
-</div>
-</section>
-<hr class="bg-gray-100">
-</div>-->
-        <!--Upload
-<section id="projectsupload">
-<p class="mt-5 mb-10">Hier kannst du deine Datei hochladen</p>
-<form action="upload.php" method="post" enctype="multipart/form-data">
-<input type="file" name="fileToUpload" id="fileToUpload">
-<input type="submit" value="Datei hochladen" name="submit">
-</form>
-</section>-->
       </section>
     </main>
   </section>
+  <!-- Modal -->
+  <div
+    id="popupNewProject"
+    class="hidden z-50 fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 p-4">
+
+    <!-- Modal-Box -->
+    <div class="relative bg-white shadow-xl p-20 rounded-2xl w-full max-w-xl">
+
+      <!-- Close Button -->
+      <button
+        onclick="toggleModal(false)"
+        class="text-gray-400 hover:text-gray-600 text-xl text-end cursor-pointer">
+        ✕
+      </button>
+
+      <!-- Content -->
+      <h2 class="mb-4 font-semibold text-violet-500">Projekt erstellen</h2>
+      <p class="mb-4 text-gray-600">Gib die Daten deines neuen Projekts ein:</p>
+
+      <form
+        action="../frontend/src/js/addproject.js"
+        method="POST"
+        id="formAddProject"
+        class="flex flex-col gap-5">
+        <input
+          name="title"
+          type="text"
+          placeholder="Titel"
+          class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+        <input
+          name="description"
+          type="text"
+          placeholder="Beschreibung"
+          class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+        <input
+          name="image"
+          type="text"
+          placeholder="Image-URL"
+          class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+        <input
+          name="category"
+          type="text"
+          placeholder="Kategorie"
+          class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+        <input
+          name="areas"
+          type="text"
+          placeholder="Bereiche"
+          class="mb-5 p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+      </form>
+
+      <!-- Buttons -->
+      <div class="z-50 flex justify-end gap-10 mt-6">
+        <button
+          onclick="toggleModal(false)"
+          class="hover:bg-gray-200 px-4 py-2 rounded-2xl text-gray-600 transition cursor-pointer">
+          Abbrechen
+        </button>
+        <input type="submit"
+          value="Speichern"
+          onclick="event.preventDefault(); alert('Projekt gespeichert!'); toggleModal(false)"
+          class="bg-violet-500 hover:bg-violet-600 px-4 py-2 rounded-2xl text-white transition cursor-pointer">
+      </div>
+    </div>
+  </div>
+
+
   <!-- Container for orbs (behind the content) -->
   <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">
     <div id="circle-3d"></div>
   </div>
   <!--JavaScripts-->
   <script src="../frontend/src/js/animation.js"></script>
-  <script src="../frontend/src/js/darkmode.js"></script>
-  <script src="../frontend/src/js/stats.js"></script>
+  <script src="../frontend/src/js/popup.js"></script>
+  <script src="../frontend/src/js/getprojects.js"></script>
+  <script src="../frontend/src/js/addproject.js"></script>
 </body>
 
 </html>
