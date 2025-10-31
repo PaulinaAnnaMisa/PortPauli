@@ -2,44 +2,55 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+header('Content-Type: application/json'); // only for development
 
 use Dotenv\Dotenv;
 
 require './vendor/autoload.php';
 
-// Dotenv load 
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-
-// Form check
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // connection to db
+    // connecting to DB
     $servername = "db";
     $dbusername = $_ENV['DB_USER'];
     $dbpassword = $_ENV['DB_PASSWORD'];
     $dbname = "db";
 
-    $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
-    if ($conn->connect_error) {
-        die("Verbindung fehlgeschlagen: " . $conn->connect_error);
+    $mysqli = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+
+    if ($mysqli->connect_error) {
+        http_response_code(500);
+        echo json_encode(["error" => "Verbindung fehlgeschlagen: " . $mysqli->connect_error]);
+        exit;
     }
 
-    // form data
+    // Form data
     $title       = $_POST['title'] ?? '';
     $description = $_POST['description'] ?? '';
     $image       = $_POST['image'] ?? '';
     $category    = $_POST['category'] ?? '';
     $areas       = $_POST['areas'] ?? '';
 
-    $stmt = $conn->prepare("INSERT INTO projekte (title, description, image, category, areas) VALUES (?, ?, ?, ?, ?)");
+    // empty check
+    if (empty($title) || empty($description) || empty($image) || empty($category) || empty($areas)) {
+        http_response_code(400);
+        echo json_encode(["error" => "Bitte fülle alle Felder aus."]);
+        exit;
+    }
+
+    #var_dump($_POST); //debugg
+
+    // SQL-Statement prepare
+    $stmt = $mysqli->prepare("INSERT INTO projekte (title, description, image, category, areas) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $title, $description, $image, $category, $areas);
 
+    // Execute and check result
     if ($stmt->execute()) {
         $newId = $stmt->insert_id;
 
-        // Rückgabe des neuen Projekts
         echo json_encode([
             "id" => $newId,
             "title" => $title,
@@ -49,8 +60,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "areas" => $areas
         ]);
     } else {
-        echo json_encode(["error" => $stmt->error]);
+        http_response_code(500);
+        echo json_encode(["error" => "Fehler beim Einfügen: " . $stmt->error]);
     }
+
     $stmt->close();
-    $conn->close();
+    $mysqli->close();
 }

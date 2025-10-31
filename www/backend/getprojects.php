@@ -18,14 +18,14 @@ $dbusername = $_ENV['DB_USER'];
 $dbpassword = $_ENV['DB_PASSWORD'];
 $dbname = "db";
 
-$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
-if ($conn->connect_error) {
-    die("Verbindung fehlgeschlagen: " . $conn->connect_error);
+$mysqli = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+if ($mysqli->connect_error) {
+    die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
 }
 
 // get data
-$sql = "SELECT * FROM projekte ORDER BY id ASC";
-$result = $conn->query($sql);
+$query = "SELECT * FROM projekte ORDER BY id ASC";
+$result = $mysqli->query($query);
 
 $projects = [];
 if ($result->num_rows > 0) {
@@ -34,6 +34,6 @@ if ($result->num_rows > 0) {
     }
 }
 
-$conn->close();
+$mysqli->close();
 header('Content-Type: application/json');
 echo json_encode($projects);

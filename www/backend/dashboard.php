@@ -23,7 +23,7 @@ if (!isset($_SESSION["login_id"])) {
   <aside
     id="navBar"
     class="top-0 left-0 z-50 fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen">
-    <a href="home.html" class="">
+    <a href="../frontend/home.html" class="">
       <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
     </a>
     <!--Navigation -->
@@ -101,7 +101,6 @@ if (!isset($_SESSION["login_id"])) {
     </div>
   </aside>
 
-
   <!--Content-->
   <section id="adminContent" class="z-0 relative flex flex-col flex-1 ml-[200px]">
 
@@ -123,7 +122,7 @@ if (!isset($_SESSION["login_id"])) {
 
       <!-- Project Menagement-->
       <section id="projectManagement" class="flex flex-col justify-start bg-white shadow-lg backdrop-blur-md ml-10 p-20">
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center text-gray-900">
           <h3 class="">Projektverwaltung</h3>
           <button id="btnAdd" class="flex gap-2 p-2 cursor-pointer" onclick="toggleModal(true)">
             <img src="/../frontend/src/images/admin/Icons-add-emerald.png" alt="" class="w-[20px] object-cover">Neues Projekt
@@ -180,10 +179,11 @@ if (!isset($_SESSION["login_id"])) {
       </section>
     </main>
   </section>
+
   <!-- Modal -->
   <div
     id="popupNewProject"
-    class="hidden z-50 fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 p-4">
+    class="hidden z-50 fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 ml-[200px] p-4">
 
     <!-- Modal-Box -->
     <div class="relative bg-white shadow-xl p-20 rounded-2xl w-full max-w-xl">
@@ -191,7 +191,7 @@ if (!isset($_SESSION["login_id"])) {
       <!-- Close Button -->
       <button
         onclick="toggleModal(false)"
-        class="text-gray-400 hover:text-gray-600 text-xl text-end cursor-pointer">
+        class="justify-items-end text-gray-400 text-xl cursor-pointer">
         ✕
       </button>
 
@@ -245,7 +245,6 @@ if (!isset($_SESSION["login_id"])) {
       </div>
     </div>
   </div>
-
 
   <!-- Container for orbs (behind the content) -->
   <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">

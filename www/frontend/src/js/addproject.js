@@ -2,8 +2,7 @@ let formAddProject = document.querySelector("#formAddProject");
 
 formAddProject.addEventListener("submit", async (event) => {
   event.preventDefault();
-
-  console.log("Neues Projekt wird hinzugefügt ...");
+  console.log(".js geladen");
 
   try {
     let response = await fetch("../backend/addproject.php", {
@@ -11,19 +10,20 @@ formAddProject.addEventListener("submit", async (event) => {
       body: new FormData(formAddProject),
     });
 
-    // Prüfen, ob die Antwort OK ist
+    // check
     if (!response.ok) {
       throw new Error("Fehler beim Server-Request");
     }
 
-    const project = await response.json();
+    let project = await response.json();
 
     if (project.error) {
       alert("Fehler: " + project.error);
       return;
     }
+    console.log(response.status);
 
-    // tbody holen (achte: in HTML muss ein <tbody> existieren!)
+    
     let tbody = document.querySelector("tbody");
     let tr = document.createElement("tr");
     tr.className = "shadow-sm";
@@ -48,7 +48,6 @@ formAddProject.addEventListener("submit", async (event) => {
         </button>
       </td>
     `;
-
     tbody.appendChild(tr);
     toggleModal(false);
     formAddProject.reset();

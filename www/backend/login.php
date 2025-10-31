@@ -17,9 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dbpassword = $_ENV['DB_PASSWORD'];
     $dbname = "db";
 
-    $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
-    if ($conn->connect_error) {
-        die("Verbindung fehlgeschlagen: " . $conn->connect_error);
+    $mysqli = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+    if ($mysqli->connect_error) {
+        die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
     }
 
     // Form datas
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     // SQL prepare
-    $stmt = $conn->prepare("SELECT id, password FROM login WHERE username = ?");
+    $stmt = $mysqli->prepare("SELECT id, password FROM login WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -47,5 +47,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Benutzer " . htmlspecialchars($username) . " nicht gefunden!";
     }
     $stmt->close();
-    $conn->close();
+    $mysqli->close();
 }

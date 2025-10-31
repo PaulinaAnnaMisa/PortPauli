@@ -9,7 +9,8 @@ function loadProjects() {
   fetch("../backend/getprojects.php")
     .then((res) => res.json())
     .then((projects) => {
-      tbody.innerHTML = ""; // alte Inhalte löschen
+      tbody.innerHTML = ""; // delete
+      
       projects.forEach((project) => {
         tr.className = "shadow-sm";
         tr.innerHTML = `
