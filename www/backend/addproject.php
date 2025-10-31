@@ -4,28 +4,9 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 header('Content-Type: application/json'); // only for development
 
-use Dotenv\Dotenv;
-
-require './vendor/autoload.php';
-
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+require_once 'config.db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    // connecting to DB
-    $servername = "db";
-    $dbusername = $_ENV['DB_USER'];
-    $dbpassword = $_ENV['DB_PASSWORD'];
-    $dbname = "db";
-
-    $mysqli = new mysqli($servername, $dbusername, $dbpassword, $dbname);
-
-    if ($mysqli->connect_error) {
-        http_response_code(500);
-        echo json_encode(["error" => "Verbindung fehlgeschlagen: " . $mysqli->connect_error]);
-        exit;
-    }
 
     // Form data
     $title       = $_POST['title'] ?? '';
