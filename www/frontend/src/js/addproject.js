@@ -1,34 +1,27 @@
-let formAddProject = document.querySelector("#formAddProject");
 
-formAddProject.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  console.log(".js geladen");
+let formAddProject= document.querySelector("#formAddProject")
 
-  try {
-    let response = await fetch("../backend/addproject.php", {
+  formAddProject.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    fetch("../backend/addproject.php", {
       method: "POST",
       body: new FormData(formAddProject),
-    });
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Serverfehler: " + res.status);
+        return res.json();
+      })
+      .then((project) => {
+        if (project.error) {
+          alert("Fehler: " + project.error);
+          return;
+        }
+        let tbody = document.querySelector("tbody");
+        let tr = document.createElement("tr");
+        tr.className = "shadow-sm";
 
-    // check
-    if (!response.ok) {
-      throw new Error("Fehler beim Server-Request");
-    }
-
-    let project = await response.json();
-
-    if (project.error) {
-      alert("Fehler: " + project.error);
-      return;
-    }
-    console.log(response.status);
-
-    
-    let tbody = document.querySelector("tbody");
-    let tr = document.createElement("tr");
-    tr.className = "shadow-sm";
-
-    tr.innerHTML = `
+        tr.innerHTML = `
       <td class="px-2 py-2 whitespace-nowrap">${project.id}</td>
       <td class="px-2 py-2 whitespace-nowrap">${project.title}</td>
       <td class="px-2 py-2 whitespace-nowrap">${project.description}</td>
@@ -48,11 +41,12 @@ formAddProject.addEventListener("submit", async (event) => {
         </button>
       </td>
     `;
-    tbody.appendChild(tr);
-    toggleModal(false);
-    formAddProject.reset();
-  } catch (err) {
-    console.error("Fehler:", err);
-    alert("Es gab ein Problem beim Speichern des Projekts.");
-  }
-});
+        tbody.appendChild(tr);
+        toggleModal(false);
+        event.target.reset();
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Fehler: " + err.message);
+      });
+  });

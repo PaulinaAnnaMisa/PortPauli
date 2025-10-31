@@ -1,6 +1,3 @@
-let tbody = document.querySelector("#tbody");
-let tr = document.createElement("tr");
-
 document.addEventListener("DOMContentLoaded", () => {
   loadProjects();
 });
@@ -9,9 +6,11 @@ function loadProjects() {
   fetch("../backend/getprojects.php")
     .then((res) => res.json())
     .then((projects) => {
+      let tbody = document.querySelector("#tbody");
       tbody.innerHTML = ""; // delete
       
       projects.forEach((project) => {
+        let tr = document.createElement("tr");
         tr.className = "shadow-sm";
         tr.innerHTML = `
                     <td class="px-2 py-2 whitespace-nowrap">${project.id}</td>

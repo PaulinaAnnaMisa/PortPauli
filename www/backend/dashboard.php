@@ -22,7 +22,7 @@ if (!isset($_SESSION["login_id"])) {
   <!--Navigation-->
   <aside
     id="navBar"
-    class="top-0 left-0 z-50 fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen">
+    class="top-0 left-0 z-30 fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen">
     <a href="../frontend/home.html" class="">
       <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
     </a>
@@ -118,7 +118,7 @@ if (!isset($_SESSION["login_id"])) {
       </div>
     </header>
     <!-- Main-->
-    <main class="flex flex-col m-0 p-0 min-h-screen">
+    <main class="z-0 flex flex-col m-0 p-0 min-h-screen">
 
       <!-- Project Menagement-->
       <section id="projectManagement" class="flex flex-col justify-start bg-white shadow-lg backdrop-blur-md ml-10 p-20">
@@ -180,71 +180,68 @@ if (!isset($_SESSION["login_id"])) {
     </main>
   </section>
 
-  <!-- Modal -->
-  <div
-    id="popupNewProject"
-    class="hidden z-50 fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 ml-[200px] p-4">
+  <!-- Overlay -->
+  <div id="overlay" class="hidden z-40 fixed inset-0 bg-black bg-opacity-50">
 
-    <!-- Modal-Box -->
-    <div class="relative bg-white shadow-xl p-20 rounded-2xl w-full max-w-xl">
+    <!-- Modal -->
+    <div
+      id="popupNewProject"
+      class="hidden z-50 fixed inset-0 flex justify-center items-center p-4">
 
-      <!-- Close Button -->
-      <button
-        onclick="toggleModal(false)"
-        class="justify-items-end text-gray-400 text-xl cursor-pointer">
-        ✕
-      </button>
+      <!-- Modal-Box -->
+      <div class="flex flex-col bg-white ml-[200px] p-10 border border-gray-200 rounded-2xl w-1/2">
 
-      <!-- Content -->
-      <h2 class="mb-4 font-semibold text-violet-500">Projekt erstellen</h2>
-      <p class="mb-4 text-gray-600">Gib die Daten deines neuen Projekts ein:</p>
+        <!-- Close Button -->
+        <div id="closebutton" class="flex justify-end w-full text-end">
+          <button
+            onclick="toggleModal(false)"
+            class="text-gray-400 cursor-pointer">
+            Abbrechen
+          </button>
+        </div>
 
-      <form
-        action="../frontend/src/js/addproject.js"
-        method="POST"
-        id="formAddProject"
-        class="flex flex-col gap-5">
-        <input
-          name="title"
-          type="text"
-          placeholder="Titel"
-          class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
-        <input
-          name="description"
-          type="text"
-          placeholder="Beschreibung"
-          class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
-        <input
-          name="image"
-          type="text"
-          placeholder="Image-URL"
-          class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
-        <input
-          name="category"
-          type="text"
-          placeholder="Kategorie"
-          class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
-        <input
-          name="areas"
-          type="text"
-          placeholder="Bereiche"
-          class="mb-5 p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
-      </form>
+        <!-- Content -->
+        <h2 class="mb-4 font-semibold text-violet-500">Projekt erstellen</h2>
+        <p class="mb-4 text-gray-600">Gib die Daten deines neuen Projekts ein:</p>
 
-      <!-- Buttons -->
-      <div class="z-50 flex justify-end gap-10 mt-6">
-        <button
-          onclick="toggleModal(false)"
-          class="hover:bg-gray-200 px-4 py-2 rounded-2xl text-gray-600 transition cursor-pointer">
-          Abbrechen
-        </button>
-        <input type="submit"
-          value="Speichern"
-          onclick="event.preventDefault(); alert('Projekt gespeichert!'); toggleModal(false)"
-          class="bg-violet-500 hover:bg-violet-600 px-4 py-2 rounded-2xl text-white transition cursor-pointer">
+        <form
+          method="POST"
+          id="formAddProject"
+          class="flex flex-col gap-5 mb-5">
+          <input
+            name="title"
+            type="text"
+            placeholder="Titel"
+            class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+          <input
+            name="description"
+            type="text"
+            placeholder="Beschreibung"
+            class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+          <input
+            name="image"
+            type="text"
+            placeholder="Image-URL"
+            class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+          <input
+            name="category"
+            type="text"
+            placeholder="Kategorie"
+            class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+          <input
+            name="areas"
+            type="text"
+            placeholder="Bereiche"
+            class="mb-5 p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+          <input type="submit"
+            value="Speichern"
+            class="bg-violet-500 hover:bg-violet-600 px-4 py-2 rounded-2xl text-white transition cursor-pointer">
+        </form>
       </div>
     </div>
   </div>
+
+
 
   <!-- Container for orbs (behind the content) -->
   <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">
