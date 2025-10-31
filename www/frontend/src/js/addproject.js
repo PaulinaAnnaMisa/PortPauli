@@ -1,5 +1,6 @@
 
-let formAddProject= document.querySelector("#formAddProject")
+let formAddProject= document.querySelector("#formAddProject");
+let resultAdd = document.querySelector("#resultAdd");
 
   formAddProject.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -14,7 +15,7 @@ let formAddProject= document.querySelector("#formAddProject")
       })
       .then((project) => {
         if (project.error) {
-          alert("Fehler: " + project.error);
+          resultAdd.innerHTML = ("Fehler: " + project.error);
           return;
         }
         let tbody = document.querySelector("tbody");
@@ -47,6 +48,6 @@ let formAddProject= document.querySelector("#formAddProject")
       })
       .catch((err) => {
         console.error(err);
-        alert("Fehler: " + err.message);
+        resultAdd.innerHTML = "Fehler: " + err.message;
       });
   });

@@ -180,8 +180,8 @@ if (!isset($_SESSION["login_id"])) {
     </main>
   </section>
 
-  <!-- Overlay -->
-  <div id="overlay" class="hidden z-40 fixed inset-0 bg-black bg-opacity-50">
+  <!-- Overlay Add -->
+  <div id="overlayAdd" class="hidden z-40 fixed inset-0 bg-black bg-opacity-50">
 
     <!-- Modal -->
     <div
@@ -237,6 +237,69 @@ if (!isset($_SESSION["login_id"])) {
             value="Speichern"
             class="bg-violet-500 hover:bg-violet-600 px-4 py-2 rounded-2xl text-white transition cursor-pointer">
         </form>
+        <div id="resultAdd"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay Edit-->
+  <div id="overlayEdit" class="hidden z-40 fixed inset-0 bg-black bg-opacity-50">
+
+    <!-- Modal -->
+    <div
+      id="popupEditProject"
+      class="hidden z-50 fixed inset-0 flex justify-center items-center p-4">
+
+      <!-- Modal-Box -->
+      <div class="flex flex-col bg-white ml-[200px] p-10 border border-gray-200 rounded-2xl w-1/2">
+
+        <!-- Close Button -->
+        <div id="closebuttonEdit" class="flex justify-end w-full text-end">
+          <button
+            onclick="toggleModal(false)"
+            class="text-gray-400 cursor-pointer">
+            Abbrechen
+          </button>
+        </div>
+
+        <!-- Content -->
+        <h2 class="mb-4 font-semibold text-violet-500">Projekt erstellen</h2>
+        <p class="mb-4 text-gray-600">Gib die Daten deines neuen Projekts ein:</p>
+
+        <form
+          method="POST"
+          id="formEditProject"
+          class="flex flex-col gap-5 mb-5">
+          <input
+            name="title"
+            type="text"
+            placeholder="Titel"
+            class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+          <input
+            name="description"
+            type="text"
+            placeholder="Beschreibung"
+            class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+          <input
+            name="image"
+            type="text"
+            placeholder="Image-URL"
+            class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+          <input
+            name="category"
+            type="text"
+            placeholder="Kategorie"
+            class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+          <input
+            name="areas"
+            type="text"
+            placeholder="Bereiche"
+            class="mb-5 p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500" />
+          <input type="submit"
+            value="Speichern"
+            class="bg-violet-500 hover:bg-violet-600 px-4 py-2 rounded-2xl text-white transition cursor-pointer">
+        </form>
+        <div id="resultEdit"></div>
       </div>
     </div>
   </div>

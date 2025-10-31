@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // empty check
     if (empty($title) || empty($description) || empty($image) || empty($category) || empty($areas)) {
-        http_response_code(400);
+        #http_response_code(400);
         echo json_encode(["error" => "Bitte fülle alle Felder aus."]);
         exit;
     }

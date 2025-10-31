@@ -1,6 +1,6 @@
 function toggleModal(show) {
     let popup = document.querySelector("#popupNewProject");
-    let overlay = document.querySelector("#overlay");
+    let overlay = document.querySelector("#overlayAdd");
     
     if (show) {
       popup.classList.remove("hidden");
