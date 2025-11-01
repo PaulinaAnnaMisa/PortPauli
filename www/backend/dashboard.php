@@ -163,7 +163,7 @@ if (!isset($_SESSION["login_id"])) {
                   </td>
                   <td class="px-6 py-6 text-start whitespace-nowrap">
                     <!-- Löschen Button -->
-                    <button class="flex items-center gap-2 py-1 text-gray-900 cursor-pointer">
+                    <button class="flex items-center gap-2 py-1 text-gray-900 cursor-pointer deleteBtn" data-id="1">
                       <img src="../frontend/src/images/admin/Icons-delete-red.png" alt="" class="w-[20px]">
                       Löschen
                     </button>
@@ -314,7 +314,10 @@ if (!isset($_SESSION["login_id"])) {
   <script src="../frontend/src/js/animation.js"></script>
   <script src="../frontend/src/js/popup.js"></script>
   <script src="../frontend/src/js/getprojects.js"></script>
+  <script src="../frontend/src/js/deleteproject.js"></script>
   <script src="../frontend/src/js/addproject.js"></script>
 </body>
+
+</html>
 
 </html>

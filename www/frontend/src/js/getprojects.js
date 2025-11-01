@@ -26,7 +26,7 @@ function loadProjects() {
                         </button>
                     </td>
                     <td class="px-6 py-6 text-start whitespace-nowrap">
-                        <button class="flex items-center gap-2 py-1 text-gray-900 cursor-pointer">
+                        <button class="flex items-center gap-2 py-1 text-gray-900 cursor-pointer deleteBtn" data-id="${project.id}">
                             <img src="../frontend/src/images/admin/Icons-delete-red.png" class="w-[20px]">
                             Löschen
                         </button>
