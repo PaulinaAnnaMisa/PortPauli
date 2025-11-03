@@ -202,7 +202,7 @@ if (!isset($_SESSION["login_id"])) {
 
         <!-- Content -->
         <h2 class="mb-4 font-semibold text-violet-500">Projekt erstellen</h2>
-        <p class="mb-4 text-gray-600">Gib die Daten deines neuen Projekts ein:</p>
+        <p class="mb-4 text-gray-600">Gib die Daten deines Projekts ein:</p>
 
         <form
           method="POST"
@@ -264,12 +264,13 @@ if (!isset($_SESSION["login_id"])) {
 
         <!-- Content -->
         <h2 class="mb-4 font-semibold text-violet-500">Projekt erstellen</h2>
-        <p class="mb-4 text-gray-600">Gib die Daten deines neuen Projekts ein:</p>
+        <p class="mb-4 text-gray-600">Gib die Daten deines Projekts ein:</p>
 
         <form
           method="POST"
           id="formEditProject"
           class="flex flex-col gap-5 mb-5">
+          <input type="hidden" name="id" class="p-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-violet-500">
           <input
             name="title"
             type="text"
@@ -318,7 +319,5 @@ if (!isset($_SESSION["login_id"])) {
   <script src="../frontend/src/js/addproject.js"></script>
   <script src="../frontend/src/js/editproject.js"></script>
 </body>
-
-</html>
 
 </html>
