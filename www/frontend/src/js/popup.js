@@ -1,12 +1,16 @@
-function toggleModal(show) {
-    let popup = document.querySelector("#popupNewProject");
-    let overlay = document.querySelector("#overlayAdd");
-    
-    if (show) {
-      popup.classList.remove("hidden");
-      overlay.classList.remove("hidden");
-    } else {
-      popup.classList.add("hidden");
-      overlay.classList.add("hidden");
-    }
+function toggleModal(show, type = 'add') {
+  let popupAdd = document.querySelector("#popupNewProject");
+  let overlayAdd = document.querySelector("#overlayAdd");
+  let popupEdit = document.querySelector("#popupEditProject");
+  let overlayEdit = document.querySelector("#overlayEdit");
+
+  if (type === 'add') {
+    popupAdd.classList.toggle("hidden", !show);
+    overlayAdd.classList.toggle("hidden", !show);
+  } else if (type === 'edit') {
+    popupEdit.classList.toggle("hidden", !show);
+    overlayEdit.classList.toggle("hidden", !show);
   }
+}
+
+window.toggleModal = toggleModal;

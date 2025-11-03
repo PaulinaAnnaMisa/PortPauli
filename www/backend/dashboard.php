@@ -194,7 +194,7 @@ if (!isset($_SESSION["login_id"])) {
         <!-- Close Button -->
         <div id="closebutton" class="flex justify-end w-full text-end">
           <button
-            onclick="toggleModal(false)"
+            onclick="toggleModal(false, 'add')"
             class="text-gray-400 cursor-pointer">
             Abbrechen
           </button>
@@ -256,7 +256,7 @@ if (!isset($_SESSION["login_id"])) {
         <!-- Close Button -->
         <div id="closebuttonEdit" class="flex justify-end w-full text-end">
           <button
-            onclick="toggleModal(false)"
+            onclick="toggleModal(false, 'edit')"
             class="text-gray-400 cursor-pointer">
             Abbrechen
           </button>
