@@ -1,6 +1,6 @@
 <?php
 session_start();
-// Überprüfe, ob der Benutzer bereits angemeldet ist
+
 if (!isset($_SESSION["login_id"])) {
   header("Location: ../frontend/login.html");
   exit();
@@ -20,9 +20,7 @@ if (!isset($_SESSION["login_id"])) {
 <body
   class="bg-gray-100 m-0 p-0 w-full">
   <!--Navigation-->
-  <aside
-    id="navBar"
-    class="top-0 left-0 z-30 fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen">
+  <aside id="navBar" class="top-0 left-0 z-30 fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen">
     <a href="../frontend/home.html" class="">
       <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
     </a>
@@ -125,7 +123,7 @@ if (!isset($_SESSION["login_id"])) {
         <div class="flex justify-between items-center text-gray-900">
           <h3 class="">Projektverwaltung</h3>
           <button id="btnAdd" class="flex gap-2 p-2 cursor-pointer" onclick="toggleModal(true)">
-            <img src="/../frontend/src/images/admin/Icons-add-emerald.png" alt="" class="w-[20px] object-cover">Neues Projekt
+            <img src="/../frontend/src/images/admin/Icons-add-emerald.png" alt="Projekt Hinzufügen Button" class="w-[20px] object-cover">Neues Projekt
           </button>
         </div>
 
@@ -147,30 +145,7 @@ if (!isset($_SESSION["login_id"])) {
               </thead>
               <!-- Body -->
               <tbody id="tbody" class="pl-5">
-                <tr class="shadow-sm">
-                  <td class="px-2 py-2 whitespace-nowrap">1</td>
-                  <td class="px-2 py-2 whitespace-nowrap">Freitagsidee</td>
-                  <td class="px-2 py-2 whitespace-nowrap">Ein fiktives Projekt, während der Weiterbildung</td>
-                  <td class="px-2 py-2 whitespace-nowrap">./src/images/projects/netflix-idee.png</td>
-                  <td class="px-2 py-2 whitespace-nowrap">Web Developer</td>
-                  <td class="px-2 py-2 whitespace-nowrap">Frontend, Backend</td>
-                  <td class="py-2 whitespace-nowrap">
-                    <!-- Bearbeiten Button -->
-                    <button class="flex items-center gap-2 py-1 text-gray-900 cursor-pointer editBtn">
-                      <img src="../frontend/src/images/admin/Icons-edit-orange.png" alt="" class="w-[20px]">
-                      Bearbeiten
-                    </button>
-                  </td>
-                  <td class="px-6 py-6 text-start whitespace-nowrap">
-                    <!-- Löschen Button -->
-                    <button class="flex items-center gap-2 py-1 text-gray-900 cursor-pointer deleteBtn" data-id="1">
-                      <img src="../frontend/src/images/admin/Icons-delete-red.png" alt="" class="w-[20px]">
-                      Löschen
-                    </button>
-                  </td>
-                </tr>
                 <!-- Weitere Projekte -->
-                <tr id="newProject" class="hidden shadow-sm"></tr>
               </tbody>
             </table>
           </div>

@@ -15,7 +15,7 @@
     <!--Navigation-->
     <aside
       id="navBar"
-      class="z-100 fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen min-h-screen"
+      class="z-50 flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen min-h-screen hiddenfixed"
     >
       <a href="home.html" class="">
         <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
@@ -100,6 +100,26 @@
           />
         </button>
       </div>
+    </aside>
+
+    <!--Navigation Mobile-->
+    <aside
+      id="navBarMobile"
+      class="hidden z-50 fixed flex flex-col justify-start items-center gap-5 bg-gray-50 w-[100px]"
+    >
+      <a href="home.html">
+        <h3 class="mt-5 text-violet-500 text-sm text-center">Port Pauli</h3>
+      </a>
+
+      <nav id="navMobile" class="flex flex-col items-start mx-5 my-5">
+        <button id="navBtn" class="relative mb-5">
+          <img
+            src="./src/images/nav/burgermenu.svg"
+            alt="Icon Home"
+            class="justify-center w-[20px] h-[20px] cursor-pointer"
+          />
+        </button>
+      </nav>
     </aside>
 
     <!--Content-->
@@ -516,7 +536,10 @@
           </div>
 
           <!-- Gallery -->
-          <div id="projectGallery" class="flex flex-row flex-wrap justify-center gap-10 mx-10 transition-all translate-y-10 duration-700 ease-out"></div>
+          <div
+            id="projectGallery"
+            class="flex flex-row flex-wrap justify-center gap-10 mx-10 transition-all translate-y-10 duration-700 ease-out"
+          ></div>
         </section>
       </main>
 
