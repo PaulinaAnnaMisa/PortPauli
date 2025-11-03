@@ -1,8 +1,6 @@
 let tabs = document.querySelectorAll(".tab-btn");
-let galleryItems = document.querySelectorAll(".gallery-item");
 
 tabs.forEach((tab) => {
-
   tab.addEventListener("click", () => {
     let category = tab.dataset.category;
     let color = tab.dataset.color;
@@ -13,11 +11,12 @@ tabs.forEach((tab) => {
       t.classList.add("border-gray-300", "text-gray-900");
     });
 
-    // set button activ
+    // set button active
     tab.classList.remove("border-gray-300", "text-gray-900");
     tab.classList.add(`border-${color}`, `text-${color}`);
 
-    // filter gallery
+    // filter gallery 
+    let galleryItems = document.querySelectorAll(".gallery-item");
     galleryItems.forEach((item) => {
       if (category === "all" || item.dataset.category === category) {
         item.classList.remove("hidden");

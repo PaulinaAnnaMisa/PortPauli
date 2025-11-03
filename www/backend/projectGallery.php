@@ -1,0 +1,22 @@
+<?php
+/*ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);*/
+
+header('Content-Type: application/json');
+
+require_once 'config.db.php';
+
+// get data
+$query = "SELECT * FROM projekte";
+$result = $mysqli->query($query);
+
+$projects = [];
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $projects[] = $row;
+    }
+}
+
+$mysqli->close();
+echo json_encode($projects);

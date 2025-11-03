@@ -1,9 +1,6 @@
 //port
 let portHeader = document.querySelector("#portHeader");
 let portAboutBox = document.querySelector("#portAboutBox");
-let projectsWeb = document.querySelector("#portProjectsWeb");
-let projectsDesign = document.querySelector("#portProjectsDesign");
-let projectsPhoto = document.querySelector("#portProjectsPhoto");
 
 //about me
 let aboutHeader = document.querySelector("#aboutHeader");
@@ -30,9 +27,6 @@ let observer = new IntersectionObserver((entries) => {
   //port
   if (portHeader) observer.observe(portHeader);
   if (portAboutBox) observer.observe(portAboutBox);
-  if (projectsWeb) observer.observe(projectsWeb);
-  if (projectsDesign) observer.observe(projectsDesign);
-  if (projectsPhoto) observer.observe(projectsPhoto);
 
   //about me
   if (aboutHeader) observer.observe(aboutHeader);
