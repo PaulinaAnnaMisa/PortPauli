@@ -2,6 +2,7 @@
 header("Content-Type: application/json");
 require_once 'config.db.php';
 
+//if empty fields
 if (empty($_POST['id'])) {
     echo json_encode(["error" => "Keine ID übergeben."]);
     exit;
@@ -9,6 +10,7 @@ if (empty($_POST['id'])) {
 
 $id = intval($_POST['id']);
 
+//delete
 $stmt = $mysqli->prepare("DELETE FROM projekte WHERE id = ?");
 $stmt->bind_param("i", $id);
 

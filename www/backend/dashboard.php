@@ -156,7 +156,7 @@ if (!isset($_SESSION["login_id"])) {
                   <td class="px-2 py-2 whitespace-nowrap">Frontend, Backend</td>
                   <td class="py-2 whitespace-nowrap">
                     <!-- Bearbeiten Button -->
-                    <button class="flex items-center gap-2 py-1 text-gray-900 cursor-pointer">
+                    <button class="flex items-center gap-2 py-1 text-gray-900 cursor-pointer editBtn">
                       <img src="../frontend/src/images/admin/Icons-edit-orange.png" alt="" class="w-[20px]">
                       Bearbeiten
                     </button>
@@ -316,6 +316,7 @@ if (!isset($_SESSION["login_id"])) {
   <script src="../frontend/src/js/getprojects.js"></script>
   <script src="../frontend/src/js/deleteproject.js"></script>
   <script src="../frontend/src/js/addproject.js"></script>
+  <script src="../frontend/src/js/editproject.js"></script>
 </body>
 
 </html>

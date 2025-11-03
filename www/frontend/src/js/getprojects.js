@@ -20,7 +20,7 @@ function loadProjects() {
                     <td class="px-2 py-2 whitespace-nowrap">${project.category}</td>
                     <td class="px-2 py-2 whitespace-nowrap">${project.areas}</td>
                     <td class="py-2 whitespace-nowrap">
-                        <button class="flex items-center gap-2 py-1 text-gray-900 cursor-pointer">
+                        <button class="flex items-center gap-2 py-1 text-gray-900 cursor-pointer editBtn">
                             <img src="../frontend/src/images/admin/Icons-edit-orange.png" class="w-[20px]">
                             Bearbeiten
                         </button>
