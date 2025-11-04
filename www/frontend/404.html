@@ -11,12 +11,10 @@
       href="./src/images/favicon/security.png"
     />
     <link href="./src/css/output.css" rel="stylesheet" />
-    <title>LogIn</title>
+    <title>404 Not Found</title>
   </head>
 
-  <body
-    class="relative flex justify-center items-center bg-gray-100 m-0 p-0 min-h-screen"
-  >
+  <body class="relative flex justify-center items-center bg-gray-100 m-0 p-0 min-h-screen">
     <!--Theme Toggle -->
     <div id="themeToggle" class="top-8 right-8 z-50 fixed">
       <button id="themeToggleBtn">
@@ -37,10 +35,10 @@
     </div>
 
     <main>
-      <!-- Container with blur effectt -->
+      <!-- Content-->
       <section
         id="welcomeBox"
-        class="z-10 relative flex flex-col items-center bg-white/30 shadow-lg backdrop-blur-md p-10 rounded-2xl w-[800px] max-w-2xl"
+        class="z-10 relative flex flex-col items-center bg-white/30 shadow-lg backdrop-blur-md p-10 rounded-2xl w-md max-w-2xl"
       >
         <a
           href="index.html"
@@ -54,7 +52,7 @@
             />
           </button>
         </a>
-        <div id="404Text" class="w-full">
+        <div id="404Text" class="sm:flex-col w-full">
           <h1 class="mb-10 font-bold text-violet-500 text-3xl text-center">
             404 Not Found
           </h1>
@@ -62,8 +60,8 @@
             Schön, dass du hierhergefunden hast – willkommen auf meinem Weg!
           </p>
           <p class="text-center">
-            Konkurrenz? Gibt’s bei mir nicht. Ich glaube an Zusammenarbeit,<br />
-            Inspiration und gemeinsames Wachsen. Wir sind ein Team!
+            Konkurrenz? Gibt’s bei mir nicht. Ich glaube an <strong>Zusammenarbeit,<br />
+            Inspiration</strong> und <strong>gemeinsames Wachsen.</strong> Wir sind ein Team!
           </p>
         </div>
         <div id="404Gif">
@@ -83,7 +81,6 @@
 
     <!--JavaScripts-->
     <script src="./src/js/animation.js"></script>
-    <script src="./src/js/darkmode.js"></script>
     <script src="./src/js/scrollanimation.js"></script>
   </body>
 </html>
