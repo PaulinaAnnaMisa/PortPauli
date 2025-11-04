@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="welcome" content="Portfolio Willkommensseite" />
+    <meta name="robots" content="index, follow" />
     <link href="./src/css/output.css" rel="stylesheet" />
 
     <title>Portfolio</title>
@@ -15,7 +16,7 @@
     <!--Navigation-->
     <aside
       id="navBar"
-      class="z-50 flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen min-h-screen hiddenfixed"
+      class="z-50 fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen min-h-screen"
     >
       <a href="home.html" class="">
         <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
@@ -103,24 +104,66 @@
     </aside>
 
     <!--Navigation Mobile-->
-    <aside
+    <div
       id="navBarMobile"
-      class="hidden z-50 fixed flex flex-col justify-start items-center gap-5 bg-gray-50 w-[100px]"
+      class="hidden md:hidden z-50 fixed flex flex-col justify-center items-center bg-gray-50 shadow p-4 w-32"
     >
-      <a href="home.html">
-        <h3 class="mt-5 text-violet-500 text-sm text-center">Port Pauli</h3>
-      </a>
+      <h4 class="font-semibold text-violet-500! text-center">Port Pauli</h4>
 
-      <nav id="navMobile" class="flex flex-col items-start mx-5 my-5">
-        <button id="navBtn" class="relative mb-5">
-          <img
-            src="./src/images/nav/burgermenu.svg"
-            alt="Icon Home"
-            class="justify-center w-[20px] h-[20px] cursor-pointer"
-          />
-        </button>
-      </nav>
-    </aside>
+      <button
+        id="burgerBtn"
+        data-dropdown-toggle="dropdown"
+        class="inline-flex mt-5 mb-5"
+        type="button"
+      >
+        <img
+          src="./src/images/nav/burgermenu_long.svg"
+          alt="Burgermenu Navigation Mobile"
+          class="w-[40px] cursor-pointer"
+        />
+      </button>
+
+      <!-- Dropdown menu -->
+      <div id="dropdown" class="hidden bg-gray-50 rounded-lg divide-y w-48">
+        <ul
+          class="shadow-lg py-2 text-gray-900 text-center"
+          aria-labelledby="dropdownDefaultButton"
+        >
+          <hr class="border-gray-300" />
+          <li>
+            <a href="home.html" class="block px-4 py-2 hover:text-violet-500"
+              >Home</a
+            >
+          </li>
+          <hr class="border-gray-300" />
+          <li>
+            <a href="#portSkills" class="block px-4 py-2 hover:text-violet-500"
+              >Skills</a
+            >
+          </li>
+          <hr class="border-gray-300" />
+          <li>
+            <a
+              href="#portProjectsBox"
+              class="block px-4 py-2 hover:text-violet-500"
+              >Projekte</a
+            >
+          </li>
+          <hr class="border-gray-300" />
+          <li>
+            <a href="about.html" class="block px-4 py-2 hover:text-violet-500"
+              >Über mich</a
+            >
+          </li>
+          <hr class="border-gray-300" />
+          <li>
+            <a href="contact.html" class="block px-4 py-2 hover:text-violet-500"
+              >Kontakt</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!--Content-->
     <section
@@ -567,9 +610,9 @@
     </div>
 
     <!--JavaScripts-->
-    <script src="./src/js/scrollanimation.js"></script>
     <script src="./src/js/animation.js"></script>
-    <script src="./src/js/logos.js"></script>
+    <script src="./src/js/navigation.js"></script>
+    <script src="./src/js/scrollanimation.js"></script>
     <script src="./src/js/darkmode.js"></script>
     <script src="./src/js/projectGallery.js"></script>
     <script src="./src/js/tabs.js"></script>
