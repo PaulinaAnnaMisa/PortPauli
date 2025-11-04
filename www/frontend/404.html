@@ -5,16 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="welcome" content="Portfolio Willkommensseite" />
     <meta name="robots" content="index, follow" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./src/images/favicon/security.png"
-    />
+    <link rel="icon" type="image/png" href="./src/images/favicon/security.png"/>
     <link href="./src/css/output.css" rel="stylesheet" />
     <title>404 Not Found</title>
   </head>
 
-  <body class="relative flex justify-center items-center bg-gray-100 m-0 p-0 min-h-screen">
+  <body class="relative flex sm:flex-col md:flex-col justify-center items-center bg-gray-100 m-0 p-0 min-h-screen">
     <!--Theme Toggle -->
     <div id="themeToggle" class="top-8 right-8 z-50 fixed">
       <button id="themeToggleBtn">
@@ -34,25 +30,22 @@
       </button>
     </div>
 
+    <!-- Content-->
     <main>
-      <!-- Content-->
       <section
         id="welcomeBox"
-        class="z-10 relative flex flex-col items-center bg-white/30 shadow-lg backdrop-blur-md p-10 rounded-2xl w-md max-w-2xl"
+        class="z-10 relative flex flex-col flex-wrap items-center bg-white/30 shadow-lg backdrop-blur-md m-2 mx-auto p-10 rounded-2xl w-md container"
       >
-        <a
-          href="index.html"
-          class="top-4 left-4 absolute hover:scale-110 transition duration-200 ease-in-out"
-        >
+        <a href="index.html" class="top-4 left-4 absolute hover:scale-110 transition duration-200 ease-in-out">
           <button id="back">
             <img
               src="./src/images/icon_arrow_back_violett.svg"
               alt="icon back"
-              class="flex content-start m-2 w-[50px] h-[50px] object-cover cursor-pointer"
+              class="flex content-start mx-2 mt-2 mb-5 w-[50px] h-[50px] object-cover cursor-pointer"
             />
           </button>
         </a>
-        <div id="404Text" class="sm:flex-col w-full">
+        <div id="404Text" class="mt-10 w-full">
           <h1 class="mb-10 font-bold text-violet-500 text-3xl text-center">
             404 Not Found
           </h1>
@@ -61,14 +54,14 @@
           </p>
           <p class="text-center">
             Konkurrenz? Gibt’s bei mir nicht. Ich glaube an <strong>Zusammenarbeit,<br />
-            Inspiration</strong> und <strong>gemeinsames Wachsen.</strong> Wir sind ein Team!
+            Inspiration</strong> und <strong>gemeinsames Wachsen.</strong> <br>Wir sind ein Team!
           </p>
         </div>
         <div id="404Gif">
           <img
             src="./src/images/404/dance-22003_256.gif"
             alt="Ein Männchen tanzt"
-            class="pt-5 w-[150px] h-[150px] object-cover"
+            class="pt-5 w-sm object-cover"
           />
         </div>
       </section>
