@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function hexToRgba(hex, alpha = 1) {
     if (!hex || typeof hex !== 'string') return `rgba(255,255,255,${alpha})`;
     let h = hex.replace('#','').trim();
-    if (h.length === 3) h = h.split('').map(c => c + c).join('');
+
+    if (h.length === 3) h = h.split('').map(c => c + c).join(''); // umschreiben, maps:  
+
     if (h.length !== 6) return `rgba(255,255,255,${alpha})`;
     let r = parseInt(h.substring(0,2), 16);
     let g = parseInt(h.substring(2,4), 16);
@@ -37,8 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let size = Math.round(random(120, 520));       // px
     let left = Math.round(random(-10, 90));        // %
     let top = Math.round(random(-20, 85));         // %
+
    // let blur = Math.round(random(18, 70));         // px
-    let opacity = +(random(0.12, 0.95).toFixed(2));
+    let opacity = +(random(0.12, 0.95).toFixed(2));  // ?? fixed!! Anzahl der Werten bei der , stellen 
     let duration = Math.round(random(10, 28));     // s
     let tx = Math.round(random(-60, 60));          // px
     let ty = Math.round(random(-60, 60));          // px
@@ -49,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     orb.style.height = `${size}px`;
     orb.style.left = `${left}%`;
     orb.style.top = `${top}%`;
+
     //orb.style.filter = `blur(${blur}px)`;
     orb.style.opacity = String(opacity);
     orb.style.pointerEvents = 'none';

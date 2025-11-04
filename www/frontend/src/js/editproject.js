@@ -1,12 +1,9 @@
 let formEditProject = document.querySelector("#formEditProject");
 let resultEdit = document.querySelector("#resultEdit");
 
-
-
 document.addEventListener("click", (event) => {
   let btn = event.target.closest(".editBtn");
   if (!btn) return;
-
 
   let tr = btn.closest("tr");
   let id = tr.children[0].textContent.trim();
