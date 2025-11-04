@@ -191,7 +191,7 @@ b {
   }
 }
 
-/* kleinere Geräte: weniger Blur & kleinere Orbs für Performance */
+/* smaller: weniger Blur & kleinere Orbs für Performance */
 @media (max-width: 640px) {
   .orb {
     filter: blur(calc(var(--blur, 40px) * 0.7));
