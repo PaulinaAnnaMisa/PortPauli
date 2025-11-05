@@ -2,12 +2,12 @@ let dropdown = document.getElementById("dropdown");
 let burgerBtn = document.getElementById("burgerBtn");
 
 burgerBtn.addEventListener("click", () => {
-  dropdown.classList.toggle("hidden"); // Menü ein-/ausblenden
+  dropdown.classList.toggle("hidden"); 
   let expanded = burgerBtn.getAttribute("aria-expanded") === "true";
   burgerBtn.setAttribute("aria-expanded", !expanded);
 });
 
-// options with default values
+// options default values
 let options = {
     placement: "bottom",
     triggerType: "click",

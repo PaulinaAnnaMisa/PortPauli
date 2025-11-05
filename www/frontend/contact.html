@@ -14,16 +14,16 @@
     <!--Navigation-->
     <aside
       id="navBar"
-      class="hidden z-50 fixed md:flex flex-col justify-between items-center bg-gray-50 md:w-[200px] h-screen"
+      class="hidden z-50 fixed md:flex flex-col justify-center items-center bg-gray-50 md:w-[200px] h-screen min-h-screen"
     >
-      <a href="home.html">
+      <a href="home.html" class="">
         <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
       </a>
-
-      <nav id="nav" class="flex flex-col items-center">
+      <!--Navigation -->
+      <nav id="nav" class="flex flex-col items-start">
         <ul
           id="navLinks"
-          class="flex flex-col justify-center items-start gap-10 mt-10 ml-10"
+          class="flex flex-col justify-center items-start gap-10 mt-10"
         >
           <li
             class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out"
@@ -80,7 +80,24 @@
           </li>
         </ul>
       </nav>
-
+      <!--Theme Toggle -->
+      <div id="themeToggle" class="flex flex-end justify-center mt-auto">
+        <button id="themeToggleBtn">
+          <img
+            src="./src/images/darkmode/bright-sun.svg"
+            alt="Dark Mode"
+            id="darkIcon"
+            class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out cursor-pointer"
+          />
+          <img
+            src="./src/images/darkmode/dark-sun.svg"
+            alt=""
+            id="Light Mode"
+            style="display: none"
+            class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+          />
+        </button>
+      </div>
     </aside>
 
     <!--Navigation Mobile-->
@@ -156,7 +173,7 @@
     >
       <!-- Main contant -->
       <main
-        class="flex lg:flex-row flex-col justify-center items-center gap-20 min-h-screen"
+        class="flex lg:flex-row flex-col justify-center items-center gap-10 md:gap-50 min-h-screen"
       >
         <!-- Content left -->
         <section
@@ -271,7 +288,7 @@
                       </div>
                     </div>
 
-                    <div class="flex space-x-4 mb-6">
+                    <div class="flex md:flex-row flex-col space-x-4 mb-6">
                       <div class="w-full md:w-1/2">
                         <label
                           for="email"
