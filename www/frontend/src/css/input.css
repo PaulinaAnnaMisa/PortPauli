@@ -100,7 +100,7 @@
 
 h1 {
   font-family: "Paytone One", Arial, sans-serif;
-    font-size: 32px;
+  font-size: 32px;
 }
 h2 {
   font-family: "Paytone One", Arial, sans-serif;
@@ -121,14 +121,15 @@ h4 {
   font-family: "Lato", Arial, sans-serif;
   font-weight: 400;
 }
+
 p {
   color: rgb(29, 29, 29);
 }
+
 strong,
 b {
   font-weight: 600;
 }
-
 
 #orbs {
   position: fixed;
