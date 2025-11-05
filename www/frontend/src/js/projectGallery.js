@@ -36,7 +36,7 @@ fetch("../backend/projectGallery.php")
               </p>
               <ul class="flex flex-row justify-center gap-5 mt-5">
                 <li
-                  class="px-2 border-2 border-${color} rounded-2xl min-w-12 text-${color} text-center scale-100 hover:scale-105 duration-300 ease-in-out"
+                  class="px-2 border-2 !border-${color} rounded-2xl min-w-12 !text-${color} text-center scale-100 hover:scale-105 duration-300 ease-in-out"
                 >
                   ${project.areas}
                 </li>

@@ -1376,6 +1376,11 @@
       padding-inline: calc(var(--spacing) * 20);
     }
   }
+  .lg\:absolute {
+    @media (width >= 64rem) {
+      position: absolute;
+    }
+  }
   .lg\:flex-row {
     @media (width >= 64rem) {
       flex-direction: row;
