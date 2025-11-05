@@ -4,21 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfolio Page" />
-    <meta name="robots" content="index, follow" /> 
-    <link rel="icon" type="image/png" href="./src/images/favicon/portfolio.png">
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./src/images/favicon/portfolio.png"
+    />
     <link href="./src/css/output.css" rel="stylesheet" />
     <title>Portfolio</title>
   </head>
 
-  <body
-    class="flex md:flex-row flex-col justify-between bg-gray-100 m-0 p-0 w-full"
-  >
+  <body class="flex justify-between bg-gray-100 m-0 p-0 overflow-x-hidden">
     <!--Navigation-->
-    <aside id="navBar" class="z-50 fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen min-h-screen" >
+    <aside
+      id="navBar"
+      class="hidden z-50 fixed md:flex flex-col justify-start items-center bg-gray-50 md:w-[200px] h-screen min-h-screen"
+    >
       <a href="home.html" class="">
         <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
       </a>
-
       <!--Navigation -->
       <nav id="nav" class="flex flex-col items-start">
         <ul
@@ -46,7 +50,7 @@
               alt="Icon Home"
               class="justify-center w-[20px] h-[20px]"
             />
-            <a href="#portSkills">Skills</a>
+            <a href="home.html#portSkills">Skills</a>
           </li>
           <li
             class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out"
@@ -56,7 +60,7 @@
               alt="Icon Home"
               class="w-[20px] h-[20px]"
             />
-            <a href="#portProjectsBox">Projekte</a>
+            <a href="home.html#portProjectsBox">Projekte</a>
           </li>
           <li
             class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out"
@@ -80,77 +84,62 @@
           </li>
         </ul>
       </nav>
-      <!--Theme Toggle -->
-      <div id="themeToggle" class="flex flex-end justify-center mt-auto">
-        <button id="themeToggleBtn">
-          <img
-            src="./src/images/darkmode/bright-sun.svg"
-            alt="Dark Mode"
-            id="darkIcon"
-            class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out cursor-pointer"
-          />
-          <img
-            src="./src/images/darkmode/dark-sun.svg"
-            alt=""
-            id="Light Mode"
-            style="display: none"
-            class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
-          />
-        </button>
-      </div>
     </aside>
 
     <!--Navigation Mobile-->
-    <div id="navBarMobile" class="hidden md:hidden z-50 fixed flex flex-col justify-center items-center bg-gray-50 shadow p-4 w-32"
-    >
-      <h4 class="font-semibold text-violet-500! text-center">Port Pauli</h4>
-
-      <button
-        id="burgerBtn"
-        data-dropdown-toggle="dropdown"
-        class="inline-flex mt-5 mb-5"
-        type="button"
+    <div id="navMobile" class="md:hidden z-50 fixed flex w-full">
+      <div
+        id="navBarMobile"
+        class="z-50 fixed flex justify-between items-center gap-10 bg-white/30 shadow-lg backdrop-blur-md p-4 w-full"
       >
-        <img
-          src="./src/images/nav/burgermenu_long.svg"
-          alt="Burgermenu Navigation Mobile"
-          class="w-[40px] cursor-pointer"
-        />
-      </button>
-
+        <h3 class="text-violet-500 text-center">Port Pauli</h3>
+        <button
+          id="burgerBtn"
+          data-dropdown-toggle="dropdown"
+          class="inline-flex mt-5 mb-6"
+          type="button"
+        >
+          <img
+            src="./src/images/nav/burgermenu_long.svg"
+            alt="Burgermenu Navigation Mobile"
+            class="w-[40px] cursor-pointer"
+          />
+        </button>
+      </div>
       <!-- Dropdown menu -->
-      <div id="dropdown" class="hidden bg-gray-50 rounded-lg divide-y w-48">
+      <div
+        id="dropdown"
+        class="hidden z-50 fixed flex flex-col justify-between bg-gray-50 shadow-sm mt-20 rounded-lg w-full"
+      >
         <ul
-          class="shadow-lg py-2 text-gray-900 text-center"
+          class="flex flex-col justify-between shadow-lg py-2 divide-y divide-gray-300 text-gray-900 text-center"
           aria-labelledby="dropdownDefaultButton"
         >
-          <hr class="border-gray-300" />
           <li>
-            <a href="home.html" class="block px-4 py-2 hover:text-violet-500"
+            <a href="home.html" class="block p-2 px-4 hover:text-violet-500"
               >Home</a
             >
           </li>
-          <hr class="border-gray-300" />
           <li>
-            <a href="#portSkills" class="block px-4 py-2 hover:text-violet-500"
+            <a
+              href="home.html#portSkills"
+              class="block px-4 py-2 hover:text-violet-500"
               >Skills</a
             >
           </li>
-          <hr class="border-gray-300" />
           <li>
             <a
-              href="#portProjectsBox"
+              href="home.html#portProjectsBox"
               class="block px-4 py-2 hover:text-violet-500"
               >Projekte</a
             >
           </li>
-          <hr class="border-gray-300" />
           <li>
             <a href="about.html" class="block px-4 py-2 hover:text-violet-500"
               >Über mich</a
             >
           </li>
-          <hr class="border-gray-300" />
+
           <li>
             <a href="contact.html" class="block px-4 py-2 hover:text-violet-500"
               >Kontakt</a
@@ -163,23 +152,28 @@
     <!--Content-->
     <section
       id="portContent"
-      class="flex flex-col flex-1 justify-between ml-[200px] w-full"
+      class="flex flex-col flex-1 justify-between md:ml-[200px] w-full overflow-x-hidden"
     >
       <!--Header-->
       <header
         id="portHeader"
-        class="flex opacity-0 m-0 transition-all translate-y-10 duration-700 ease-out"
+        class="flex md:flex-row flex-col opacity-0 m-0 transition-all translate-y-10 duration-700 ease-out"
       >
         <img
           src="./src/images/home/header.png"
           alt="Bild von Paulina"
-          class=""
+          class="hidden md:flex md:mt-0 md:w-auto md:w-auto md:w-full md:h-full md:object-center md:scale-100 md:translate-x-0"
+        />
+        <img
+          src="./src/images/home/header_mobile.png"
+          alt="Bild von Paulina"
+          class="md:hidden flex mt-30 w-full md:w-auto md:w-auto h-80 h-full md:h-full object-cover"
         />
 
         <!-- Text Container-->
         <section
           id="headerTextBox"
-          class="absolute flex flex-col justify-center items-center bg-white/30 shadow-lg backdrop-blur-md m-4 mt-40 ml-20 p-10 rounded-2xl w-full max-w-xl"
+          class="md:absolute relative flex flex-col justify-center items-center bg-white/30 shadow-lg backdrop-blur-md m-4 md:mt-50 md:ml-20 p-10 rounded-2xl max-w-xl"
         >
           <div
             id="headerText"
@@ -210,17 +204,21 @@
             class="max-h-10"
           />
         </div>
+
         <!--Short about me-->
         <section
           id="portAboutBox"
-          class="flex flex-col justify-center items-center bg-white/30 opacity-0 shadow-lg backdrop-blur-md m-0 mx-20 mt-20 p-20 rounded-2xl transition-all translate-y-10 duration-700 ease-out"
+          class="flex flex-col justify-center items-center bg-white/30 opacity-0 shadow-lg backdrop-blur-md m-0 mx-4 md:mx-20 mt-10 p-20 rounded-2xl transition-all translate-y-10 duration-700 ease-out"
         >
-          <div id="portAbout" class="flex flex-row gap-40">
+          <div
+            id="portAbout"
+            class="flex md:flex-row flex-col gap-20 md:gap-40"
+          >
             <div id="portAboutAnimation">
               <img
                 src="./src/images/home/GIF-sky-coden.gif"
                 alt="Animation von Codes auf dem PC-Bildschirm."
-                class="w-[400px] h-[400px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+                class="w-64 object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
               />
             </div>
 
@@ -230,7 +228,7 @@
                 Hi, ich bin Paulina – alias Pauli. <br />
                 27 Jahre alt, mit einem Herzen <b>voller Kreativität</b> und
                 einem Kopf, der gerne Pixel jongliert. Ich bin eine kreative
-                Seele denn ich <b>designe, code, fotografiere und UI/UX</b> ist
+                Seele denn ich <b>designe, code und fotografiere. UI/UX</b> ist
                 mir ebenfalls vertraut.
                 <br />
                 Am liebsten kombiniere ich all diese Fähigkeiten gleichzeitig,
@@ -260,18 +258,18 @@
 
           <div
             id="skillsBoxes"
-            class="flex md:flex-row flex-col justify-start items-center items-stretch gap-10 mx-40"
+            class="flex md:flex-row flex-col justify-start items-center items-stretch gap-10 mx-4 md:mx-40"
           >
             <!--Skills Web-->
-            <a
-              class="flex flex-col flex-1 justify-center items-center bg-white/30 shadow-lg hover:shadow-sky-200 backdrop-blur-md px-20 py-10 rounded-2xl scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            <div
+              class="flex flex-col flex-1 justify-center items-center bg-white/30 shadow-lg hover:shadow-sky-200 backdrop-blur-md px-10 md:px-20 py-10 rounded-2xl scale-100 hover:scale-105 transition duration-200 ease-in-out"
             >
               <div id="skillsBoxDev">
                 <h4 class="font-bold !text-sky-500">Web Development</h4>
 
                 <div
                   id="skillsDev"
-                  class="flex flex-row flex-wrap justify-between items-center gap-5 my-10 text-center"
+                  class="flex flex-row flex-wrap justify-start items-center gap-5 my-10 text-center"
                 >
                   <div
                     id="skillHtml"
@@ -363,10 +361,10 @@
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
             <!--Skills Design-->
-            <a
-              class="flex flex-col flex-1 justify-center items-center bg-white/30 shadow-lg hover:shadow-orange-200 backdrop-blur-md px-20 py-10 rounded-2xl scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            <div
+              class="flex flex-col flex-1 justify-center items-center bg-white/30 shadow-lg hover:shadow-orange-200 backdrop-blur-md px-10 md:px-20 py-10 rounded-2xl scale-100 hover:scale-105 transition duration-200 ease-in-out"
             >
               <div id="skillsBoxDesign">
                 <h4 class="font-bold !text-orange-500">Design</h4>
@@ -443,10 +441,11 @@
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
+
             <!--Skills Photography-->
-            <a
-              class="flex flex-col flex-1 justify-center items-center bg-white/30 shadow-lg hover:shadow-emerald-200 backdrop-blur-md px-20 py-10 rounded-2xl scale-100 hover:scale-105 transition duration-200 ease-in-out"
+            <div
+              class="flex flex-col flex-1 justify-center items-center bg-white/30 shadow-lg hover:shadow-emerald-200 backdrop-blur-md px-10 md:px-20 py-10 rounded-2xl scale-100 hover:scale-105 transition duration-200 ease-in-out"
             >
               <div id="skillsBoxPhoto">
                 <h4 class="font-bold !text-emerald-500">Fotografie</h4>
@@ -512,7 +511,7 @@
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
           <a
             href="about.html#cv"
@@ -524,16 +523,20 @@
 
         <!--Projects-->
         <section
-          id="portProjectsBox"
-          class="flex flex-col justify-center items-center bg-white/30 shadow-lg backdrop-blur-md mt-10 p-20"
-        >
+          id="portProjectsBox" class="flex flex-col justify-center items-center bg-white/30 shadow-lg backdrop-blur-md mt-10 p-4 md:p-20 w-full">
+
           <h2 class="mb-10 text-violet-500 text-3xl text-center">
             Meine Projekte
           </h2>
 
           <!-- Category/Tabs-->
-          <div id="categoryProjects" class="flex justify-center mb-10">
-            <ul class="flex gap-10 font-medium text-gray-800">
+          <div
+            id="categoryProjects"
+            class="flex justify-center items-center mb-5 md:mb-10"
+          >
+            <ul
+              class="flex flex-wrap justify-center gap-2 md:gap-10 font-medium text-gray-800"
+            >
               <li>
                 <button
                   class="px-4 py-2 border border-gray-300 rounded-full text-gray-900 hover:scale-105 transition-all duration-300 ease-in-out tab-btn"
@@ -576,7 +579,7 @@
           <!-- Gallery -->
           <div
             id="projectGallery"
-            class="flex flex-row flex-wrap justify-center gap-10 mx-10 transition-all translate-y-10 duration-700 ease-out"
+            class="flex flex-row flex-wrap justify-center gap-10 mx-10 mb-20 transition-all translate-y-10 duration-700 ease-out"
           ></div>
         </section>
       </main>
@@ -611,5 +614,4 @@
     <script src="./src/js/projectGallery.js"></script>
     <script src="./src/js/tabs.js"></script>
   </body>
-</html>
 </html>

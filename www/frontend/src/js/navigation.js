@@ -3,6 +3,7 @@ let burgerBtn = document.getElementById("burgerBtn");
 
 burgerBtn.addEventListener("click", () => {
   dropdown.classList.toggle("hidden"); 
+  
   let expanded = burgerBtn.getAttribute("aria-expanded") === "true";
   burgerBtn.setAttribute("aria-expanded", !expanded);
 });
