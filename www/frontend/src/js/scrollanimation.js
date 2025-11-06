@@ -9,10 +9,6 @@ let aboutBoxWDP = document.querySelector("#aboutBoxWDP");
 let cv = document.querySelector("#cv");
 let aboutInterests = document.querySelector("#aboutInterests");
 
-//contact
-let contactLeft = document.querySelector("#contactLeft");
-let contactRight = document.querySelector("#contactRight");
-
 
 let observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -34,7 +30,3 @@ let observer = new IntersectionObserver((entries) => {
   if (aboutBoxWDP) observer.observe(aboutBoxWDP);
   if (cv) observer.observe(cv);
   if (aboutInterests) observer.observe(aboutInterests);
-
-  //contact
-  if (contactLeft) observer.observe(contactLeft);
-  if (contactRight) observer.observe(contactRight);
