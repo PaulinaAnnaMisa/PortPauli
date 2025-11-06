@@ -195,7 +195,10 @@
 
       <!--Main content-->
       <main class="flex flex-col m-0 p-0">
-        <div id="aboutAnimationArrow" class="flex justify-center mt-10 md:mt-30 mb-10">
+        <div
+          id="aboutAnimationArrow"
+          class="flex justify-center mt-10 md:mt-30 mb-10"
+        >
           <img
             src="./src/images/home/gif_arrow_violet.gif"
             alt="Animation von Pfeilen nach unten"
@@ -314,7 +317,10 @@
             </a>
           </div>
 
-          <div id="timelines" class="flex lg:flex-row flex-col justify-start items-start">
+          <div
+            id="timelines"
+            class="flex lg:flex-row flex-col justify-start items-start"
+          >
             <div
               id="cvCenter"
               class="flex flex-col justify-start md:justify-center md:items-center p-10 w-full"
@@ -464,7 +470,10 @@
               id="cvRight"
               class="flex flex-col justify-start md:justify-center md:items-center w-full"
             >
-              <div id="cvRightTop" class="flex flex-col justify-start lg:p-20 px-10 pb-10">
+              <div
+                id="cvRightTop"
+                class="flex flex-col justify-start lg:p-20 px-10 pb-10"
+              >
                 <div
                   id="cvRightTopHeadline"
                   class="flex flex-row items-center gap-2"
@@ -573,7 +582,10 @@
                 </div>
               </div>
 
-              <div id="cvRightBottom" class="flex flex-col justify-start p-10 pt-0">
+              <div
+                id="cvRightBottom"
+                class="flex flex-col justify-start p-10 pt-0"
+              >
                 <div
                   id="cvRightBottomHeadline"
                   class="flex flex-row items-center gap-2"
@@ -624,8 +636,10 @@
         </section>
 
         <!--Interests-->
-        <section id="aboutInterests" class="flex lg:flex-row flex-col justify-between opacity-0 mx-20 my-10">
-
+        <section
+          id="aboutInterests"
+          class="flex lg:flex-row flex-col justify-between opacity-0 mx-20 my-10"
+        >
           <div
             id="interests"
             class="flex lg:flex-row flex-col justify-between items-center"
@@ -650,10 +664,7 @@
               id="paintingsGallery"
               class="flex md:flex-row flex-col justify-end w-2/3 overflow-hidden"
             >
-              <div
-                id="paintings"
-                class="flex flex-wrap justify-center gap-4"
-              >
+              <div id="paintings" class="flex flex-wrap justify-center gap-4">
                 <img
                   src="./src/images/about/painting-3.png"
                   class="flex-shrink-0 w-full lg:w-[200px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
@@ -694,7 +705,9 @@
             >Impressum</a
           >
         </div>
-        <p class="mb-10 text-center">© 2025 Paulina Anna Misa</p>
+        <p class="mb-10 text-center">
+          © <span id="year"></span> Paulina Anna Misa
+        </p>
       </footer>
     </section>
 
@@ -707,5 +720,6 @@
     <script src="./src/js/animation.js"></script>
     <script src="./src/js/navigation.js"></script>
     <script src="./src/js/scrollanimation.js"></script>
+    <script src="./src/js/footer.js"></script>
   </body>
 </html>
