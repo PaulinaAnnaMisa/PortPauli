@@ -4,6 +4,7 @@ require_once 'config.db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    // datas 
     $id          = $_POST['id'] ?? '';
     $title       = $_POST['title'] ?? '';
     $description = $_POST['description'] ?? '';
@@ -11,11 +12,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $category    = $_POST['category'] ?? '';
     $areas       = $_POST['areas'] ?? '';
 
+    // empty check
     if (empty($id) || empty($title) || empty($description) || empty($image) || empty($category) || empty($areas)) {
         echo json_encode(["error" => "Bitte fülle alle Felder aus."]);
         exit;
     }
 
+    // update
     $stmt = $mysqli->prepare("
         UPDATE projekte 
         SET title = ?, description = ?, image = ?, category = ?, areas = ?
