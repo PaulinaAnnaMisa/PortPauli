@@ -1,3 +1,4 @@
+// get projects during data loading
 document.addEventListener("DOMContentLoaded", () => {
   loadProjects();
 });
@@ -7,7 +8,7 @@ function loadProjects() {
     .then((res) => res.json())
     .then((projects) => {
       let tbody = document.querySelector("#tbody");
-      tbody.innerHTML = ""; // delete
+      tbody.innerHTML = ""; // delete no space
       
       projects.forEach((project) => {
         let tr = document.createElement("tr");
