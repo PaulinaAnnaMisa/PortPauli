@@ -1,6 +1,7 @@
 let dropdown = document.getElementById("dropdown");
 let burgerBtn = document.getElementById("burgerBtn");
 
+// btn funcion
 burgerBtn.addEventListener("click", () => {
   dropdown.classList.toggle("hidden"); 
   
@@ -27,7 +28,7 @@ let options = {
     },
 };
 
-// instance options object
+// options object
 let instanceOptions = {
   id: "dropdown",
   override: true
