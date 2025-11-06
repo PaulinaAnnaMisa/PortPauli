@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="About me" />
     <meta name="robots" content="index, follow" />
-    <link rel="icon" type="image/png" href="./src/images/favicon/about.png"/>
+    <link rel="icon" type="image/png" href="./src/images/favicon/about.png" />
     <link href="./src/css/output.css" rel="stylesheet" />
     <title>Über mich</title>
   </head>
 
-  <body
-    class="flex md:flex-row flex-col justify-between bg-gray-100 m-0 p-0 w-full"
-  >
+  <body class="flex justify-between bg-gray-100 m-0 p-0">
     <!--Navigation-->
     <aside
       id="navBar"
-      class="hidden z-50 fixed md:flex flex-col justify-center items-center bg-gray-50 md:w-[200px] h-screen min-h-screen"
+      class="hidden z-50 fixed md:flex flex-col justify-start items-center bg-gray-50 md:w-[200px] h-screen min-h-screen"
     >
       <a href="home.html" class="">
         <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
@@ -82,44 +80,89 @@
           </li>
         </ul>
       </nav>
-      <!--Theme Toggle -->
-      <div id="themeToggle" class="flex flex-end justify-center mt-auto">
-        <button id="themeToggleBtn">
+    </aside>
+
+    <!--Navigation Mobile-->
+    <div id="navMobile" class="md:hidden z-50 fixed flex w-full">
+      <div
+        id="navBarMobile"
+        class="z-50 fixed flex justify-between items-center gap-10 bg-white/30 shadow-lg backdrop-blur-md p-4 w-full"
+      >
+        <h3 class="text-violet-500 text-center">Port Pauli</h3>
+        <button
+          id="burgerBtn"
+          data-dropdown-toggle="dropdown"
+          class="inline-flex mt-5 mb-6"
+          type="button"
+        >
           <img
-            src="./src/images/darkmode/bright-sun.svg"
-            alt="Dark Mode"
-            id="darkIcon"
-            class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out cursor-pointer"
-          />
-          <img
-            src="./src/images/darkmode/dark-sun.svg"
-            alt=""
-            id="Light Mode"
-            style="display: none"
-            class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+            src="./src/images/nav/burgermenu_long.svg"
+            alt="Burgermenu Navigation Mobile"
+            class="w-[40px] cursor-pointer"
           />
         </button>
       </div>
-    </aside>
+      <!-- Dropdown menu -->
+      <div
+        id="dropdown"
+        class="hidden z-50 fixed flex flex-col justify-between bg-gray-50 shadow-sm mt-20 rounded-lg w-full"
+      >
+        <ul
+          class="flex flex-col justify-between shadow-lg py-2 divide-y divide-gray-300 text-gray-900 text-center"
+          aria-labelledby="dropdownDefaultButton"
+        >
+          <li>
+            <a href="home.html" class="block p-2 px-4 hover:text-violet-500"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="home.html#portSkills"
+              class="block px-4 py-2 hover:text-violet-500"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="home.html#portProjectsBox"
+              class="block px-4 py-2 hover:text-violet-500"
+              >Projekte</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="block px-4 py-2 hover:text-violet-500"
+              >Über mich</a
+            >
+          </li>
+
+          <li>
+            <a href="contact.html" class="block px-4 py-2 hover:text-violet-500"
+              >Kontakt</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!--Content-->
     <section
       id="aboutContent"
-      class="flex flex-col flex-1 justify-between md:ml-[200px] w-full"
+      class="flex flex-col flex-1 justify-between md:ml-[200px] w-full md:w-[calc(100%-200px)]"
     >
       <!--Header-->
       <header
         id="aboutHeader"
-        class="z-50 flex justify-center opacity-0 transition-all translate-y-10 duration-700 ease-out"
+        class="flex xl:flex-row flex-col justify-center opacity-0 transition-all translate-y-10 duration-700 ease-out"
       >
         <!-- Text Container-->
         <section
-          id="headerTextBox"
-          class="flex flex-row justify-between items-center content-center gap-50 mx-20 my-20 h-full"
+          id="headerBox"
+          class="flex lg:flex-row flex-col justify-between items-center gap-24 mx-5 md:mx-10 mt-32"
         >
           <div
             id="headerText"
-            class="flex flex-col justify-center gap-5 shadow-lg backdrop-blur-md p-20 rounded-2xl g-white/30"
+            class="flex flex-col justify-center gap-5 shadow-lg backdrop-blur-md p-10 rounded-2xl g-white/30"
           >
             <p>PAULINA ANNA MISA</p>
             <h2 class="text-violet-500 text-3xl">
@@ -137,13 +180,11 @@
 
           <div id="aboutVideo">
             <video
-              width="720"
-              height="640"
               autoplay
               loop
               muted
               playsinline
-              class="shadow-lg rounded-2xl"
+              class="shadow-lg rounded-2xl w-full max-w-md md:max-w-lg lg:max-w-xl h-auto object-cover"
             >
               <source src="./src/videos/video-me4.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -161,10 +202,11 @@
             class="max-h-10"
           />
         </div>
+
         <!--About me-->
         <section
           id="aboutBoxMain"
-          class="flex flex-col md:flex-col justify-center items-center opacity-0 mx-20 rounded-2xl"
+          class="flex flex-col lg:flex-col justify-start items-center opacity-0 mx-20 rounded-2xl"
         >
           <h2 class="mb-5 text-violet-500">Über mich</h2>
           <p class="mb-10 max-w-2xl text-center">
@@ -178,10 +220,12 @@
             mich eine neue Möglichkeit, etwas zu lernen – über Design, Technik
             und mich selbst.
           </p>
+
           <div
             id="aboutBoxWDP"
-            class="flex lg:flex-row flex-col justify-center items-center gap-10 bg-white/30 opacity-0 shadow-lg backdrop-blur-md p-20 rounded-2xl transition-all translate-y-10 duration-700 ease-out"
+            class="flex lg:flex-row flex-col justify-start items-center gap-10 bg-white/30 opacity-0 shadow-lg backdrop-blur-md mx-4 md:mx-20 p-10 rounded-2xl w-full transition-all translate-y-10 duration-700 ease-out"
           >
+            <!--Web-->
             <div
               id="aboutWeb"
               class="flex flex-col justify-center items-center"
@@ -191,7 +235,9 @@
                 alt="Abbildung von einem Laptop mit Codes"
                 class="shadow-lg hover:shadow-sky-200 mt-0 rounded-full w-24 h-24 object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
               />
-              <h4 class="mt-5 !text-sky-500">Full-Stack-Web Developerin</h4>
+              <h4 class="mt-5 !text-sky-500 text-center">
+                Full-Stack-Web Developerin
+              </h4>
               <p class="mt-5 max-w-2xl text-center">
                 Als <b>Web Developerin</b> gestalte und entwickle ich moderne,
                 benutzerfreundliche Webseiten mit Fokus auf Design, Performance
@@ -201,6 +247,7 @@
                 fertigen Produkt.
               </p>
             </div>
+            <!--Design-->
             <div
               id="aboutDesgn"
               class="flex flex-col justify-center items-center"
@@ -220,6 +267,7 @@
                 sind und einen bleibenden <b>Eindruck</b> hinterlassen.
               </p>
             </div>
+            <!--Photo-->
             <div
               id="aboutPhoto"
               class="flex flex-col justify-center items-center"
@@ -251,28 +299,25 @@
         <!--CV-->
         <section
           id="cv"
-          class="flex flex-row md:flex-col justify-center h-screen"
+          class="flex xl:flex-row flex-col justify-center items-center bg-white/30 shadow-lg backdrop-blur-md my-10 pt-10 pb-20"
         >
           <div
-            id="cvAll"
-            class="flex flex-row justify-center gap-10 bg-white/30 shadow-lg backdrop-blur-md mb-20"
+            id="cvLeft"
+            class="flex flex-col justify-center items-center w-full lg:w-1/3"
           >
-            <div
-              id="cvLeft"
-              class="flex flex-col justify-center items-center content-center max-w-1/4"
+            <img src="./src/images/about/aboutpauli.png" alt="Bild von Paula" />
+            <a
+              href="home.html#projectsWebHeadline"
+              class="flex justify-center items-center bg-orange-500 p-2 rounded-2xl w-48 h-10 text-white scale-100 hover:scale-105 transition duration-200 ease-in-out"
             >
-              <img src="./src/images/about/aboutpauli.png" alt="" />
-              <a
-                href="home.html#projectsWebHeadline"
-                class="flex justify-center items-center bg-orange-500 p-2 rounded-2xl w-48 h-10 text-white scale-100 hover:scale-105 transition duration-200 ease-in-out"
-              >
-                Zu meinen Projekten
-              </a>
-            </div>
+              Zu meinen Projekten
+            </a>
+          </div>
 
+          <div id="timelines" class="flex lg:flex-row flex-col justify-start items-start">
             <div
               id="cvCenter"
-              class="flex flex-col justify-start p-20 max-w-1/2"
+              class="flex flex-col justify-start md:justify-center md:items-center p-10 w-full"
             >
               <div
                 id="cvCenterHeadline"
@@ -288,7 +333,7 @@
                 </h3>
               </div>
               <!--Timeline Praxis-->
-              <div id="timelinePraxis" class="mt-5">
+              <div id="timelinePraxis" class="mt-5 ml-5">
                 <ol
                   class="relative !border-orange-200 border-s dark:border-orange-700"
                 >
@@ -415,11 +460,11 @@
               </div>
             </div>
 
-            <div id="cvRight" class="flex flex-col max-w-1/2">
-              <div
-                id="cvRightTop"
-                class="flex flex-col justify-start px-20 pt-20 pb-10"
-              >
+            <div
+              id="cvRight"
+              class="flex flex-col justify-start md:justify-center md:items-center w-full"
+            >
+              <div id="cvRightTop" class="flex flex-col justify-start lg:p-20 px-10 pb-10">
                 <div
                   id="cvRightTopHeadline"
                   class="flex flex-row items-center gap-2"
@@ -433,7 +478,7 @@
                 </div>
 
                 <!--Timeline School-->
-                <div id="timelinePraxis" class="mt-5">
+                <div id="timelinePraxis" class="mt-5 ml-5">
                   <ol
                     class="relative !border-orange-200 border-s dark:border-orange-700"
                   >
@@ -482,7 +527,7 @@
               </div>
               <div
                 id="cvRightMiddle"
-                class="flex flex-col justify-start px-20 pb-10"
+                class="flex flex-col justify-start md:ml-5 p-10 pt-0"
               >
                 <div
                   id="cvRightMiddleHeadline"
@@ -528,7 +573,7 @@
                 </div>
               </div>
 
-              <div id="cvRightBottom" class="flex flex-col justify-start px-20">
+              <div id="cvRightBottom" class="flex flex-col justify-start p-10 pt-0">
                 <div
                   id="cvRightBottomHeadline"
                   class="flex flex-row items-center gap-2"
@@ -579,17 +624,15 @@
         </section>
 
         <!--Interests-->
-        <section
-          id="aboutInterests"
-          class="flex flex-col opacity-0 mx-20 my-10"
-        >
+        <section id="aboutInterests" class="flex lg:flex-row flex-col justify-between opacity-0 mx-20 my-10">
+
           <div
-            id="interestsLeft"
-            class="flex flex-row justify-between items-center gap-15"
+            id="interests"
+            class="flex lg:flex-row flex-col justify-between items-center"
           >
-            <div id="interestsText">
+            <div id="interestsText" class="w-full lg:w-1/3">
               <h2 class="mb-5 text-violet-500">Meine Interessen</h2>
-              <p class="w-1/3 max-w-xl text-start">
+              <p class="text-start">
                 Meine Interessen drehen sich um das Gestalten, Entdecken und
                 Erleben. Die Fotografie erlaubt es mir, besondere Momente
                 einzufangen und die Welt aus einzigartigen Blickwinkeln zu
@@ -602,36 +645,35 @@
               </p>
             </div>
 
-            <!-- Gallery: Viewport + Track -->
-            <div id="paintingsGallery" class="relative">
-              <!-- viewport: begrenzt die sichtbare Fläche -->
-              <div id="paintingsViewport" class="w-[660px] overflow-hidden">
-                <!-- track: flex container, den wir per transform verschieben -->
-                <div
-                  id="paintingsTrack"
-                  class="flex gap-4 will-change-transform"
-                >
-                  <img
-                    src="./src/images/about/painting-3.png"
-                    class="flex-shrink-0 w-[200px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
-                    alt="Painting 3"
-                  />
-                  <img
-                    src="./src/images/about/painting-4.png"
-                    class="flex-shrink-0 w-[200px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
-                    alt="Painting 4"
-                  />
-                  <img
-                    src="./src/images/about/painting-2.png"
-                    class="flex-shrink-0 w-[200px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
-                    alt="Painting 2"
-                  />
-                  <img
-                    src="./src/images/about/painting-1.png"
-                    class="flex-shrink-0 w-[200px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
-                    alt="Painting 1"
-                  />
-                </div>
+            <!-- Paintings gallery-->
+            <div
+              id="paintingsGallery"
+              class="flex md:flex-row flex-col justify-end w-2/3 overflow-hidden"
+            >
+              <div
+                id="paintings"
+                class="flex flex-wrap justify-center gap-4"
+              >
+                <img
+                  src="./src/images/about/painting-3.png"
+                  class="flex-shrink-0 w-full lg:w-[200px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+                  alt="Painting 3"
+                />
+                <img
+                  src="./src/images/about/painting-4.png"
+                  class="flex-shrink-0 w-full lg:w-[200px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+                  alt="Painting 4"
+                />
+                <img
+                  src="./src/images/about/painting-2.png"
+                  class="flex-shrink-0 w-full lg:w-[200px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+                  alt="Painting 2"
+                />
+                <img
+                  src="./src/images/about/painting-1.png"
+                  class="flex-shrink-0 w-full lg:w-[200px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+                  alt="Painting 1"
+                />
               </div>
             </div>
           </div>
