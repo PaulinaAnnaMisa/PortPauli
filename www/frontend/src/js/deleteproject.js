@@ -5,7 +5,7 @@ document.addEventListener("click", (event) => {
   if (!btn) return;
 
   let projectId = btn.getAttribute("data-id");
-  //console.log("Projekt-ID:", projectId); //debug
+  //console.log("Projekt-ID:", projectId); 
 
   if (!projectId) {
     console.error("Keine Projekt-ID gefunden.");
