@@ -12,5 +12,5 @@ function toggleModal(show, type = 'add') {
     overlayEdit.classList.toggle("hidden", !show);
   }
 }
-
+// global
 window.toggleModal = toggleModal;
