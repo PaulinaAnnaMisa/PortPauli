@@ -2,7 +2,7 @@ let galleryItems = document.querySelectorAll(".gallery-item");
 let projectGallery = document.getElementById("projectGallery");
 
 let categoryColors = {
-  // category color
+  // category colors
   web: "sky-500",
   design: "orange-500",
   photo: "emerald-500",
@@ -11,11 +11,11 @@ let categoryColors = {
 fetch("../backend/projectGallery.php")
   .then((res) => res.json())
   .then((projects) => {
+
     projects.forEach((project) => {
       let color = categoryColors[project.category] || "gray-500";
       let div = document.createElement("div");
-      div.className =
-        "gallery-item";
+      div.className = "gallery-item";
 
       div.dataset.category = project.category;
 
