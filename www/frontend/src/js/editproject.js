@@ -1,6 +1,7 @@
 let formEditProject = document.querySelector("#formEditProject");
 let resultEdit = document.querySelector("#resultEdit");
 
+// get datas
 document.addEventListener("click", (event) => {
   let btn = event.target.closest(".editBtn");
   if (!btn) return;
@@ -24,6 +25,7 @@ document.addEventListener("click", (event) => {
   formEditProject.querySelector("[name='areas']").value = areas;
 });
 
+// update datas
 formEditProject.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -39,9 +41,8 @@ formEditProject.addEventListener("submit", (event) => {
       }
 
       if (project.success) {
-        let tr = document
-          .querySelector(`button[data-id='${project.id}']`)
-          .closest("tr");
+        let tr = document.querySelector(`button[data-id='${project.id}']`);
+        tr.closest("tr");
 
         tr.children[1].textContent = project.title;
         tr.children[2].textContent = project.description;
@@ -51,8 +52,11 @@ formEditProject.addEventListener("submit", (event) => {
 
         alert("Projekt erfolgreich aktualisiert!");
 
-        document.querySelector("#overlayEdit").classList.add("hidden");
-        document.querySelector("#popupEditProject").classList.add("hidden");
+        let overlayEdit = document.querySelector("#overlayEdit");
+        overlayEdit.classList.add("hidden");
+
+        let popupEditProject = document.querySelector("#popupEditProject");
+        popupEditProject.classList.add("hidden");
       }
     })
     .catch((err) => {
