@@ -309,8 +309,6 @@ if (!isset($_SESSION["login_id"])) {
       </div>
     </div>
 
-
-
     <!-- Container for orbs (behind the content) -->
     <div id="orbs" aria-hidden="true" class="-z-10 absolute inset-0">
       <div id="circle-3d"></div>
@@ -324,5 +322,4 @@ if (!isset($_SESSION["login_id"])) {
     <script src="../frontend/src/js/addproject.js"></script>
     <script src="../frontend/src/js/editproject.js"></script>
 </body>
-
 </html>
