@@ -1188,6 +1188,9 @@
   .\!text-emerald-500 {
     color: var(--color-emerald-500) !important;
   }
+  .\!text-gray-400 {
+    color: var(--color-gray-400) !important;
+  }
   .\!text-gray-900 {
     color: var(--color-gray-900) !important;
   }
