@@ -7,9 +7,8 @@ form.addEventListener("submit", (event) => {
   result.style.display = "block";
   result.innerHTML = "Bitte warten ...";
 
-  console.log("Formular wird gesendet ...");
+  //console.log("Formular wird gesendet ...");
 
-  //fetch
   fetch("../backend/contact.php", {
     method: "POST",
     body: new FormData(form),
