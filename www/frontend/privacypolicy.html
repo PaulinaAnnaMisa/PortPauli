@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="privaty policy" />
     <meta name="robots" content="index, follow" />
-    <link  rel="icon" type="image/png" href="./src/images/favicon/security.png"/>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./src/images/favicon/security.png"
+    />
     <link href="./src/css/output.css" rel="stylesheet" />
     <title>Datenschutz</title>
   </head>
 
   <body class="flex flex-col bg-gray-100">
+
     <!--Navigation-->
     <aside
       id="navBar"
-      class="z-50 fixed flex flex-col justify-between items-center bg-gray-50 w-[200px] h-screen">
-      
-      <a href="home.html">
+      class="hidden z-50 fixed md:flex flex-col justify-start items-center bg-gray-50 md:w-[200px] h-screen min-h-screen"
+    >
+      <a href="home.html" class="">
         <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
       </a>
-
+      <!--Navigation -->
       <nav id="nav" class="flex flex-col items-start">
         <ul
           id="navLinks"
@@ -46,7 +51,7 @@
               alt="Icon Home"
               class="justify-center w-[20px] h-[20px]"
             />
-            <a href="home.html#skillsBoxes">Skills</a>
+            <a href="home.html#portSkills">Skills</a>
           </li>
           <li
             class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out"
@@ -56,7 +61,7 @@
               alt="Icon Home"
               class="w-[20px] h-[20px]"
             />
-            <a href="home.html#projectsWebHeadline">Projekte</a>
+            <a href="home.html#portProjectsBox">Projekte</a>
           </li>
           <li
             class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out"
@@ -80,34 +85,79 @@
           </li>
         </ul>
       </nav>
+    </aside>
 
-      <!--Theme Toggle -->
-      <div id="themeToggle" class="flex flex-end justify-center mt-auto">
-        <button id="themeToggleBtn">
+    <!--Navigation Mobile-->
+    <div id="navMobile" class="md:hidden z-50 fixed flex w-full">
+      <div
+        id="navBarMobile"
+        class="z-50 fixed flex justify-between items-center gap-10 bg-white/30 shadow-lg backdrop-blur-md p-4 w-full"
+      >
+        <h3 class="text-violet-500 text-center">Port Pauli</h3>
+        <button
+          id="burgerBtn"
+          data-dropdown-toggle="dropdown"
+          class="inline-flex mt-5 mb-6"
+          type="button"
+        >
           <img
-            src="./src/images/darkmode/bright-sun.svg"
-            alt="Dark Mode"
-            id="darkIcon"
-            class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out cursor-pointer"
-          />
-          <img
-            src="./src/images/darkmode/dark-sun.svg"
-            alt=""
-            id="Light Mode"
-            style="display: none"
-            class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+            src="./src/images/nav/burgermenu_long.svg"
+            alt="Burgermenu Navigation Mobile"
+            class="w-[40px] cursor-pointer"
           />
         </button>
       </div>
-    </aside>
+      <!-- Dropdown menu -->
+      <div
+        id="dropdown"
+        class="hidden z-50 fixed flex flex-col justify-between bg-gray-50 shadow-sm mt-20 rounded-lg w-full"
+      >
+        <ul
+          class="flex flex-col justify-between shadow-lg py-2 divide-y divide-gray-300 text-gray-900 text-center"
+          aria-labelledby="dropdownDefaultButton"
+        >
+          <li>
+            <a href="home.html" class="block p-2 px-4 hover:text-violet-500"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="home.html#portSkills"
+              class="block px-4 py-2 hover:text-violet-500"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="home.html#portProjectsBox"
+              class="block px-4 py-2 hover:text-violet-500"
+              >Projekte</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="block px-4 py-2 hover:text-violet-500"
+              >Über mich</a
+            >
+          </li>
+
+          <li>
+            <a href="contact.html" class="block px-4 py-2 hover:text-violet-500"
+              >Kontakt</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!--Content-->
 
-    <main class="flex justify-center items-center ml-[200px]">
+    <main class="flex justify-center items-center md:ml-[200px]">
+      
       <!--Privacy Policy-->
       <section
         id="pp"
-        class="flex flex-col justify-center gap-5 bg-white/30 shadow-lg backdrop-blur-md mx-auto my-20 p-10 rounded-2xl w-2/3"
+        class="flex flex-col justify-center gap-5 bg-white/30 shadow-lg backdrop-blur-md m-10 lg:m-50 my-30 lg:my-20 p-10 rounded-2xl"
       >
         <a
           href="contact.html"
@@ -576,7 +626,7 @@
     </main>
 
     <!--Footer-->
-    <footer id="portFooter" class="bg-gray-50 m-h-[150px] ml-[200px]">
+    <footer id="portFooter" class="bg-gray-50 m-h-[150px] md:ml-[200px]">
       <div id="footerLinks" class="flex flex-row justify-center gap-20 py-10">
         <a
           href="contact.html"
@@ -599,7 +649,6 @@
 
     <!--JavaScripts-->
     <script src="./src/js/animation.js"></script>
-    <script src="./src/js/scrollanimation.js"></script>
-    <script src="./src/js/contact.js"></script>
+    <script src="./src/js/navigation.js"></script>
   </body>
 </html>
