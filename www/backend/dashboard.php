@@ -24,7 +24,7 @@ if (!isset($_SESSION["login_id"])) {
     <!--Navigation-->
     <aside
       id="navBar"
-      class="hidden z-50 fixed md:flex flex-col justify-start items-center bg-gray-50 md:w-[200px] h-screen min-h-screen">
+      class="hidden z-40 fixed md:flex flex-col justify-start items-center bg-gray-50 md:w-[200px] h-screen min-h-screen">
       <a href="../frontend/home.html" >
         <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
       </a>
@@ -80,10 +80,10 @@ if (!isset($_SESSION["login_id"])) {
     </aside>
 
     <!--Navigation Mobile-->
-    <div id="navMobile" class="md:hidden z-50 fixed flex w-full">
+    <div id="navMobile" class="md:hidden z-40 fixed flex w-full">
       <div
         id="navBarMobile"
-        class="z-50 fixed flex justify-between items-center gap-10 bg-white/30 shadow-lg backdrop-blur-md p-4 w-full">
+        class="z-40 fixed flex justify-between items-center gap-10 bg-white/30 shadow-lg backdrop-blur-md p-4 w-full">
         <h3 class="text-violet-500 text-center">Port Pauli</h3>
         <button
           id="burgerBtn"
@@ -133,7 +133,7 @@ if (!isset($_SESSION["login_id"])) {
       <!-- Header-->
       <header
         id="adminHeader"
-        class="flex justify-between items-center my-10 px-20">
+        class="flex justify-between items-center my-40 lg:my-10 mb-10 px-20">
         <div id="headerText"
           class="flex flex-col">
           <h3 class="text-gray-500">Willkommen Pauli!</h3>
@@ -148,7 +148,8 @@ if (!isset($_SESSION["login_id"])) {
 
         <!-- Project Menagement-->
         <section id="projectManagement" class="flex flex-col justify-start bg-white shadow-lg backdrop-blur-md p-20">
-          <div class="flex justify-between items-center text-gray-900">
+
+          <div class="flex lg:flex-row flex-col justify-between items-center text-gray-900">
             <h3 class="">Projektverwaltung</h3>
             <button id="btnAdd" class="flex gap-2 p-2 cursor-pointer" onclick="toggleModal(true)">
               <img src="/../frontend/src/images/admin/Icons-add-emerald.png" alt="Projekt Hinzufügen Button" class="w-[20px] object-cover">Neues Projekt
@@ -184,15 +185,15 @@ if (!isset($_SESSION["login_id"])) {
     </section>
 
     <!-- Overlay Add -->
-    <div id="overlayAdd" class="hidden z-40 fixed inset-0 bg-black bg-opacity-50">
+    <div id="overlayAdd" class="hidden z-40 fixed inset-0 flex justify-center items-center bg-black/50">
 
       <!-- Modal -->
       <div
         id="popupNewProject"
-        class="hidden z-50 fixed inset-0 flex justify-center items-center p-4">
+        class="hidden z-50 flex justify-center items-center p-4 xl:p-50 w-full">
 
         <!-- Modal-Box -->
-        <div class="flex flex-col bg-white ml-[200px] p-10 border border-gray-200 rounded-2xl w-1/2">
+        <div class="flex flex-col bg-white p-10 border border-gray-200 rounded-2xl w-3/4">
 
           <!-- Close Button -->
           <div id="closebutton" class="flex justify-end w-full text-end">
@@ -246,15 +247,15 @@ if (!isset($_SESSION["login_id"])) {
     </div>
 
     <!-- Overlay Edit-->
-    <div id="overlayEdit" class="hidden z-40 fixed inset-0 bg-black bg-opacity-50">
+    <div id="overlayEdit" class="hidden z-40 fixed inset-0 flex justify-center items-center bg-black/50">
 
       <!-- Modal -->
       <div
         id="popupEditProject"
-        class="hidden z-50 fixed inset-0 flex justify-center items-center p-4">
+        class="hidden z-50 flex justify-center items-center p-4 xl:p-50 w-full">
 
         <!-- Modal-Box -->
-        <div class="flex flex-col bg-white ml-[200px] p-10 border border-gray-200 rounded-2xl w-1/2">
+        <div class="flex flex-col bg-white p-10 border border-gray-200 rounded-2xl w-3/4">
 
           <!-- Close Button -->
           <div id="closebuttonEdit" class="flex justify-end w-full text-end">
