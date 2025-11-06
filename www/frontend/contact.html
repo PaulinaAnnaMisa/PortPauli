@@ -14,7 +14,7 @@
     <!--Navigation-->
     <aside
       id="navBar"
-      class="hidden z-50 fixed md:flex flex-col justify-center items-center bg-gray-50 md:w-[200px] h-screen min-h-screen"
+      class="hidden z-50 fixed md:flex flex-col justify-start items-center bg-gray-50 md:w-[200px] h-screen min-h-screen"
     >
       <a href="home.html" class="">
         <h3 class="mt-5 text-violet-500 text-2xl text-center">Port Pauli</h3>
@@ -80,25 +80,70 @@
           </li>
         </ul>
       </nav>
-      <!--Theme Toggle -->
-      <div id="themeToggle" class="flex flex-end justify-center mt-auto">
-        <button id="themeToggleBtn">
+    </aside>
+
+    <!--Navigation Mobile-->
+    <div id="navMobile" class="md:hidden z-50 fixed flex w-full">
+      <div
+        id="navBarMobile"
+        class="z-50 fixed flex justify-between items-center gap-10 bg-white/30 shadow-lg backdrop-blur-md p-4 w-full"
+      >
+        <h3 class="text-violet-500 text-center">Port Pauli</h3>
+        <button
+          id="burgerBtn"
+          data-dropdown-toggle="dropdown"
+          class="inline-flex mt-5 mb-6"
+          type="button"
+        >
           <img
-            src="./src/images/darkmode/bright-sun.svg"
-            alt="Dark Mode"
-            id="darkIcon"
-            class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out cursor-pointer"
-          />
-          <img
-            src="./src/images/darkmode/dark-sun.svg"
-            alt=""
-            id="Light Mode"
-            style="display: none"
-            class="mb-4 w-[50px] h-[50px] object-cover scale-100 hover:scale-105 duration-300 ease-in-out"
+            src="./src/images/nav/burgermenu_long.svg"
+            alt="Burgermenu Navigation Mobile"
+            class="w-[40px] cursor-pointer"
           />
         </button>
       </div>
-    </aside>
+      <!-- Dropdown menu -->
+      <div
+        id="dropdown"
+        class="hidden z-50 fixed flex flex-col justify-between bg-gray-50 shadow-sm mt-20 rounded-lg w-full"
+      >
+        <ul
+          class="flex flex-col justify-between shadow-lg py-2 divide-y divide-gray-300 text-gray-900 text-center"
+          aria-labelledby="dropdownDefaultButton"
+        >
+          <li>
+            <a href="home.html" class="block p-2 px-4 hover:text-violet-500"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="home.html#portSkills"
+              class="block px-4 py-2 hover:text-violet-500"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="home.html#portProjectsBox"
+              class="block px-4 py-2 hover:text-violet-500"
+              >Projekte</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="block px-4 py-2 hover:text-violet-500"
+              >Über mich</a
+            >
+          </li>
+
+          <li>
+            <a href="contact.html" class="block px-4 py-2 hover:text-violet-500"
+              >Kontakt</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!--Navigation Mobile-->
     <div id="navMobile" class="md:hidden z-50 fixed flex w-full">
@@ -172,13 +217,11 @@
       class="flex flex-col flex-1 justify-center md:ml-[200px] min-h-screen"
     >
       <!-- Main contant -->
-      <main
-        class="flex xl:flex-row flex-col justify-center items-center mt-10"
-      >
+      <main class="flex xl:flex-row flex-col justify-center items-center mt-10">
         <!-- Content left -->
         <section
           id="contactLeft"
-          class="flex flex-col justify-start items-start md:mx-30 mt-30 mb-10"
+          class="flex flex-col justify-start items-start mt-30 lg:mr-30 mb-10 md:ml-10"
         >
           <h1 class="text-violet-500">
             Alles beginnt mit <br />einem Gespräch.
