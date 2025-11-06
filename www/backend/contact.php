@@ -13,24 +13,24 @@ require './vendor/autoload.php';
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-// Formulareingaben holen
+// get form datas
 $vorname   = htmlspecialchars($_POST['name'] ?? '');
 $nachname  = htmlspecialchars($_POST['last_name'] ?? '');
 $email     = htmlspecialchars($_POST['email'] ?? '');
 $tel       = htmlspecialchars($_POST['tel'] ?? '');
 $message   = htmlspecialchars($_POST['message'] ?? '');
 
-// Pflichtfelder prüfen
+// empty check
 if (empty($vorname) || empty($nachname) || empty($email) || empty($message)) {
     echo "Bitte fülle alle Pflichtfelder aus.";
     exit;
 }
 
-// PHPMailer initialisieren
+// PHPMailer 
 $mail = new PHPMailer(true);
 
 try {
-    // SMTP konfigurieren
+    // SMTP configure
     $mail->isSMTP();
     $mail->Host       = $_ENV['EMAIL_HOST'];
     $mail->SMTPAuth   = true;
@@ -40,9 +40,9 @@ try {
     $mail->Port       = $_ENV['EMAIL_PORT'];
 
     // Absender und Empfänger
-    $mail->setFrom($_ENV['EMAIL_ADDR'], 'Portfolio Website'); // eigener SMTP-Account
-    $mail->addReplyTo($email, "$vorname $nachname");           // Nutzerantwort
-    $mail->addAddress($_ENV['EMAIL_ADDR']);            // deine Zieladresse
+    $mail->setFrom($_ENV['EMAIL_ADDR'], 'Portfolio Website'); // my SMTP-Account
+    $mail->addReplyTo($email, "$vorname $nachname");           // user answer
+    $mail->addAddress($_ENV['EMAIL_ADDR']);            // my mail
 
     // E-Mail content
     $mail->isHTML(true);
@@ -61,6 +61,5 @@ try {
 
     echo "Vielen Dank! Deine Nachricht wurde gesendet.";
 } catch (Exception $e) {
-    // Debugging
     echo "Leider ist ein Fehler aufgetreten. Bitte versuche es später erneut. Fehler: {$mail->ErrorInfo}";
 }
