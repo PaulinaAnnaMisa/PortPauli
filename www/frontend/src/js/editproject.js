@@ -35,14 +35,14 @@ formEditProject.addEventListener("submit", (event) => {
   })
     .then((res) => res.json())
     .then((project) => {
+      console.log("fetch erfolgreich ");
       if (project.error) {
         resultEdit.textContent = "Fehler: " + project.error;
         return;
       }
 
       if (project.success) {
-        let tr = document.querySelector(`button[data-id='${project.id}']`);
-        tr.closest("tr");
+        let tr = document.querySelector(`button[data-id='${project.id}']`).closest("tr");
 
         tr.children[1].textContent = project.title;
         tr.children[2].textContent = project.description;
