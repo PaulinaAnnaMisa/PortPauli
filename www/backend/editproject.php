@@ -5,12 +5,12 @@ require_once 'config.db.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // datas 
-    $id          = $_POST['id'] ?? '';
-    $title       = $_POST['title'] ?? '';
-    $description = $_POST['description'] ?? '';
-    $image       = $_POST['image'] ?? '';
-    $category    = $_POST['category'] ?? '';
-    $areas       = $_POST['areas'] ?? '';
+    $id          = htmlspecialchars($_POST['id'] ?? '');
+    $title       = htmlspecialchars($_POST['title'] ?? '');
+    $description = htmlspecialchars($_POST['description'] ?? '');
+    $image       = htmlspecialchars($_POST['image'] ?? '');
+    $category    = htmlspecialchars($_POST['category'] ?? '');
+    $areas       = htmlspecialchars($_POST['areas'] ?? '');
 
     // empty check
     if (empty($id) || empty($title) || empty($description) || empty($image) || empty($category) || empty($areas)) {
