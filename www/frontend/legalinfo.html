@@ -11,7 +11,7 @@
   </head>
 
   <body class="flex flex-col bg-gray-100">
-    <!--Navigation-->
+     <!--Navigation-->
     <aside
       id="navBar"
       class="hidden z-50 fixed md:flex flex-col justify-start items-center bg-gray-50 md:w-[200px] h-screen min-h-screen"
@@ -26,55 +26,90 @@
           class="flex flex-col justify-center items-start gap-10 mt-10"
         >
           <li
-            class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out"
+            class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out nav-item"
           >
+            <!--grey-->
             <img
               src="./src/images/nav/Icon_home.png"
               alt="Icon Home"
-              class="justify-center w-[20px] h-[20px]"
+              class="justify-center w-[20px] h-[20px] flex iconGrey"
             />
-            <a href="home.html" class="relative focus:outline-none">Home</a>
+            <!--violet-->
+            <img
+              src="./src/images/nav/Icon_home_violet.png"
+              alt="Icon Home"
+              class="justify-center w-[20px] h-[20px] hidden iconViolet"
+            />
+            <a href="home.html#home.html" class="relative focus:outline-none">Home</a>
             <span
               class="-bottom-1 left-0 absolute bg-violet-500 w-0 focus:w-full h-0.5 transition-all duration-300"
             ></span>
           </li>
           <li
-            class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out"
+            class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out nav-item"
           >
+            <!--grey-->
             <img
               src="./src/images/nav/Icon_skills.png"
               alt="Icon Home"
-              class="justify-center w-[20px] h-[20px]"
+              class="justify-center w-[20px] h-[20px] flex iconGrey"
+            />
+            <!--violet-->
+            <img
+              src="./src/images/nav/Icon_skills_violet.png"
+              alt="Icon Home"
+              class="justify-center w-[20px] h-[20px] hidden iconViolet"
             />
             <a href="home.html#portSkills">Skills</a>
           </li>
           <li
-            class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out"
+            class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out nav-item"
           >
+            <!--grey-->
             <img
               src="./src/images/nav/Icon_projects.png"
               alt="Icon Home"
-              class="w-[20px] h-[20px]"
+              class="justify-center w-[20px] h-[20px] flex iconGrey"
+            />
+            <!--violet-->
+            <img
+              src="./src/images/nav/Icon_projects_violet.png"
+              alt="Icon Home"
+              class="justify-center w-[20px] h-[20px] hidden iconViolet"
             />
             <a href="home.html#portProjectsBox">Projekte</a>
           </li>
           <li
-            class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out"
+            class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out nav-item"
           >
+            <!--grey-->
             <img
               src="./src/images/nav/Icon_about.png"
               alt="Icon Home"
-              class="w-[20px] h-[20px]"
+              class="justify-center w-[20px] h-[20px] flex iconGrey"
+            />
+            <!--violet-->
+            <img
+              src="./src/images/nav/Icon_about_violet.png"
+              alt="Icon Home"
+              class="justify-center w-[20px] h-[20px] hidden iconViolet"
             />
             <a href="about.html">Über mich</a>
           </li>
           <li
-            class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out"
+            class="flex flex-row justify-center items-center gap-2 text-gray-900 hover:text-violet-500 scale-100 hover:scale-105 duration-300 ease-in-out nav-item"
           >
+            <!--grey-->
             <img
               src="./src/images/nav/Icon_contact.png"
               alt="Icon Home"
-              class="w-[20px] h-[20px]"
+              class="justify-center w-[20px] h-[20px] flex iconGrey"
+            />
+            <!--violet-->
+            <img
+              src="./src/images/nav/Icon_contact_violet.png"
+              alt="Icon Home"
+              class="justify-center w-[20px] h-[20px] hidden iconViolet"
             />
             <a href="contact.html">Kontakt</a>
           </li>
@@ -207,6 +242,7 @@
     <!--JavaScripts-->
     <script src="./src/js/animation.js"></script>
     <script src="./src/js/navigation.js"></script>
+    <script src="./src/js/nav.js"></script>
     <script src="./src/js/footer.js"></script>
   </body>
 </html>
