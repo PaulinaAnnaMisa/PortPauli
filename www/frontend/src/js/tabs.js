@@ -1,22 +1,24 @@
 let tabs = document.querySelectorAll(".tab-btn");
 
 tabs.forEach((tab) => {
+
   tab.addEventListener("click", () => {
     let category = tab.dataset.category;
     let color = tab.dataset.color;
 
     // buttons reset
     tabs.forEach((t) => {
-      t.classList.remove(`border-${t.dataset.color}`, `text-${t.dataset.color}`);
+      t.classList.remove(`!border-${t.dataset.color}`, `!text-${t.dataset.color}`);
       t.classList.add("border-gray-300", "text-gray-900");
     });
 
-    // set button active
+    // set clicked tab active
     tab.classList.remove("border-gray-300", "text-gray-900");
-    tab.classList.add(`border-${color}`, `text-${color}`);
+    tab.classList.add(`!border-${color}`, `!text-${color}`);
 
-    // filter gallery 
+    // filter gallery
     let galleryItems = document.querySelectorAll(".gallery-item");
+
     galleryItems.forEach((item) => {
       if (category === "all" || item.dataset.category === category) {
         item.classList.remove("hidden");

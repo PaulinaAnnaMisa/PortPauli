@@ -4,7 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function loadProjects() {
-  fetch("../backend/getprojects.php")
+
+  let URL = "../backend/getprojects.php";
+  
+  fetch(URL)
     .then((res) => res.json())
     .then((projects) => {
       let tbody = document.querySelector("#tbody");

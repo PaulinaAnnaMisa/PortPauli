@@ -7,8 +7,9 @@ let categoryColors = {
   design: "orange-500",
   photo: "emerald-500",
 };
+let URL = "../backend/projectGallery.php";
 
-fetch("../backend/projectGallery.php")
+fetch(URL)
   .then((res) => res.json())
   .then((projects) => {
 
