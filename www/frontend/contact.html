@@ -117,7 +117,7 @@
       </nav>
     </aside>
 
-    <!--Navigation Mobile-->
+     <!--Navigation Mobile-->
     <div id="navMobile" class="md:hidden z-50 fixed flex w-full">
       <div
         id="navBarMobile"
@@ -143,36 +143,94 @@
         class="hidden z-50 fixed flex flex-col justify-between bg-gray-50 shadow-sm mt-20 rounded-lg w-full"
       >
         <ul
-          class="flex flex-col justify-between shadow-lg py-2 divide-y divide-gray-300 text-gray-900 text-center"
+          class="flex flex-row justify-between shadow-lg p-2 text-gray-900 text-center h-full"
           aria-labelledby="dropdownDefaultButton"
         >
-          <li>
-            <a href="home.html" class="block p-2 px-4 hover:text-violet-500"
-              >Home</a
-            >
+          <li class="flex flex-col justify-center items-center nav-item">
+            <!--grey-->
+            <img
+              src="./src/images/nav/Icon_home.png"
+              alt="Icon Home"
+              class="justify-center w-[24px] h-[24px] flex iconGrey mt-2"
+            />
+            <!--violet-->
+            <img
+              src="./src/images/nav/Icon_home_violet.png"
+              alt="Icon Home"
+              class="justify-center w-[24px] h-[24px] hidden iconViolet mt-2"
+            />
+            <a href="home.html" aria-current="page" class="block p-2 hover:text-violet-500 ">Home</a>
           </li>
-          <li>
+          <li class="flex flex-col justify-center items-center nav-item">
+            <!--grey-->
+            <img
+              src="./src/images/nav/Icon_skills.png"
+              alt="Icon Home"
+              class="justify-center w-[24px] h-[24px] flex iconGrey mt-2"
+            />
+            <!--violet-->
+            <img
+              src="./src/images/nav/Icon_skills_violet.png"
+              alt="Icon Home"
+              class="justify-center w-[24px] h-[24px] hidden iconViolet mt-2"
+            />
             <a
-              href="home.html#portSkills"
-              class="block px-4 py-2 hover:text-violet-500"
+              href="home.html#portSkills" 
+              class="block p-2 hover:text-violet-500"
               >Skills</a
             >
           </li>
-          <li>
+          <li class="flex flex-col justify-center items-center nav-item">
+            <!--grey-->
+            <img
+              src="./src/images/nav/Icon_projects.png"
+              alt="Icon Home"
+              class="justify-center w-[24px] h-[24px] flex iconGrey mt-2"
+            />
+            <!--violet-->
+            <img
+              src="./src/images/nav/Icon_projects_violet.png"
+              alt="Icon Home"
+              class="justify-center w-[24px] h-[24px] hidden iconViolet mt-2"
+            />
             <a
               href="home.html#portProjectsBox"
-              class="block px-4 py-2 hover:text-violet-500"
+              class="block p-2 hover:text-violet-500"
               >Projekte</a
             >
           </li>
-          <li>
-            <a href="about.html" class="block px-4 py-2 hover:text-violet-500"
+          <li class="flex flex-col justify-center items-center nav-item">
+            <!--grey-->
+            <img
+              src="./src/images/nav/Icon_about.png"
+              alt="Icon Home"
+              class="justify-center w-[24px] h-[24px] flex iconGrey mt-2"
+            />
+            <!--violet-->
+            <img
+              src="./src/images/nav/Icon_about_violet.png"
+              alt="Icon Home"
+              class="justify-center w-[24px] h-[24px] hidden iconViolet mt-2"
+            />
+            <a href="about.html" class="block p-2 hover:text-violet-500"
               >Über mich</a
             >
           </li>
 
-          <li>
-            <a href="contact.html" class="block px-4 py-2 hover:text-violet-500"
+          <li class="flex flex-col justify-center items-center nav-item">
+            <!--grey-->
+            <img
+              src="./src/images/nav/Icon_contact.png"
+              alt="Icon Home"
+              class="justify-center w-[24px] h-[24px] flex iconGrey mt-2"
+            />
+            <!--violet-->
+            <img
+              src="./src/images/nav/Icon_contact_violet.png"
+              alt="Icon Home"
+              class="justify-center w-[24px] h-[24px] hidden iconViolet mt-2"
+            />
+            <a href="contact.html" class="block p-2 hover:text-violet-500"
               >Kontakt</a
             >
           </li>
